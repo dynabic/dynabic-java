@@ -84,10 +84,11 @@ public class UsersAPITest extends AbstractIntegrationTest {
 
 	@Test(groups={"integration"})
 	public void SetDeletedStatus() throws APIException {
+		Assert.assertFalse(user.getDeleted());
 		UsersAPI.SetDeletedStatus(user.getId().toString(), "true");
 		UserResponse userById = UsersAPI.GetUserById(user.getId().toString());
 		Assert.assertNotNull(userById);
-		Assert.assertFalse(userById.getDeleted());
+		Assert.assertTrue(userById.getDeleted());
 	}
 
 	@Test(groups={"integration"})
@@ -109,6 +110,19 @@ public class UsersAPITest extends AbstractIntegrationTest {
 	public void UpdateUser() throws APIException {
 		UserRequest postData = new UserRequest();
 		postData.setFirst_name(user.getFirst_name() + "_updated");
+		postData.setLast_name(user.getLast_name());
+		postData.setActive(user.getActive());
+		postData.setEmail(user.getEmail());
+		postData.setDeleted(user.getDeleted());
+		postData.setIs_subscribed_to_newsletter(user.getIs_subscribed_to_newsletter());
+		postData.setFacebook_id(user.getFacebook_id());
+		postData.setGoogleapps_user_name(user.getGoogleapps_user_name());
+		postData.setFirst_name(user.getFirst_name());
+		postData.setYahoo_user_name("yahoo_user_name");
+		postData.setCurrency(user.getCurrency());
+		postData.setCountry(user.getCountry());
+		postData.setCulture(user.getCulture());
+		postData.setTimezone(user.getTimezone());
 		UserResponse updatedUser = UsersAPI.UpdateUser(postData, user.getId().toString());
 		Assert.assertNotNull(updatedUser);
 		Assert.assertEquals(updatedUser.getFirst_name(), postData.getFirst_name());
