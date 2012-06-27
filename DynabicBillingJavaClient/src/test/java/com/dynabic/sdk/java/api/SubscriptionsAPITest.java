@@ -1,13 +1,15 @@
 package com.dynabic.sdk.java.api;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import org.junit.rules.TestName;
 
 import com.dynabic.sdk.java.model.AddressResponse;
 import com.dynabic.sdk.java.model.CancellationRequest;
@@ -21,20 +23,25 @@ import com.dynabic.sdk.java.model.SubscriptionResponse;
 import com.dynabic.sdk.java.model.TransactionResponse;
 import com.wordnik.swagger.runtime.exception.APIException;
 
+@Category(IntegrationTest.class)
 public class SubscriptionsAPITest extends AbstractIntegrationTest {
 
 	private SubscriptionResponse subscription;
 
-	@BeforeMethod(dependsOnMethods = { "setUpSite" })
-	public void setUpSubscription(Method m) throws APIException {
+	@Rule
+	public TestName testName = new TestName();
+
+	@Before
+	public void setUpSubscription() throws APIException {
 		log("Setting up Subscription...");
 		subscription = addSubscription(testData.siteId);
 		Assert.assertNotNull(subscription);
 		Assert.assertNotNull(subscription.getId());
-		log("Executing test case " + m.getName() + "()");
+
+		log("Executing test case " + testName.getMethodName() + "()");
 	}
 
-	@AfterMethod
+	@After
 	public void tearDownSubscription() {
 		log("Tearing down Subscription...");
 		try {
@@ -44,7 +51,7 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 		}
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void AddChargeToSubscription() throws APIException {
 		ChargeRequest postData = new ChargeRequest();
 		postData.setAmount(100d);
@@ -54,13 +61,13 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 		Assert.assertEquals(trx.getAmount().intValue(), postData.getAmount().intValue());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void AddSubscription() {
 		Assert.assertNotNull(subscription);
 		Assert.assertNotNull(subscription.getId());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void AddSubscriptionItems() throws APIException {
 		ProductResponse product = ProductsAPI.GetProductById(subscription.getProduct_id().toString());
 		List<SubscriptionItemRequest> items = new ArrayList<SubscriptionItemRequest>();
@@ -72,7 +79,7 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 		SubscriptionsAPI.AddSubscriptionItems(items);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void AdjustSubscriptionBalance() throws APIException {
 		ChargeRequest postData = new ChargeRequest();
 		postData.setAmount(100d);
@@ -80,7 +87,7 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 		SubscriptionsAPI.AdjustSubscriptionBalance(subscription.getId().toString(), "false", postData);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void CancelSubscription() throws APIException {
 		CancellationRequest postData = new CancellationRequest();
 		postData.setIsCancelledAtEndOfPeriod(false);
@@ -88,25 +95,25 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 		SubscriptionsAPI.CancelSubscription(subscription.getId().toString(), postData);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void ChangeSubscriptionProduct() throws APIException {
 		ProductResponse product = ProductsAPI.GetProductById(subscription.getProduct_id().toString());
 		SubscriptionsAPI.ChangeSubscriptionProduct(subscription.getId().toString(), product.getPricing_plans().get(0).getId().toString());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void DeleteSubscription() throws APIException {
 		SubscriptionsAPI.DeleteSubscription(subscription.getId().toString());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetAddress() throws APIException {
 		AddressResponse address = SubscriptionsAPI.GetAddress(subscription.getId().toString());
 		Assert.assertNotNull(address);
 		Assert.assertEquals(address.getId(), subscription.getBilling_address_id());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetCustomersForProduct() throws APIException {
 		List<CustomerResponse> customers = SubscriptionsAPI.GetCustomersForProduct(subscription.getId().toString());
 		Assert.assertNotNull(customers);
@@ -114,13 +121,13 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
         Assert.assertEquals(subscription.getCustomer_id(), customers.get(0).getId());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetSubscription() throws APIException {
 		SubscriptionResponse subscription2 = SubscriptionsAPI.GetSubscription(subscription.getId().toString());
 		Assert.assertNotNull(subscription2);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetSubscriptionItems() throws APIException {
 		ProductResponse product = ProductsAPI.GetProductById(subscription.getProduct_id().toString());
 
@@ -143,41 +150,41 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 		List<SubscriptionItemResponse> components = SubscriptionsAPI.GetSubscriptionItems(subscription.getId().toString());
 		Assert.assertNotNull(components);
 		Assert.assertEquals(components.size(), 2);
-		Assert.assertEquals(components.get(0).getQuantity(), 50d);
+		Assert.assertEquals(components.get(0).getQuantity().intValue(), 50);
 		Assert.assertEquals(components.get(0).getUpdate_history().size(), 3); // 2 from this method + 1 from Add item operation
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetSubscriptions() throws APIException {
 		List<SubscriptionResponse> subscriptions = SubscriptionsAPI.GetSubscriptions(testData.subdomain, null, null);
 		Assert.assertNotNull(subscriptions);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetSubscriptionsForStatus() throws APIException {
 		List<SubscriptionResponse> subscriptions = SubscriptionsAPI.GetSubscriptionsForStatus(testData.subdomain, "Active", null, null);
 		Assert.assertNotNull(subscriptions);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetSubscriptionsOfCustomer() throws APIException {
 		List<SubscriptionResponse> subscriptions = SubscriptionsAPI.GetSubscriptionsOfCustomer(subscription.getCustomer_id().toString());
 		Assert.assertNotNull(subscriptions);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetSubscriptionsOfCustomerByReferenceId() throws APIException {
 		List<SubscriptionResponse> subscriptions = SubscriptionsAPI.GetSubscriptionsOfCustomerByReferenceId(
 				testData.subdomain, subscription.getCustomer().getReference());
 		Assert.assertNotNull(subscriptions);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void ReactivateSubscription() throws APIException {
 		SubscriptionsAPI.ReactivateSubscription(subscription.getId().toString());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void Refund() throws APIException {
 		ChargeRequest charge = new ChargeRequest();
 		charge.setAmount(100d);
@@ -194,7 +201,7 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 		Assert.assertEquals(charge.getAmount().intValue(), trx.getAmount().intValue());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void ResetSubscriptionMeteredItems() throws APIException {
 		ProductResponse product = ProductsAPI.GetProductById(subscription.getProduct_id().toString());
 
@@ -223,20 +230,26 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 		components = SubscriptionsAPI.GetSubscriptionItems(subscription.getId().toString());
 		Assert.assertNotNull(components);
 		Assert.assertEquals(components.size(), 2);
-		Assert.assertEquals(components.get(0).getQuantity(), 0);
+		Assert.assertEquals(components.get(0).getQuantity().intValue(), 0);
 		Assert.assertEquals(components.get(0).getUpdate_history().size(), 0);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void UpdateSubscription() throws APIException {
 		SubscriptionRequest postData = new SubscriptionRequest();
-		postData.setStatus("64");
+		postData.setCancellation_details(subscription.getCancellation_details() + "_updated");
+		postData.setSubscription_items(null);
+		postData.setCustomer_id(subscription.getCustomer_id());
+		postData.setProduct_id(subscription.getProduct_id());
+		postData.setPricing_plan_id(subscription.getPricing_plan_id());
+		postData.setBilling_address_id(subscription.getBilling_address_id());
+		postData.setCredit_card_id(subscription.getCredit_card_id());
 		SubscriptionResponse updatedSubscription = SubscriptionsAPI.UpdateSubscription(testData.subdomain, subscription.getId().toString(), postData);
 		Assert.assertNotNull(updatedSubscription);
-		Assert.assertEquals(updatedSubscription.getStatus(), postData.getStatus());
+		Assert.assertEquals(postData.getCancellation_details(), updatedSubscription.getCancellation_details());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void UpdateSubscriptionItems() throws APIException {
 		ProductResponse product = ProductsAPI.GetProductById(subscription.getProduct_id().toString());
 		List<SubscriptionItemRequest> items = new ArrayList<SubscriptionItemRequest>();
@@ -248,7 +261,7 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 		SubscriptionsAPI.UpdateSubscriptionItems(items);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void UpgradeDowngradeSubscriptionProduct() throws APIException {
 		ProductResponse product = ProductsAPI.GetProductById(subscription.getProduct_id().toString());
         ProductResponse secondProduct = addProductToFamily(product.getProduct_family_id());

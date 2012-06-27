@@ -1,14 +1,14 @@
 package com.dynabic.sdk.java.api;
 
-import java.lang.reflect.Method;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import com.dynabic.sdk.java.model.ActiveSubscriptionsCountResponse;
 import com.dynabic.sdk.java.model.ProductsRevenues;
@@ -22,32 +22,32 @@ import com.dynabic.sdk.java.model.TodayNewSubscribersCountResponse;
 import com.dynabic.sdk.java.model.TotalSubscribersCountResponse;
 import com.wordnik.swagger.runtime.exception.APIException;
 
+@Category(IntegrationTest.class)
 public class ReportsAPITest extends AbstractIntegrationTest {
 
 	private SubscriptionResponse subscription;
 
-	@BeforeMethod(dependsOnMethods = { "setUpSite" })
-	public void setUpSubscription(Method m) throws APIException {
+	@Before
+	public void setUpSubscription() throws APIException {
 		log("Setting up Subscription...");
 		subscription = addSubscription(testData.siteId);
 		Assert.assertNotNull(subscription);
 		Assert.assertNotNull(subscription.getId());
-		log("Executing test case " + m.getName() + "()");
 	}
 
-	@AfterMethod
+	@After
 	public void tearDownSubscription() throws APIException {
 		log("Tearing down Subscription...");
 		SubscriptionsAPI.DeleteSubscription(subscription.getId().toString());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetActiveSubscriptionsCount() throws APIException {
 		ActiveSubscriptionsCountResponse response = ReportsAPI.GetActiveSubscriptionsCount(testData.subdomain);
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetCustomersEvolution() throws APIException {
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, -10);
@@ -57,7 +57,7 @@ public class ReportsAPITest extends AbstractIntegrationTest {
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetProductsRevenuesEvolution() throws APIException {
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, -10);
@@ -67,7 +67,7 @@ public class ReportsAPITest extends AbstractIntegrationTest {
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetProductsSignupsEvolution() throws APIException {
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, -10);
@@ -77,7 +77,7 @@ public class ReportsAPITest extends AbstractIntegrationTest {
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetRevenuesEvolution() throws APIException {
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, -10);
@@ -87,7 +87,7 @@ public class ReportsAPITest extends AbstractIntegrationTest {
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetSignupsEvolution() throws APIException {
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, -10);
@@ -97,13 +97,13 @@ public class ReportsAPITest extends AbstractIntegrationTest {
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetSitesSummary() throws APIException {
 		List<SiteSummary> response = ReportsAPI.GetSitesSummary();
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetSubscriptionsEvolution() throws APIException {
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, -10);
@@ -113,25 +113,25 @@ public class ReportsAPITest extends AbstractIntegrationTest {
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetTodayNewSubscribersCount() throws APIException {
 		TodayNewSubscribersCountResponse response = ReportsAPI.GetTodayNewSubscribersCount(testData.subdomain);
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetTodayRevenueAmount() throws APIException {
 		List<RevenueAmount> response = ReportsAPI.GetTodayRevenueAmount(testData.subdomain);
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetTotalRevenueAmount() throws APIException {
 		List<RevenueAmount> response = ReportsAPI.GetTotalRevenueAmount(testData.subdomain);
 		Assert.assertNotNull(response);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetTotalSubscribersCount() throws APIException {
 		TotalSubscribersCountResponse response = ReportsAPI.GetTotalSubscribersCount(testData.subdomain);
 		Assert.assertNotNull(response);

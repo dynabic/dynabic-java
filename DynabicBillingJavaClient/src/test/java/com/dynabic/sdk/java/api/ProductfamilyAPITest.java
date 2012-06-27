@@ -1,31 +1,31 @@
 package com.dynabic.sdk.java.api;
 
-import java.lang.reflect.Method;
 import java.util.List;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import com.dynabic.sdk.java.model.ProductFamilyRequest;
 import com.dynabic.sdk.java.model.ProductFamilyResponse;
 import com.wordnik.swagger.runtime.exception.APIException;
 
+@Category(IntegrationTest.class)
 public class ProductfamilyAPITest extends AbstractIntegrationTest {
 
 	private ProductFamilyResponse pf;
 
-	@BeforeMethod(dependsOnMethods = { "setUpSite" })
-	public void setUpProductFamily(Method m) throws APIException {
+	@Before
+	public void setUpProductFamily() throws APIException {
 		log("Setting up ProductFamily...");
 		pf = addProductFamily(testData.siteId);
 		Assert.assertNotNull(pf);
 		Assert.assertNotNull(pf.getId());
-		log("Executing test case " + m.getName() + "()");
 	}
 
-	@AfterMethod
+	@After
 	public void tearDownProductFamily() {
 		log("Tearing down ProductFamily...");
 		try {
@@ -35,7 +35,7 @@ public class ProductfamilyAPITest extends AbstractIntegrationTest {
 		}
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void ActivateProductFamily() throws APIException {
 		ProductFamilyResponse productFamily = ProductfamilyAPI.GetProductFamilyById(pf.getId().toString());
 		Assert.assertNotNull(productFamily);
@@ -54,12 +54,12 @@ public class ProductfamilyAPITest extends AbstractIntegrationTest {
 		Assert.assertFalse(productFamily.getIs_archived());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void AddProductFamily() {
 		Assert.assertNotNull(pf);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void ArchiveProductFamily() throws APIException {
 		ProductFamilyResponse productFamily = ProductfamilyAPI.GetProductFamilyById(pf.getId().toString());
 		Assert.assertNotNull(productFamily);
@@ -72,7 +72,7 @@ public class ProductfamilyAPITest extends AbstractIntegrationTest {
 		Assert.assertTrue(productFamily.getIs_archived());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void DeleteProductFamily() throws APIException {
 		ProductFamilyResponse productFamily = ProductfamilyAPI.GetProductFamilyById(pf.getId().toString());
 		Assert.assertNotNull(productFamily);
@@ -83,28 +83,28 @@ public class ProductfamilyAPITest extends AbstractIntegrationTest {
 		Assert.assertTrue(productFamilies.size() == 0);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetProductFamilies() throws APIException {
 		List<ProductFamilyResponse> productFamilies = ProductfamilyAPI.GetProductFamilies(testData.subdomain, null, null, null);
 		Assert.assertNotNull(productFamilies);
 		Assert.assertTrue(productFamilies.size() > 0);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetProductFamilyById() throws APIException {
 		ProductFamilyResponse productFamily = ProductfamilyAPI.GetProductFamilyById(pf.getId().toString());
 		Assert.assertNotNull(productFamily);
 		Assert.assertEquals(productFamily.getId(), pf.getId());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetProductFamilyByName() throws APIException {
 		ProductFamilyResponse productFamily = ProductfamilyAPI.GetProductFamilyByName(testData.subdomain, pf.getName());
 		Assert.assertNotNull(productFamily);
 		Assert.assertEquals(productFamily.getId(), pf.getId());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void UpdateProductFamily() throws APIException {
 		ProductFamilyRequest postData = new ProductFamilyRequest();
 		postData.setName(pf.getName() + "_updated");

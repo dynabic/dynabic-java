@@ -1,40 +1,40 @@
 package com.dynabic.sdk.java.api;
 
-import java.lang.reflect.Method;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import com.dynabic.sdk.java.model.SubscriptionResponse;
 import com.dynabic.sdk.java.platform.api.EventsAPI;
 import com.dynabic.sdk.java.platform.model.EventResponse;
 import com.wordnik.swagger.runtime.exception.APIException;
 
+@Category(IntegrationTest.class)
 public class EventsAPITest extends AbstractIntegrationTest {
 
 	private SubscriptionResponse subscription;
 
-	@BeforeMethod(dependsOnMethods = { "setUpSite" })
-	public void setUpSubscription(Method m) throws APIException {
+	@Before
+	public void setUpSubscription() throws APIException {
 		log("Setting up Subscription...");
 		subscription = addSubscription(testData.siteId);
 		Assert.assertNotNull(subscription);
 		Assert.assertNotNull(subscription.getId());
-		log("Executing test case " + m.getName() + "()");
 	}
 
-	@AfterMethod
+	@After
 	public void tearDownSubscription() throws APIException {
 		log("Tearing down Subscription...");
 		SubscriptionsAPI.DeleteSubscription(subscription.getId().toString());
 	}
 
-	@Test(timeOut=1200000)
+	@Test(timeout=1200000)
 	public void GetEvent() throws APIException {
 		List<EventResponse> events = EventsAPI.GetEventsForSubscription(subscription.getId().toString(), null, null);
 		Assert.assertNotNull(events);
@@ -43,25 +43,25 @@ public class EventsAPITest extends AbstractIntegrationTest {
 		Assert.assertNotNull(event.getId());
 	}
 
-	@Test(timeOut=1200000)
+	@Test(timeout=1200000)
 	public void GetEvents() throws APIException {
 		List<EventResponse> events = EventsAPI.GetEvents(null, "100");
 		Assert.assertNotNull(events);
 	}
 
-	@Test(timeOut=1200000)
+	@Test(timeout=1200000)
 	public void GetEventsForSite() throws APIException {
 		List<EventResponse> events = EventsAPI.GetEventsForSite(testData.siteId.toString(), null, "1", "100");
 		Assert.assertNotNull(events);
 	}
 
-	@Test(timeOut=1200000)
+	@Test(timeout=1200000)
 	public void GetEventsForSubscription() throws APIException {
 		List<EventResponse> events = EventsAPI.GetEventsForSubscription(subscription.getId().toString(), null, null);
 		Assert.assertNotNull(events);
 	}
 
-	@Test(timeOut=1200000)
+	@Test(timeout=1200000)
 	public void GetEventsForSubscriptionBetweenDates() throws APIException {
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, -5);
