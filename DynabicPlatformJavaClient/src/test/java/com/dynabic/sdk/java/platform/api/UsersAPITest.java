@@ -1,31 +1,38 @@
 package com.dynabic.sdk.java.platform.api;
 
-import java.lang.reflect.Method;
 import java.util.List;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import org.junit.rules.TestName;
 
 import com.dynabic.sdk.java.platform.model.UserRequest;
 import com.dynabic.sdk.java.platform.model.UserResponse;
 import com.wordnik.swagger.runtime.exception.APIException;
 
+@Category(IntegrationTest.class)
 public class UsersAPITest extends AbstractIntegrationTest {
 
 	private UserResponse user;
 
-	@BeforeMethod(dependsOnMethods = {"setUpSite"})
-	public void setUpUser(Method m) throws APIException {
+	@Rule
+	public TestName testName = new TestName();
+
+	@Before
+	public void setUpUser() throws APIException {
 		log("Setting up user...");
 		user = addUser(testData.subdomain);
 		Assert.assertNotNull(user);
 		Assert.assertNotNull(user.getId());
-		log("Executing test case " + m.getName() + "()");
+
+		log("Executing test case " + testName.getMethodName() + "()");
 	}
 
-	@AfterMethod
+	@After
 	public void tearDownUser() {
 		log("Tearing down user...");
 		try {
@@ -35,46 +42,46 @@ public class UsersAPITest extends AbstractIntegrationTest {
 		}
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void AddUser() {
 		Assert.assertNotNull(user);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void DeleteUser() throws APIException {
 		UsersAPI.DeleteUser(user.getId().toString());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetAllUsers() throws APIException {
 		List<UserResponse> users = UsersAPI.GetAllUsers(null,  null);
 		Assert.assertNotNull(users);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetUserById() throws APIException {
 		UserResponse userById = UsersAPI.GetUserById(user.getId().toString());
 		Assert.assertNotNull(userById);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetUserByUserName() throws APIException {
 		UserResponse userByName = UsersAPI.GetUserByUserName("b@b.com");
 		Assert.assertNotNull(userByName);
 		UsersAPI.DeleteUser(userByName.getId().toString());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void ModifyPassword() throws APIException {
 		UsersAPI.ModifyPassword(user.getId().toString(), "test123", "newPassword");
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void ResetPassword() throws APIException {
 		UsersAPI.ResetPassword(user.getId().toString());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void SetActiveStatus() throws APIException {
 		UsersAPI.SetActiveStatus(user.getId().toString(), "false");
 		UserResponse userById = UsersAPI.GetUserById(user.getId().toString());
@@ -82,7 +89,7 @@ public class UsersAPITest extends AbstractIntegrationTest {
 		Assert.assertFalse(userById.getActive());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void SetDeletedStatus() throws APIException {
 		Assert.assertFalse(user.getDeleted());
 		UsersAPI.SetDeletedStatus(user.getId().toString(), "true");
@@ -91,7 +98,7 @@ public class UsersAPITest extends AbstractIntegrationTest {
 		Assert.assertTrue(userById.getDeleted());
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void SetRoles() throws APIException {
 		// remove all roles
 		UsersAPI.SetRoles(user.getId().toString(), "");
@@ -106,7 +113,7 @@ public class UsersAPITest extends AbstractIntegrationTest {
 		Assert.assertEquals(userById.getUser_roles(), "Admin,User");
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void UpdateUser() throws APIException {
 		UserRequest postData = new UserRequest();
 		postData.setFirst_name(user.getFirst_name() + "_updated");

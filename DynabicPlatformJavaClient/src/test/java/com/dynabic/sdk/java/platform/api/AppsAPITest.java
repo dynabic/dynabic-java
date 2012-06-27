@@ -2,50 +2,55 @@ package com.dynabic.sdk.java.platform.api;
 
 import java.util.List;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import com.dynabic.sdk.java.platform.model.ApplicationInCompanyResponse;
 import com.dynabic.sdk.java.platform.model.ApplicationPlan;
 import com.dynabic.sdk.java.platform.model.ApplicationResponse;
 import com.wordnik.swagger.runtime.exception.APIException;
 
+@Category(IntegrationTest.class)
 public class AppsAPITest extends AbstractIntegrationTest {
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetAllApplications() throws APIException {
 		List<ApplicationResponse> applications = AppsAPI.GetAllApplications();
 		Assert.assertNotNull(applications);
 	}
 
-	@Test(groups={"integration"}, enabled=false, description="GetApplicationCurrentPlan returns null")
+	@Ignore("GetApplicationCurrentPlan returns null")
+	@Test
 	public void GetApplicationCurrentPlan() throws APIException {
 		List<ApplicationInCompanyResponse> applications = AppsAPI.GetCompanyApplications();
 		ApplicationPlan plan = AppsAPI.GetApplicationCurrentPlan(applications.get(0).getApplication_id().toString());
 		Assert.assertNotNull(plan);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetCompanyApplicationById() throws APIException {
 		List<ApplicationInCompanyResponse> applications = AppsAPI.GetCompanyApplications();
 		ApplicationInCompanyResponse app = AppsAPI.GetCompanyApplicationById(applications.get(0).getApplication_id().toString());
 		Assert.assertNotNull(app);
 	}
 
-	@Test(groups={"integration"}, enabled=false, description="GetCompanyApplicationByName Analytics returns null")
+	@Ignore("CompanyApplicationByName Analytics returns null")
+	@Test
 	public void GetCompanyApplicationByName() throws APIException {
 		ApplicationInCompanyResponse app = AppsAPI.GetCompanyApplicationByName("Analytics");
 		Assert.assertNotNull(app);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetCompanyApplications() throws APIException {
 		List<ApplicationInCompanyResponse> applications = AppsAPI.GetCompanyApplications();
 		Assert.assertNotNull(applications);
 		Assert.assertTrue(applications.size() > 0);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void SetApplicationStatus() throws APIException {
 		List<ApplicationInCompanyResponse> applications = AppsAPI.GetCompanyApplications();
 		AppsAPI.SetApplicationStatus(applications.get(0).getId().toString(), "false");

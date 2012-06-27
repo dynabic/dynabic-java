@@ -1,21 +1,23 @@
 package com.dynabic.sdk.java.platform.api;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import com.dynabic.sdk.java.platform.model.CompanyInfoRequest;
 import com.dynabic.sdk.java.platform.model.CompanyInfoResponse;
 import com.wordnik.swagger.runtime.exception.APIException;
 
+@Category(IntegrationTest.class)
 public class CompanyinfoAPITest extends AbstractIntegrationTest {
 
-	@Test(groups={"integration"})
+	@Test
 	public void GetCompanyInfo() throws APIException {
 		CompanyInfoResponse companyInfo = CompanyinfoAPI.GetCompanyInfo();
 		Assert.assertNotNull(companyInfo);
 	}
 
-	@Test(groups={"integration"})
+	@Test
 	public void UpdateCompanyInfo() throws APIException {
 		CompanyInfoResponse companyInfo = CompanyinfoAPI.GetCompanyInfo();
 		Assert.assertNotNull(companyInfo);

@@ -22,22 +22,43 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.12</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>2.12</version>
+					</dependency>
+				</dependencies>
+                <configuration>
+             		<includes>
+             			<include>**/*.class</include>
+             		</includes>
+	            	<excludedGroups>com.dynabic.sdk.java.platform.api.IntegrationTest</excludedGroups>
+	            </configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.12</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>2.12</version>
+					</dependency>
+				</dependencies>
+                <configuration>
+             		<includes>
+             			<include>**/*.class</include>
+             		</includes>
+	            	<groups>com.dynabic.sdk.java.platform.api.IntegrationTest</groups>
+	            	<threadCount>1</threadCount>
+	            </configuration>
 				<executions>
 					<execution>
-                        <id>default-test</id>
-                        <configuration>
-                       		<excludedGroups>integration</excludedGroups>
-                        </configuration>
-                    </execution>
-					<execution>
-                        <id>api-integration</id>
-                        <phase>integration-test</phase>
                         <goals>
-                            <goal>test</goal>
+                            <goal>integration-test</goal>
                         </goals>
-                        <configuration>
-                       		<groups>integration</groups>
-                        </configuration>
                     </execution>
 				</executions>
 			</plugin>
@@ -90,9 +111,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>${testng-version}</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
 			<scope>test</scope>
 		</dependency>
 	    <dependency>
@@ -124,7 +145,6 @@
 	<properties>
     	<jersey-version>1.7</jersey-version>
     	<jackson-version>1.7.7</jackson-version>
-		<testng-version>6.3.1</testng-version>
 		<maven-plugin.version>1.0.0</maven-plugin.version>
 		<junit-version>4.8.1</junit-version>
 	    <commons-beanutils-version>1.8.0</commons-beanutils-version>

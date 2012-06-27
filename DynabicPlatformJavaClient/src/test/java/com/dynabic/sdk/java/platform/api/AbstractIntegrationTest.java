@@ -2,9 +2,9 @@ package com.dynabic.sdk.java.platform.api;
 
 import java.text.SimpleDateFormat;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
 
 import com.dynabic.sdk.java.platform.model.SiteRequest;
 import com.dynabic.sdk.java.platform.model.SiteResponse;
@@ -45,9 +45,9 @@ public abstract class AbstractIntegrationTest {
 
 	protected TestData testData;
 
-	@BeforeMethod
+	@Before
 	public void setUpSite() throws APIException {
-		log("Setting up site...");
+		log("Setting up site... " + Thread.currentThread().getName());
 
 		SiteResponse site = addSite();
 		Assert.assertNotNull(site);
@@ -60,7 +60,7 @@ public abstract class AbstractIntegrationTest {
 		testData.subdomain = site.getSubdomain();
 	}
 
-	@AfterMethod
+	@After
 	public void tearDownSite() {
 		log("Tearing down site...");
 		try {
