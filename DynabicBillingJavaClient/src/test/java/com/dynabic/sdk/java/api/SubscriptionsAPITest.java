@@ -43,6 +43,10 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 
 	@After
 	public void tearDownSubscription() {
+		if(subscription == null) {
+			return;
+		}
+
 		log("Tearing down Subscription...");
 		try {
 			SubscriptionsAPI.DeleteSubscription(subscription.getId().toString());
@@ -104,6 +108,7 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 	@Test
 	public void DeleteSubscription() throws APIException {
 		SubscriptionsAPI.DeleteSubscription(subscription.getId().toString());
+		subscription = null;
 	}
 
 	@Test
@@ -149,9 +154,9 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 
 		List<SubscriptionItemResponse> components = SubscriptionsAPI.GetSubscriptionItems(subscription.getId().toString());
 		Assert.assertNotNull(components);
-		Assert.assertEquals(components.size(), 2);
-		Assert.assertEquals(components.get(0).getQuantity().intValue(), 50);
-		Assert.assertEquals(components.get(0).getUpdate_history().size(), 3); // 2 from this method + 1 from Add item operation
+		Assert.assertEquals(2, components.size());
+		Assert.assertEquals(50, components.get(0).getQuantity().intValue());
+		Assert.assertEquals(3, components.get(0).getUpdate_history().size());
 	}
 
 	@Test
@@ -229,9 +234,9 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 		SubscriptionsAPI.ResetSubscriptionMeteredItems(subscription.getId().toString());
 		components = SubscriptionsAPI.GetSubscriptionItems(subscription.getId().toString());
 		Assert.assertNotNull(components);
-		Assert.assertEquals(components.size(), 2);
-		Assert.assertEquals(components.get(0).getQuantity().intValue(), 0);
-		Assert.assertEquals(components.get(0).getUpdate_history().size(), 0);
+		Assert.assertEquals(2, components.size());
+		Assert.assertEquals(0, components.get(0).getQuantity().intValue());
+		Assert.assertEquals(0, components.get(0).getUpdate_history().size());
 	}
 
 	@Test
@@ -264,7 +269,7 @@ public class SubscriptionsAPITest extends AbstractIntegrationTest {
 	@Test
 	public void UpgradeDowngradeSubscriptionProduct() throws APIException {
 		ProductResponse product = ProductsAPI.GetProductById(subscription.getProduct_id().toString());
-        ProductResponse secondProduct = addProductToFamily(product.getProduct_family_id());
+        ProductResponse secondProduct = addSecondProductToFamily(product.getProduct_family_id());
         SubscriptionsAPI.UpgradeDowngradeSubscriptionProduct(subscription.getId().toString(), secondProduct.getPricing_plans().get(0).getId().toString(), "true", "true");
 	}
 }

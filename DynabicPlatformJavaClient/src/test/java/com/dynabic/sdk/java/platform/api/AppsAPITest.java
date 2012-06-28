@@ -15,6 +15,10 @@ import com.wordnik.swagger.runtime.exception.APIException;
 @Category(IntegrationTest.class)
 public class AppsAPITest extends AbstractIntegrationTest {
 
+	{
+		runSetup = false;
+	}
+
 	@Test
 	public void GetAllApplications() throws APIException {
 		List<ApplicationResponse> applications = AppsAPI.GetAllApplications();

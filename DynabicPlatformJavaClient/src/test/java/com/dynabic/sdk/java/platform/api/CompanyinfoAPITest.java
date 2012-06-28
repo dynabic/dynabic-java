@@ -11,6 +11,10 @@ import com.wordnik.swagger.runtime.exception.APIException;
 @Category(IntegrationTest.class)
 public class CompanyinfoAPITest extends AbstractIntegrationTest {
 
+	{
+		runSetup = false;
+	}
+
 	@Test
 	public void GetCompanyInfo() throws APIException {
 		CompanyInfoResponse companyInfo = CompanyinfoAPI.GetCompanyInfo();

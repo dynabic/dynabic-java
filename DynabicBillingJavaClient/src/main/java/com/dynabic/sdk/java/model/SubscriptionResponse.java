@@ -20,8 +20,6 @@ import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
 import java.util.Date;
-import java.util.List;
-import java.util.ArrayList;
 
 
 /**
@@ -109,11 +107,6 @@ public class SubscriptionResponse extends Object {
      * 
      */
 	 private Double revenue ;
-
-    /**
-     * 
-     */
-	 private List<SubscriptionItemResponse> subscription_items  =  new ArrayList<SubscriptionItemResponse>();
 
     /**
      * 
@@ -364,19 +357,6 @@ public class SubscriptionResponse extends Object {
 	 
 	 public void setRevenue(Double  revenue) {
 	 	this.revenue = revenue;
-	 }
-
-	/**
-	 * 
-	 * 
-	 * 
-	 */
-	 public List<SubscriptionItemResponse> getSubscription_items() {
-	 	return subscription_items;
-	 }  
-	 
-	 public void setSubscription_items(List<SubscriptionItemResponse>  subscription_items) {
-	 	this.subscription_items = subscription_items;
 	 }
 
 	/**

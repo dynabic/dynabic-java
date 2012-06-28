@@ -18,7 +18,7 @@ public class ProductsAPITest extends AbstractIntegrationTest {
 	private ProductResponse product;
 
 	@Before
-	public void setUpSubscription() throws APIException {
+	public void setUpProduct() throws APIException {
 		log("Setting up Product...");
 		product = addProduct(testData.siteId);
 		Assert.assertNotNull(product);
@@ -26,10 +26,14 @@ public class ProductsAPITest extends AbstractIntegrationTest {
 	}
 
 	@After
-	public void tearDownSubscription() {
+	public void tearDownProduct() {
+		if(product == null) {
+			return;
+		}
+
 		log("Tearing down Product...");
 		try {
-			SubscriptionsAPI.DeleteSubscription(product.getId().toString());
+			ProductsAPI.DeleteProduct(product.getId().toString());
 		} catch (APIException ignore) {
 			// already deleted
 		}
@@ -69,6 +73,7 @@ public class ProductsAPITest extends AbstractIntegrationTest {
 	@Test
 	public void DeleteProduct() throws APIException {
 		ProductsAPI.DeleteProduct(product.getId().toString());
+		product = null;
 	}
 
 	@Test

@@ -44,29 +44,34 @@ public abstract class AbstractIntegrationTest {
 	}
 
 	protected TestData testData;
+	protected boolean runSetup = true;
 
 	@Before
 	public void setUpSite() throws APIException {
-		log("Setting up site... " + Thread.currentThread().getName());
+		if(runSetup){
+			log("Setting up site... " + Thread.currentThread().getName());
 
-		SiteResponse site = addSite();
-		Assert.assertNotNull(site);
-		Assert.assertNotNull(site.getId());
-		Assert.assertNotNull(site.getName());
-		Assert.assertNotNull(site.getSubdomain());
-		testData = new TestData();
-		testData.siteId = site.getId();
-		testData.siteName = site.getName();
-		testData.subdomain = site.getSubdomain();
+			SiteResponse site = addSite();
+			Assert.assertNotNull(site);
+			Assert.assertNotNull(site.getId());
+			Assert.assertNotNull(site.getName());
+			Assert.assertNotNull(site.getSubdomain());
+			testData = new TestData();
+			testData.siteId = site.getId();
+			testData.siteName = site.getName();
+			testData.subdomain = site.getSubdomain();
+		}
 	}
 
 	@After
 	public void tearDownSite() {
-		log("Tearing down site...");
-		try {
-			SitesAPI.DeleteSite(testData.siteId.toString());
-		} catch (APIException ignore) {
-			// already deleted
+		if(runSetup){
+			log("Tearing down site...");
+			try {
+				SitesAPI.DeleteSite(testData.siteId.toString());
+			} catch (APIException ignore) {
+				// already deleted
+			}
 		}
 	}
 

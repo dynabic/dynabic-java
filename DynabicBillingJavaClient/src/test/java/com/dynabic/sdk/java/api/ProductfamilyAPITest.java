@@ -27,6 +27,10 @@ public class ProductfamilyAPITest extends AbstractIntegrationTest {
 
 	@After
 	public void tearDownProductFamily() {
+		if(pf == null) {
+			return;
+		}
+
 		log("Tearing down ProductFamily...");
 		try {
 			ProductfamilyAPI.DeleteProductFamily(pf.getId().toString());
@@ -78,6 +82,7 @@ public class ProductfamilyAPITest extends AbstractIntegrationTest {
 		Assert.assertNotNull(productFamily);
 
 		ProductfamilyAPI.DeleteProductFamily(pf.getId().toString());
+		pf = null;
 		List<ProductFamilyResponse> productFamilies = ProductfamilyAPI.GetProductFamilies(testData.subdomain, null, null, null);
 		Assert.assertNotNull(productFamilies);
 		Assert.assertTrue(productFamilies.size() == 0);

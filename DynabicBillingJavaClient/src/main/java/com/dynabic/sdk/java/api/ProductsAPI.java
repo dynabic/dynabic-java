@@ -44,15 +44,15 @@ public class ProductsAPI extends Object {
 	/**
 	 * GetProductsBySite
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param siteSubdomain  site Subdomain
      *  @param isArchived  is Archived
      *  @param pageNumber  page number
      *  @param pageSize  page size
-     *
-	 * @return List<ProductResponse> {@link ProductResponse}
-	 * @throws APIException
+     *  
+	 * @return List<ProductResponse> {@link ProductResponse} 
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="siteSubdomain, isArchived, pageNumber, pageSize")
 	 public static List<ProductResponse> GetProductsBySite(String siteSubdomain, String isArchived, String pageNumber, String pageSize) throws APIException {
@@ -95,14 +95,14 @@ public class ProductsAPI extends Object {
 	/**
 	 * GetProductsBySiteAndFamily
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param siteSubdomain  site Subdomain
      *  @param productFamilyName  product Family Name
      *  @param isArchived  is Archived
-     *
-	 * @return List<ProductResponse> {@link ProductResponse}
-	 * @throws APIException
+     *  
+	 * @return List<ProductResponse> {@link ProductResponse} 
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="siteSubdomain, productFamilyName, isArchived")
 	 public static List<ProductResponse> GetProductsBySiteAndFamily(String siteSubdomain, String productFamilyName, String isArchived) throws APIException {
@@ -142,13 +142,13 @@ public class ProductsAPI extends Object {
 	/**
 	 * GetProductsBySiteAndProductName
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param siteSubdomain  site Subdomain
      *  @param productName  product Name
-     *
-	 * @return List<ProductResponse> {@link ProductResponse}
-	 * @throws APIException
+     *  
+	 * @return List<ProductResponse> {@link ProductResponse} 
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="siteSubdomain, productName")
 	 public static List<ProductResponse> GetProductsBySiteAndProductName(String siteSubdomain, String productName) throws APIException {
@@ -185,13 +185,13 @@ public class ProductsAPI extends Object {
 	/**
 	 * GetProductByApiRef
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param siteId  site Id
      *  @param apiRef  api Ref
-     *
-	 * @return ProductResponse {@link ProductResponse}
-	 * @throws APIException
+     *  
+	 * @return ProductResponse {@link ProductResponse} 
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="siteId, apiRef")
 	 public static ProductResponse GetProductByApiRef(String siteId, String apiRef) throws APIException {
@@ -224,13 +224,13 @@ public class ProductsAPI extends Object {
 	/**
 	 * GetProductsByFamilyId
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param productFamilyId  product Family Id
      *  @param isArchived  is Archived
-     *
-	 * @return List<ProductResponse> {@link ProductResponse}
-	 * @throws APIException
+     *  
+	 * @return List<ProductResponse> {@link ProductResponse} 
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="productFamilyId, isArchived")
 	 public static List<ProductResponse> GetProductsByFamilyId(String productFamilyId, String isArchived) throws APIException {
@@ -267,13 +267,13 @@ public class ProductsAPI extends Object {
 	/**
 	 * GetProductByFamilyIdAndProductName
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param productFamilyId  product Family Id
      *  @param productName  product Name
-     *
-	 * @return ProductResponse {@link ProductResponse}
-	 * @throws APIException
+     *  
+	 * @return ProductResponse {@link ProductResponse} 
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="productFamilyId, productName")
 	 public static ProductResponse GetProductByFamilyIdAndProductName(String productFamilyId, String productName) throws APIException {
@@ -306,12 +306,12 @@ public class ProductsAPI extends Object {
 	/**
 	 * GetProductById
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param productId  product Id
-     *
-	 * @return ProductResponse {@link ProductResponse}
-	 * @throws APIException
+     *  
+	 * @return ProductResponse {@link ProductResponse} 
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="productId")
 	 public static ProductResponse GetProductById(String productId) throws APIException {
@@ -341,12 +341,12 @@ public class ProductsAPI extends Object {
 	/**
 	 * AddProduct
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param postData  new Product
-     *
-	 * @return ProductResponse {@link ProductResponse}
-	 * @throws APIException
+     *  
+	 * @return ProductResponse {@link ProductResponse} 
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="postData")
 	 public static ProductResponse AddProduct(ProductRequest postData) throws APIException {
@@ -372,13 +372,13 @@ public class ProductsAPI extends Object {
 	/**
 	 * UpdateProduct
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param postData  updated Product
      *  @param productId  product Id
-     *
-	 * @return ProductResponse {@link ProductResponse}
-	 * @throws APIException
+     *  
+	 * @return ProductResponse {@link ProductResponse} 
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="postData, productId")
 	 public static ProductResponse UpdateProduct(ProductRequest postData, String productId) throws APIException {
@@ -408,11 +408,11 @@ public class ProductsAPI extends Object {
 	/**
 	 * DeleteProduct
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param productId  product Id
-     *
-	 * @throws APIException
+     *  
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="productId")
 	 public static void DeleteProduct(String productId) throws APIException {
@@ -436,11 +436,11 @@ public class ProductsAPI extends Object {
 	/**
 	 * ArchiveProduct
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param productId  product Id
-     *
-	 * @throws APIException
+     *  
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="productId")
 	 public static void ArchiveProduct(String productId) throws APIException {
@@ -464,11 +464,11 @@ public class ProductsAPI extends Object {
 	/**
 	 * ActivateProduct
 	 *
-	 *
-	 *
+	 * 
+	 * 
      * @param productId  product Id
-     *
-	 * @throws APIException
+     *  
+	 * @throws APIException 
 	 */
 	 @MethodArgumentNames(value="productId")
 	 public static void ActivateProduct(String productId) throws APIException {

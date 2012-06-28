@@ -214,6 +214,34 @@ public abstract class AbstractIntegrationTest {
 		return ProductsAPI.AddProduct(product);
 	}
 
+	public ProductResponse addSecondProductToFamily(int familyId) throws APIException {
+		ProductRequest product = newProduct(familyId);
+		product.setId(0);
+		product.setApi_reference1("api ref test");
+		product.setName("new name");
+		PricingPlanRequest pricingPlan = newPricingPlanRequest();
+		pricingPlan.setName("new test pricing plan");
+		product.getPricing_plans().add(pricingPlan);
+
+		ProductPricingPlanPaymentScheduleRequest paymentSchedule = newProductPricingPlanPaymentScheduleRequest();
+		paymentSchedule.setName("new pricing plan schedule");
+		pricingPlan.getPricing_plan_payment_schedules().add(paymentSchedule);
+
+		List<ProductMeteredPriceRequest> meteredPriceList = new ArrayList<ProductMeteredPriceRequest>();
+		ProductMeteredPriceRequest meteredPrice = new ProductMeteredPriceRequest();
+		meteredPrice.setId(0);
+		meteredPrice.setStart_quantity(1d);
+		meteredPrice.setUnit_price(3d);
+		meteredPrice.setEnd_quantity(8d);
+		meteredPriceList.add(meteredPrice);
+
+		ProductItemRequest productItem = newProductItemRequest("test unique product item 1", "2");
+		productItem.setMetered_prices(meteredPriceList);
+		pricingPlan.getProduct_items().add(productItem);
+
+		return ProductsAPI.AddProduct(product);
+	}
+
 	public ProductItemRequest newProductItemRequest(String itemName, String itemType) {
 		ProductItemRequest productItem = new ProductItemRequest();
 		productItem.setCharge_model("0");
@@ -330,3 +358,4 @@ public abstract class AbstractIntegrationTest {
 	    public String subdomain;
 	}
 }
+
