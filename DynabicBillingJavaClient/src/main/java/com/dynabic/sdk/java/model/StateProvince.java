@@ -31,25 +31,30 @@ import java.util.List;
 public class StateProvince extends Object {
 
 
+
     /**
      * 
      */
 	 private String Name ;
+
 
     /**
      * 
      */
 	 private String CountryTwoLetterISOCode ;
 
+
     /**
      * 
      */
 	 private Integer Id ;
 
+
     /**
      * 
      */
 	 private String ProvinceNumber ;
+
 
 
 	/**
@@ -65,6 +70,7 @@ public class StateProvince extends Object {
 	 	this.Name = Name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -78,6 +84,7 @@ public class StateProvince extends Object {
 	 	this.CountryTwoLetterISOCode = CountryTwoLetterISOCode;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -90,6 +97,7 @@ public class StateProvince extends Object {
 	 public void setId(Integer  Id) {
 	 	this.Id = Id;
 	 }
+
 
 	/**
 	 * 

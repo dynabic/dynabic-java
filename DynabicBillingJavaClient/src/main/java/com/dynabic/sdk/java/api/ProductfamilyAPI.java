@@ -26,7 +26,11 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
 import java.lang.Long;
 import java.io.IOException;
 
@@ -40,6 +44,7 @@ import java.io.IOException;
 public class ProductfamilyAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
+
 
 	/**
 	 * GetProductFamilies
@@ -63,15 +68,19 @@ public class ProductfamilyAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( isArchived != null) {
 			resourcePath = resourcePath.replace("{isArchived}", APIInvoker.toPathValue(isArchived));
 		}
+
 		if( pageNumber != null) {
 			resourcePath = resourcePath.replace("{pageNumber}", APIInvoker.toPathValue(pageNumber));
 		}
+
 		if( pageSize != null) {
 			resourcePath = resourcePath.replace("{pageSize}", APIInvoker.toPathValue(pageSize));
 		}
@@ -92,6 +101,7 @@ public class ProductfamilyAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
+
 	/**
 	 * GetProductFamilyById
 	 *
@@ -111,6 +121,7 @@ public class ProductfamilyAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( productFamilyId != null) {
 			resourcePath = resourcePath.replace("{productFamilyId}", APIInvoker.toPathValue(productFamilyId));
 		}
@@ -126,6 +137,7 @@ public class ProductfamilyAPI extends Object {
 		ProductFamilyResponse responseObject = (ProductFamilyResponse) getApiInvoker().deserialize(response, ProductFamilyResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetProductFamilyByName
@@ -147,9 +159,11 @@ public class ProductfamilyAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( productFamilyName != null) {
 			resourcePath = resourcePath.replace("{productFamilyName}", APIInvoker.toPathValue(productFamilyName));
 		}
@@ -165,6 +179,7 @@ public class ProductfamilyAPI extends Object {
 		ProductFamilyResponse responseObject = (ProductFamilyResponse) getApiInvoker().deserialize(response, ProductFamilyResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * AddProductFamily
@@ -197,6 +212,7 @@ public class ProductfamilyAPI extends Object {
 		return responseObject;
 	}
 
+
 	/**
 	 * UpdateProductFamily
 	 *
@@ -217,6 +233,7 @@ public class ProductfamilyAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( productFamilyId != null) {
 			resourcePath = resourcePath.replace("{productFamilyId}", APIInvoker.toPathValue(productFamilyId));
 		}
@@ -232,6 +249,7 @@ public class ProductfamilyAPI extends Object {
 		ProductFamilyResponse responseObject = (ProductFamilyResponse) getApiInvoker().deserialize(response, ProductFamilyResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * DeleteProductFamily
@@ -251,6 +269,7 @@ public class ProductfamilyAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( productFamilyId != null) {
 			resourcePath = resourcePath.replace("{productFamilyId}", APIInvoker.toPathValue(productFamilyId));
 		}
@@ -260,6 +279,7 @@ public class ProductfamilyAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
+
 
 	/**
 	 * ArchiveProductFamily
@@ -279,6 +299,7 @@ public class ProductfamilyAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( productFamilyId != null) {
 			resourcePath = resourcePath.replace("{productFamilyId}", APIInvoker.toPathValue(productFamilyId));
 		}
@@ -288,6 +309,7 @@ public class ProductfamilyAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
+
 
 	/**
 	 * ActivateProductFamily
@@ -308,9 +330,11 @@ public class ProductfamilyAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( productFamilyId != null) {
 			resourcePath = resourcePath.replace("{productFamilyId}", APIInvoker.toPathValue(productFamilyId));
 		}
+
 		if( activateProducts != null) {
 			resourcePath = resourcePath.replace("{activateProducts}", APIInvoker.toPathValue(activateProducts));
 		}

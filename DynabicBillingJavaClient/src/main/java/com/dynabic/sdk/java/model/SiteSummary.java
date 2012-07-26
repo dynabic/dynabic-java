@@ -19,7 +19,9 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.List;
+
 import java.util.ArrayList;
 
 
@@ -34,35 +36,42 @@ import java.util.ArrayList;
 public class SiteSummary extends Object {
 
 
+
     /**
      * 
      */
 	 private List<RevenueAmount> today_revenues  =  new ArrayList<RevenueAmount>();
+
 
     /**
      * 
      */
 	 private Integer total_subscribers ;
 
+
     /**
      * 
      */
 	 private Integer today_new_subscriptions ;
+
 
     /**
      * 
      */
 	 private List<RevenueAmount> total_revenues  =  new ArrayList<RevenueAmount>();
 
+
     /**
      * 
      */
 	 private Integer site_id ;
 
+
     /**
      * 
      */
 	 private String site_name ;
+
 
 
 	/**
@@ -78,6 +87,7 @@ public class SiteSummary extends Object {
 	 	this.today_revenues = today_revenues;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -90,6 +100,7 @@ public class SiteSummary extends Object {
 	 public void setTotal_subscribers(Integer  total_subscribers) {
 	 	this.total_subscribers = total_subscribers;
 	 }
+
 
 	/**
 	 * 
@@ -104,6 +115,7 @@ public class SiteSummary extends Object {
 	 	this.today_new_subscriptions = today_new_subscriptions;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -117,6 +129,7 @@ public class SiteSummary extends Object {
 	 	this.total_revenues = total_revenues;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -129,6 +142,7 @@ public class SiteSummary extends Object {
 	 public void setSite_id(Integer  site_id) {
 	 	this.site_id = site_id;
 	 }
+
 
 	/**
 	 * 

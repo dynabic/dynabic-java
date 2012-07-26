@@ -19,6 +19,7 @@ package com.dynabic.sdk.java.platform.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
 
 
@@ -33,30 +34,36 @@ import java.util.Date;
 public class ApplicationInCompanyResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer id ;
 
-    /**
-     * 
-     */
-	 private Date added ;
 
     /**
      * 
      */
-	 private Date updated ;
+	 private java.util.Date added ;
+
+
+    /**
+     * 
+     */
+	 private java.util.Date updated ;
+
 
     /**
      * 
      */
 	 private Boolean active ;
 
+
     /**
      * 
      */
 	 private Integer application_id ;
+
 
 
 	/**
@@ -72,31 +79,34 @@ public class ApplicationInCompanyResponse extends Object {
 	 	this.id = id;
 	 }
 
-	/**
-	 * 
-	 * 
-	 * 
-	 */
-	 public Date getAdded() {
-	 	return added;
-	 }  
-	 
-	 public void setAdded(Date  added) {
-	 	this.added = added;
-	 }
 
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getUpdated() {
+	 public java.util.Date getAdded() {
+	 	return added;
+	 }  
+	 
+	 public void setAdded(java.util.Date  added) {
+	 	this.added = added;
+	 }
+
+
+	/**
+	 * 
+	 * 
+	 * 
+	 */
+	 public java.util.Date getUpdated() {
 	 	return updated;
 	 }  
 	 
-	 public void setUpdated(Date  updated) {
+	 public void setUpdated(java.util.Date  updated) {
 	 	this.updated = updated;
 	 }
+
 
 	/**
 	 * 
@@ -110,6 +120,7 @@ public class ApplicationInCompanyResponse extends Object {
 	 public void setActive(Boolean  active) {
 	 	this.active = active;
 	 }
+
 
 	/**
 	 * 

@@ -19,6 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
 
 
@@ -33,85 +34,102 @@ import java.util.Date;
 public class Address extends Object {
 
 
+
     /**
      * 
      */
-	 private Date UpdatedOn ;
+	 private java.util.Date UpdatedOn ;
+
 
     /**
      * 
      */
 	 private String PhoneNumber ;
 
+
     /**
      * 
      */
 	 private Integer StateProvinceId ;
+
 
     /**
      * 
      */
 	 private String LastName ;
 
+
     /**
      * 
      */
 	 private String City ;
+
 
     /**
      * 
      */
 	 private String Email ;
 
+
     /**
      * 
      */
 	 private Integer CustomerId ;
+
 
     /**
      * 
      */
 	 private String Address2 ;
 
+
     /**
      * 
      */
 	 private String FaxNumber ;
+
 
     /**
      * 
      */
 	 private String Address1 ;
 
+
     /**
      * 
      */
-	 private Date CreatedOn ;
+	 private java.util.Date CreatedOn ;
+
 
     /**
      * 
      */
 	 private Integer CountryId ;
 
+
     /**
      * 
      */
 	 private Boolean IsBillingAddress ;
+
 
     /**
      * 
      */
 	 private String FirstName ;
 
+
     /**
      * 
      */
 	 private Integer Id ;
 
+
     /**
      * 
      */
 	 private String Company ;
+
 
     /**
      * 
@@ -119,18 +137,20 @@ public class Address extends Object {
 	 private String ZipPostalCode ;
 
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getUpdatedOn() {
+	 public java.util.Date getUpdatedOn() {
 	 	return UpdatedOn;
 	 }  
 	 
-	 public void setUpdatedOn(Date  UpdatedOn) {
+	 public void setUpdatedOn(java.util.Date  UpdatedOn) {
 	 	this.UpdatedOn = UpdatedOn;
 	 }
+
 
 	/**
 	 * 
@@ -145,6 +165,7 @@ public class Address extends Object {
 	 	this.PhoneNumber = PhoneNumber;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -157,6 +178,7 @@ public class Address extends Object {
 	 public void setStateProvinceId(Integer  StateProvinceId) {
 	 	this.StateProvinceId = StateProvinceId;
 	 }
+
 
 	/**
 	 * 
@@ -171,6 +193,7 @@ public class Address extends Object {
 	 	this.LastName = LastName;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -183,6 +206,7 @@ public class Address extends Object {
 	 public void setCity(String  City) {
 	 	this.City = City;
 	 }
+
 
 	/**
 	 * 
@@ -197,6 +221,7 @@ public class Address extends Object {
 	 	this.Email = Email;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -209,6 +234,7 @@ public class Address extends Object {
 	 public void setCustomerId(Integer  CustomerId) {
 	 	this.CustomerId = CustomerId;
 	 }
+
 
 	/**
 	 * 
@@ -223,6 +249,7 @@ public class Address extends Object {
 	 	this.Address2 = Address2;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -235,6 +262,7 @@ public class Address extends Object {
 	 public void setFaxNumber(String  FaxNumber) {
 	 	this.FaxNumber = FaxNumber;
 	 }
+
 
 	/**
 	 * 
@@ -249,18 +277,20 @@ public class Address extends Object {
 	 	this.Address1 = Address1;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getCreatedOn() {
+	 public java.util.Date getCreatedOn() {
 	 	return CreatedOn;
 	 }  
 	 
-	 public void setCreatedOn(Date  CreatedOn) {
+	 public void setCreatedOn(java.util.Date  CreatedOn) {
 	 	this.CreatedOn = CreatedOn;
 	 }
+
 
 	/**
 	 * 
@@ -275,6 +305,7 @@ public class Address extends Object {
 	 	this.CountryId = CountryId;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -287,6 +318,7 @@ public class Address extends Object {
 	 public void setIsBillingAddress(Boolean  IsBillingAddress) {
 	 	this.IsBillingAddress = IsBillingAddress;
 	 }
+
 
 	/**
 	 * 
@@ -301,6 +333,7 @@ public class Address extends Object {
 	 	this.FirstName = FirstName;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -314,6 +347,7 @@ public class Address extends Object {
 	 	this.Id = Id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -326,6 +360,7 @@ public class Address extends Object {
 	 public void setCompany(String  Company) {
 	 	this.Company = Company;
 	 }
+
 
 	/**
 	 * 

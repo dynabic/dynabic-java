@@ -31,15 +31,18 @@ import java.util.List;
 public class SetActiveMarketingPlanResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private Boolean success ;
 
+
     /**
      * 
      */
 	 private Integer active_subscription_id ;
+
 
 
 	/**
@@ -54,6 +57,7 @@ public class SetActiveMarketingPlanResponse extends Object {
 	 public void setSuccess(Boolean  success) {
 	 	this.success = success;
 	 }
+
 
 	/**
 	 * 

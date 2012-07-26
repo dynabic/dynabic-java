@@ -19,7 +19,9 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.List;
+
 import java.util.ArrayList;
 
 
@@ -34,60 +36,72 @@ import java.util.ArrayList;
 public class ProductItemResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private Integer product_item_id ;
 
+
     /**
      * 
      */
 	 private Boolean is_visible_on_hosted_page ;
+
 
     /**
      * 
      */
 	 private String description ;
 
+
     /**
      * 
      */
 	 private String charge_model ;
+
 
     /**
      * 
      */
 	 private String name ;
 
+
     /**
      * 
      */
 	 private List<ProductItemResponse> product_item_children  =  new ArrayList<ProductItemResponse>();
+
 
     /**
      * 
      */
 	 private String unit_name ;
 
+
     /**
      * 
      */
 	 private Integer pricing_plan_id ;
+
 
     /**
      * 
      */
 	 private List<ProductMeteredPriceResponse> metered_prices  =  new ArrayList<ProductMeteredPriceResponse>();
 
+
     /**
      * 
      */
 	 private String item_type ;
+
 
 
 	/**
@@ -103,6 +117,7 @@ public class ProductItemResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -115,6 +130,7 @@ public class ProductItemResponse extends Object {
 	 public void setProduct_item_id(Integer  product_item_id) {
 	 	this.product_item_id = product_item_id;
 	 }
+
 
 	/**
 	 * 
@@ -129,6 +145,7 @@ public class ProductItemResponse extends Object {
 	 	this.is_visible_on_hosted_page = is_visible_on_hosted_page;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -141,6 +158,7 @@ public class ProductItemResponse extends Object {
 	 public void setDescription(String  description) {
 	 	this.description = description;
 	 }
+
 
 	/**
 	 * 
@@ -155,6 +173,7 @@ public class ProductItemResponse extends Object {
 	 	this.charge_model = charge_model;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -167,6 +186,7 @@ public class ProductItemResponse extends Object {
 	 public void setName(String  name) {
 	 	this.name = name;
 	 }
+
 
 	/**
 	 * 
@@ -181,6 +201,7 @@ public class ProductItemResponse extends Object {
 	 	this.product_item_children = product_item_children;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -193,6 +214,7 @@ public class ProductItemResponse extends Object {
 	 public void setUnit_name(String  unit_name) {
 	 	this.unit_name = unit_name;
 	 }
+
 
 	/**
 	 * 
@@ -207,6 +229,7 @@ public class ProductItemResponse extends Object {
 	 	this.pricing_plan_id = pricing_plan_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -219,6 +242,7 @@ public class ProductItemResponse extends Object {
 	 public void setMetered_prices(List<ProductMeteredPriceResponse>  metered_prices) {
 	 	this.metered_prices = metered_prices;
 	 }
+
 
 	/**
 	 * 

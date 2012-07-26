@@ -19,7 +19,9 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.List;
+
 import java.util.ArrayList;
 
 
@@ -34,45 +36,54 @@ import java.util.ArrayList;
 public class PricingPlanRequest extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private Integer trial_period_duration_days ;
 
+
     /**
      * 
      */
 	 private Double trial_period_charge ;
+
 
     /**
      * 
      */
 	 private String name ;
 
+
     /**
      * 
      */
 	 private Double upfront_charge ;
+
 
     /**
      * 
      */
 	 private List<ProductItemRequest> product_items  =  new ArrayList<ProductItemRequest>();
 
+
     /**
      * 
      */
 	 private List<ProductPricingPlanPaymentScheduleRequest> pricing_plan_payment_schedules  =  new ArrayList<ProductPricingPlanPaymentScheduleRequest>();
 
+
     /**
      * 
      */
 	 private String currency_code ;
+
 
 
 	/**
@@ -88,6 +99,7 @@ public class PricingPlanRequest extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -100,6 +112,7 @@ public class PricingPlanRequest extends Object {
 	 public void setTrial_period_duration_days(Integer  trial_period_duration_days) {
 	 	this.trial_period_duration_days = trial_period_duration_days;
 	 }
+
 
 	/**
 	 * 
@@ -114,6 +127,7 @@ public class PricingPlanRequest extends Object {
 	 	this.trial_period_charge = trial_period_charge;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -126,6 +140,7 @@ public class PricingPlanRequest extends Object {
 	 public void setName(String  name) {
 	 	this.name = name;
 	 }
+
 
 	/**
 	 * 
@@ -140,6 +155,7 @@ public class PricingPlanRequest extends Object {
 	 	this.upfront_charge = upfront_charge;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -153,6 +169,7 @@ public class PricingPlanRequest extends Object {
 	 	this.product_items = product_items;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -165,6 +182,7 @@ public class PricingPlanRequest extends Object {
 	 public void setPricing_plan_payment_schedules(List<ProductPricingPlanPaymentScheduleRequest>  pricing_plan_payment_schedules) {
 	 	this.pricing_plan_payment_schedules = pricing_plan_payment_schedules;
 	 }
+
 
 	/**
 	 * 

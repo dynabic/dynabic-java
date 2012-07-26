@@ -19,7 +19,9 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.List;
+
 import java.util.ArrayList;
 
 
@@ -34,25 +36,30 @@ import java.util.ArrayList;
 public class ProductFamilyRequest extends Object {
 
 
+
     /**
      * 
      */
 	 private String description ;
+
 
     /**
      * 
      */
 	 private String name ;
 
+
     /**
      * 
      */
 	 private Integer site_id ;
 
+
     /**
      * 
      */
 	 private List<ProductRequest> products  =  new ArrayList<ProductRequest>();
+
 
 
 	/**
@@ -68,6 +75,7 @@ public class ProductFamilyRequest extends Object {
 	 	this.description = description;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -81,6 +89,7 @@ public class ProductFamilyRequest extends Object {
 	 	this.name = name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -93,6 +102,7 @@ public class ProductFamilyRequest extends Object {
 	 public void setSite_id(Integer  site_id) {
 	 	this.site_id = site_id;
 	 }
+
 
 	/**
 	 * 

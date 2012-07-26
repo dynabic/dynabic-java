@@ -19,6 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
 
 
@@ -33,130 +34,156 @@ import java.util.Date;
 public class SubscriptionResponse extends Object {
 
 
+
     /**
      * 
      */
-	 private Date signup_date ;
+	 private java.util.Date signup_date ;
+
 
     /**
      * 
      */
 	 private Integer product_id ;
 
+
     /**
      * 
      */
 	 private ServiceResult service_result ;
+
 
     /**
      * 
      */
 	 private ProductResponse next_product ;
 
+
     /**
      * 
      */
 	 private CustomerResponse customer ;
 
+
     /**
      * 
      */
-	 private Date next_assesment ;
+	 private java.util.Date next_assesment ;
+
 
     /**
      * 
      */
 	 private String cancellation_details ;
 
+
     /**
      * 
      */
 	 private Integer billing_address_id ;
+
 
     /**
      * 
      */
 	 private Currency currency ;
 
+
     /**
      * 
      */
 	 private PricingPlanResponse product_pricing_plan ;
+
 
     /**
      * 
      */
 	 private Integer id ;
 
+
     /**
      * 
      */
-	 private Date end_date ;
+	 private java.util.Date end_date ;
+
 
     /**
      * 
      */
 	 private CreditCardResponse credit_card ;
 
+
     /**
      * 
      */
 	 private Double current_ballance ;
+
 
     /**
      * 
      */
 	 private Double revenue ;
 
+
     /**
      * 
      */
 	 private String status ;
+
 
     /**
      * 
      */
 	 private Boolean is_cancelled_at_end_of_period ;
 
+
     /**
      * 
      */
 	 private PricingPlanResponse next_product_pricing_plan ;
 
+
     /**
      * 
      */
-	 private Date cancellation_date ;
+	 private java.util.Date cancellation_date ;
+
 
     /**
      * 
      */
 	 private ProductResponse product ;
 
+
     /**
      * 
      */
 	 private Integer credit_card_id ;
+
 
     /**
      * 
      */
 	 private Boolean is_trial ;
 
+
     /**
      * 
      */
 	 private Integer pricing_plan_id ;
 
+
     /**
      * 
      */
-	 private Date start_date ;
+	 private java.util.Date start_date ;
+
 
     /**
      * 
      */
 	 private Integer customer_id ;
+
 
     /**
      * 
@@ -164,18 +191,20 @@ public class SubscriptionResponse extends Object {
 	 private AddressResponse billing_address ;
 
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getSignup_date() {
+	 public java.util.Date getSignup_date() {
 	 	return signup_date;
 	 }  
 	 
-	 public void setSignup_date(Date  signup_date) {
+	 public void setSignup_date(java.util.Date  signup_date) {
 	 	this.signup_date = signup_date;
 	 }
+
 
 	/**
 	 * 
@@ -190,6 +219,7 @@ public class SubscriptionResponse extends Object {
 	 	this.product_id = product_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -202,6 +232,7 @@ public class SubscriptionResponse extends Object {
 	 public void setService_result(ServiceResult  service_result) {
 	 	this.service_result = service_result;
 	 }
+
 
 	/**
 	 * 
@@ -216,6 +247,7 @@ public class SubscriptionResponse extends Object {
 	 	this.next_product = next_product;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -229,18 +261,20 @@ public class SubscriptionResponse extends Object {
 	 	this.customer = customer;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getNext_assesment() {
+	 public java.util.Date getNext_assesment() {
 	 	return next_assesment;
 	 }  
 	 
-	 public void setNext_assesment(Date  next_assesment) {
+	 public void setNext_assesment(java.util.Date  next_assesment) {
 	 	this.next_assesment = next_assesment;
 	 }
+
 
 	/**
 	 * 
@@ -255,6 +289,7 @@ public class SubscriptionResponse extends Object {
 	 	this.cancellation_details = cancellation_details;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -267,6 +302,7 @@ public class SubscriptionResponse extends Object {
 	 public void setBilling_address_id(Integer  billing_address_id) {
 	 	this.billing_address_id = billing_address_id;
 	 }
+
 
 	/**
 	 * 
@@ -281,6 +317,7 @@ public class SubscriptionResponse extends Object {
 	 	this.currency = currency;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -293,6 +330,7 @@ public class SubscriptionResponse extends Object {
 	 public void setProduct_pricing_plan(PricingPlanResponse  product_pricing_plan) {
 	 	this.product_pricing_plan = product_pricing_plan;
 	 }
+
 
 	/**
 	 * 
@@ -307,18 +345,20 @@ public class SubscriptionResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getEnd_date() {
+	 public java.util.Date getEnd_date() {
 	 	return end_date;
 	 }  
 	 
-	 public void setEnd_date(Date  end_date) {
+	 public void setEnd_date(java.util.Date  end_date) {
 	 	this.end_date = end_date;
 	 }
+
 
 	/**
 	 * 
@@ -333,6 +373,7 @@ public class SubscriptionResponse extends Object {
 	 	this.credit_card = credit_card;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -345,6 +386,7 @@ public class SubscriptionResponse extends Object {
 	 public void setCurrent_ballance(Double  current_ballance) {
 	 	this.current_ballance = current_ballance;
 	 }
+
 
 	/**
 	 * 
@@ -359,6 +401,7 @@ public class SubscriptionResponse extends Object {
 	 	this.revenue = revenue;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -371,6 +414,7 @@ public class SubscriptionResponse extends Object {
 	 public void setStatus(String  status) {
 	 	this.status = status;
 	 }
+
 
 	/**
 	 * 
@@ -385,6 +429,7 @@ public class SubscriptionResponse extends Object {
 	 	this.is_cancelled_at_end_of_period = is_cancelled_at_end_of_period;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -398,18 +443,20 @@ public class SubscriptionResponse extends Object {
 	 	this.next_product_pricing_plan = next_product_pricing_plan;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getCancellation_date() {
+	 public java.util.Date getCancellation_date() {
 	 	return cancellation_date;
 	 }  
 	 
-	 public void setCancellation_date(Date  cancellation_date) {
+	 public void setCancellation_date(java.util.Date  cancellation_date) {
 	 	this.cancellation_date = cancellation_date;
 	 }
+
 
 	/**
 	 * 
@@ -424,6 +471,7 @@ public class SubscriptionResponse extends Object {
 	 	this.product = product;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -436,6 +484,7 @@ public class SubscriptionResponse extends Object {
 	 public void setCredit_card_id(Integer  credit_card_id) {
 	 	this.credit_card_id = credit_card_id;
 	 }
+
 
 	/**
 	 * 
@@ -450,6 +499,7 @@ public class SubscriptionResponse extends Object {
 	 	this.is_trial = is_trial;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -463,18 +513,20 @@ public class SubscriptionResponse extends Object {
 	 	this.pricing_plan_id = pricing_plan_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getStart_date() {
+	 public java.util.Date getStart_date() {
 	 	return start_date;
 	 }  
 	 
-	 public void setStart_date(Date  start_date) {
+	 public void setStart_date(java.util.Date  start_date) {
 	 	this.start_date = start_date;
 	 }
+
 
 	/**
 	 * 
@@ -488,6 +540,7 @@ public class SubscriptionResponse extends Object {
 	 public void setCustomer_id(Integer  customer_id) {
 	 	this.customer_id = customer_id;
 	 }
+
 
 	/**
 	 * 

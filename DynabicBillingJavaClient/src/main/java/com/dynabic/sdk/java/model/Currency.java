@@ -31,20 +31,24 @@ import java.util.List;
 public class Currency extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private String name ;
 
+
     /**
      * 
      */
 	 private String code ;
+
 
 
 	/**
@@ -60,6 +64,7 @@ public class Currency extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -72,6 +77,7 @@ public class Currency extends Object {
 	 public void setName(String  name) {
 	 	this.name = name;
 	 }
+
 
 	/**
 	 * 

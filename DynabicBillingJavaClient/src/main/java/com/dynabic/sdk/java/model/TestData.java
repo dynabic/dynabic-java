@@ -19,7 +19,9 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.List;
+
 import java.util.ArrayList;
 
 
@@ -34,220 +36,264 @@ import java.util.ArrayList;
 public class TestData extends Object {
 
 
+
     /**
      * 
      */
 	 private List<Address> addressList ;
+
 
     /**
      * 
      */
 	 private List<StateProvince> stateProvinceList ;
 
+
     /**
      * 
      */
 	 private List<Country> countryList ;
+
 
     /**
      * 
      */
 	 private List<AddressRequest> addressRequestList ;
 
+
     /**
      * 
      */
 	 private List<CustomerResponse> customerResponseList ;
+
 
     /**
      * 
      */
 	 private List<CreditCardResponse> creditCardResponseList ;
 
+
     /**
      * 
      */
 	 private List<CustomerRequest> customerRequestList ;
+
 
     /**
      * 
      */
 	 private List<CreditCardRequest> creditCardRequestList ;
 
+
     /**
      * 
      */
 	 private List<AddressResponse> addressResponseList ;
+
 
     /**
      * 
      */
 	 private List<ProductResponse> productResponseList ;
 
+
     /**
      * 
      */
 	 private List<PricingPlanResponse> pricingPlanResponseList ;
+
 
     /**
      * 
      */
 	 private List<ProductFamilyResponse> productFamilyResponseList ;
 
+
     /**
      * 
      */
 	 private List<ProductItemRequest> productItemRequestList ;
+
 
     /**
      * 
      */
 	 private List<ProductPricingPlanPaymentScheduleRequest> productPricingPlanPaymentScheduleRequestList ;
 
+
     /**
      * 
      */
 	 private List<ProductItemResponse> productItemResponseList ;
+
 
     /**
      * 
      */
 	 private List<ProductMeteredPriceRequest> productMeteredPriceRequestList ;
 
+
     /**
      * 
      */
 	 private List<ProductRequest> productRequestList ;
+
 
     /**
      * 
      */
 	 private List<ProductFamilyRequest> productFamilyRequestList ;
 
+
     /**
      * 
      */
 	 private List<ProductMeteredPriceResponse> productMeteredPriceResponseList ;
+
 
     /**
      * 
      */
 	 private List<PricingPlanRequest> pricingPlanRequestList ;
 
+
     /**
      * 
      */
 	 private List<ProductPricingPlanPaymentScheduleResponse> productPricingPlanPaymentScheduleResponseList ;
+
 
     /**
      * 
      */
 	 private List<SiteSummary> siteSummaryList ;
 
+
     /**
      * 
      */
 	 private List<ReportIntValueItem> reportIntValueItemList ;
+
 
     /**
      * 
      */
 	 private List<ActiveSubscriptionsCountResponse> activeSubscriptionsCountResponseList ;
 
+
     /**
      * 
      */
 	 private List<TotalSubscribersCountResponse> totalSubscribersCountResponseList ;
+
 
     /**
      * 
      */
 	 private List<RevenueAmount> revenueAmountList ;
 
+
     /**
      * 
      */
 	 private List<ProductsSignups> productsSignupsList ;
+
 
     /**
      * 
      */
 	 private List<ProductsRevenues> productsRevenuesList ;
 
+
     /**
      * 
      */
 	 private List<ReportDecimalValueItem> reportDecimalValueItemList ;
+
 
     /**
      * 
      */
 	 private List<TodayNewSubscribersCountResponse> todayNewSubscribersCountResponseList ;
 
+
     /**
      * 
      */
 	 private List<Statement> statementList ;
+
 
     /**
      * 
      */
 	 private List<StatementDetail> statementDetailList ;
 
+
     /**
      * 
      */
 	 private List<SubscriptionRequest> subscriptionRequestList ;
+
 
     /**
      * 
      */
 	 private List<SubscriptionResponse> subscriptionResponseList ;
 
+
     /**
      * 
      */
 	 private List<ServiceResult> serviceResultList ;
+
 
     /**
      * 
      */
 	 private List<Currency> currencyList ;
 
+
     /**
      * 
      */
 	 private List<CancellationRequest> cancellationRequestList ;
+
 
     /**
      * 
      */
 	 private List<SubscriptionItemHistoryResponse> subscriptionItemHistoryResponseList ;
 
+
     /**
      * 
      */
 	 private List<SubscriptionItemResponse> subscriptionItemResponseList ;
+
 
     /**
      * 
      */
 	 private List<TransactionResponse> transactionResponseList ;
 
+
     /**
      * 
      */
 	 private List<SubscriptionItemRequest> subscriptionItemRequestList ;
+
 
     /**
      * 
      */
 	 private List<ChargeRequest> chargeRequestList ;
 
+
     /**
      * 
      */
 	 private List<EventData> eventDataList ;
+
 
 
 	/**
@@ -263,6 +309,7 @@ public class TestData extends Object {
 	 	this.addressList = addressList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -275,6 +322,7 @@ public class TestData extends Object {
 	 public void setStateProvinceList(List<StateProvince>  stateProvinceList) {
 	 	this.stateProvinceList = stateProvinceList;
 	 }
+
 
 	/**
 	 * 
@@ -289,6 +337,7 @@ public class TestData extends Object {
 	 	this.countryList = countryList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -301,6 +350,7 @@ public class TestData extends Object {
 	 public void setAddressRequestList(List<AddressRequest>  addressRequestList) {
 	 	this.addressRequestList = addressRequestList;
 	 }
+
 
 	/**
 	 * 
@@ -315,6 +365,7 @@ public class TestData extends Object {
 	 	this.customerResponseList = customerResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -327,6 +378,7 @@ public class TestData extends Object {
 	 public void setCreditCardResponseList(List<CreditCardResponse>  creditCardResponseList) {
 	 	this.creditCardResponseList = creditCardResponseList;
 	 }
+
 
 	/**
 	 * 
@@ -341,6 +393,7 @@ public class TestData extends Object {
 	 	this.customerRequestList = customerRequestList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -353,6 +406,7 @@ public class TestData extends Object {
 	 public void setCreditCardRequestList(List<CreditCardRequest>  creditCardRequestList) {
 	 	this.creditCardRequestList = creditCardRequestList;
 	 }
+
 
 	/**
 	 * 
@@ -367,6 +421,7 @@ public class TestData extends Object {
 	 	this.addressResponseList = addressResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -379,6 +434,7 @@ public class TestData extends Object {
 	 public void setProductResponseList(List<ProductResponse>  productResponseList) {
 	 	this.productResponseList = productResponseList;
 	 }
+
 
 	/**
 	 * 
@@ -393,6 +449,7 @@ public class TestData extends Object {
 	 	this.pricingPlanResponseList = pricingPlanResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -405,6 +462,7 @@ public class TestData extends Object {
 	 public void setProductFamilyResponseList(List<ProductFamilyResponse>  productFamilyResponseList) {
 	 	this.productFamilyResponseList = productFamilyResponseList;
 	 }
+
 
 	/**
 	 * 
@@ -419,6 +477,7 @@ public class TestData extends Object {
 	 	this.productItemRequestList = productItemRequestList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -431,6 +490,7 @@ public class TestData extends Object {
 	 public void setProductPricingPlanPaymentScheduleRequestList(List<ProductPricingPlanPaymentScheduleRequest>  productPricingPlanPaymentScheduleRequestList) {
 	 	this.productPricingPlanPaymentScheduleRequestList = productPricingPlanPaymentScheduleRequestList;
 	 }
+
 
 	/**
 	 * 
@@ -445,6 +505,7 @@ public class TestData extends Object {
 	 	this.productItemResponseList = productItemResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -457,6 +518,7 @@ public class TestData extends Object {
 	 public void setProductMeteredPriceRequestList(List<ProductMeteredPriceRequest>  productMeteredPriceRequestList) {
 	 	this.productMeteredPriceRequestList = productMeteredPriceRequestList;
 	 }
+
 
 	/**
 	 * 
@@ -471,6 +533,7 @@ public class TestData extends Object {
 	 	this.productRequestList = productRequestList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -483,6 +546,7 @@ public class TestData extends Object {
 	 public void setProductFamilyRequestList(List<ProductFamilyRequest>  productFamilyRequestList) {
 	 	this.productFamilyRequestList = productFamilyRequestList;
 	 }
+
 
 	/**
 	 * 
@@ -497,6 +561,7 @@ public class TestData extends Object {
 	 	this.productMeteredPriceResponseList = productMeteredPriceResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -509,6 +574,7 @@ public class TestData extends Object {
 	 public void setPricingPlanRequestList(List<PricingPlanRequest>  pricingPlanRequestList) {
 	 	this.pricingPlanRequestList = pricingPlanRequestList;
 	 }
+
 
 	/**
 	 * 
@@ -523,6 +589,7 @@ public class TestData extends Object {
 	 	this.productPricingPlanPaymentScheduleResponseList = productPricingPlanPaymentScheduleResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -535,6 +602,7 @@ public class TestData extends Object {
 	 public void setSiteSummaryList(List<SiteSummary>  siteSummaryList) {
 	 	this.siteSummaryList = siteSummaryList;
 	 }
+
 
 	/**
 	 * 
@@ -549,6 +617,7 @@ public class TestData extends Object {
 	 	this.reportIntValueItemList = reportIntValueItemList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -561,6 +630,7 @@ public class TestData extends Object {
 	 public void setActiveSubscriptionsCountResponseList(List<ActiveSubscriptionsCountResponse>  activeSubscriptionsCountResponseList) {
 	 	this.activeSubscriptionsCountResponseList = activeSubscriptionsCountResponseList;
 	 }
+
 
 	/**
 	 * 
@@ -575,6 +645,7 @@ public class TestData extends Object {
 	 	this.totalSubscribersCountResponseList = totalSubscribersCountResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -587,6 +658,7 @@ public class TestData extends Object {
 	 public void setRevenueAmountList(List<RevenueAmount>  revenueAmountList) {
 	 	this.revenueAmountList = revenueAmountList;
 	 }
+
 
 	/**
 	 * 
@@ -601,6 +673,7 @@ public class TestData extends Object {
 	 	this.productsSignupsList = productsSignupsList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -613,6 +686,7 @@ public class TestData extends Object {
 	 public void setProductsRevenuesList(List<ProductsRevenues>  productsRevenuesList) {
 	 	this.productsRevenuesList = productsRevenuesList;
 	 }
+
 
 	/**
 	 * 
@@ -627,6 +701,7 @@ public class TestData extends Object {
 	 	this.reportDecimalValueItemList = reportDecimalValueItemList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -639,6 +714,7 @@ public class TestData extends Object {
 	 public void setTodayNewSubscribersCountResponseList(List<TodayNewSubscribersCountResponse>  todayNewSubscribersCountResponseList) {
 	 	this.todayNewSubscribersCountResponseList = todayNewSubscribersCountResponseList;
 	 }
+
 
 	/**
 	 * 
@@ -653,6 +729,7 @@ public class TestData extends Object {
 	 	this.statementList = statementList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -665,6 +742,7 @@ public class TestData extends Object {
 	 public void setStatementDetailList(List<StatementDetail>  statementDetailList) {
 	 	this.statementDetailList = statementDetailList;
 	 }
+
 
 	/**
 	 * 
@@ -679,6 +757,7 @@ public class TestData extends Object {
 	 	this.subscriptionRequestList = subscriptionRequestList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -691,6 +770,7 @@ public class TestData extends Object {
 	 public void setSubscriptionResponseList(List<SubscriptionResponse>  subscriptionResponseList) {
 	 	this.subscriptionResponseList = subscriptionResponseList;
 	 }
+
 
 	/**
 	 * 
@@ -705,6 +785,7 @@ public class TestData extends Object {
 	 	this.serviceResultList = serviceResultList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -717,6 +798,7 @@ public class TestData extends Object {
 	 public void setCurrencyList(List<Currency>  currencyList) {
 	 	this.currencyList = currencyList;
 	 }
+
 
 	/**
 	 * 
@@ -731,6 +813,7 @@ public class TestData extends Object {
 	 	this.cancellationRequestList = cancellationRequestList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -743,6 +826,7 @@ public class TestData extends Object {
 	 public void setSubscriptionItemHistoryResponseList(List<SubscriptionItemHistoryResponse>  subscriptionItemHistoryResponseList) {
 	 	this.subscriptionItemHistoryResponseList = subscriptionItemHistoryResponseList;
 	 }
+
 
 	/**
 	 * 
@@ -757,6 +841,7 @@ public class TestData extends Object {
 	 	this.subscriptionItemResponseList = subscriptionItemResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -769,6 +854,7 @@ public class TestData extends Object {
 	 public void setTransactionResponseList(List<TransactionResponse>  transactionResponseList) {
 	 	this.transactionResponseList = transactionResponseList;
 	 }
+
 
 	/**
 	 * 
@@ -783,6 +869,7 @@ public class TestData extends Object {
 	 	this.subscriptionItemRequestList = subscriptionItemRequestList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -795,6 +882,7 @@ public class TestData extends Object {
 	 public void setChargeRequestList(List<ChargeRequest>  chargeRequestList) {
 	 	this.chargeRequestList = chargeRequestList;
 	 }
+
 
 	/**
 	 * 

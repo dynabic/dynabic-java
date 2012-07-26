@@ -26,7 +26,11 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
 import java.lang.Long;
 import java.io.IOException;
 
@@ -40,6 +44,7 @@ import java.io.IOException;
 public class SitesAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
+
 
 	/**
 	 * GetSites
@@ -61,9 +66,11 @@ public class SitesAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( pageNumber != null) {
 			resourcePath = resourcePath.replace("{pageNumber}", APIInvoker.toPathValue(pageNumber));
 		}
+
 		if( pageSize != null) {
 			resourcePath = resourcePath.replace("{pageSize}", APIInvoker.toPathValue(pageSize));
 		}
@@ -84,6 +91,7 @@ public class SitesAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
+
 	/**
 	 * GetSiteById
 	 *
@@ -103,6 +111,7 @@ public class SitesAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteId != null) {
 			resourcePath = resourcePath.replace("{siteId}", APIInvoker.toPathValue(siteId));
 		}
@@ -118,6 +127,7 @@ public class SitesAPI extends Object {
 		SiteResponse responseObject = (SiteResponse) getApiInvoker().deserialize(response, SiteResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetSiteBySubdomain
@@ -138,6 +148,7 @@ public class SitesAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
@@ -153,6 +164,7 @@ public class SitesAPI extends Object {
 		SiteResponse responseObject = (SiteResponse) getApiInvoker().deserialize(response, SiteResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetSitesByName
@@ -173,6 +185,7 @@ public class SitesAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteName != null) {
 			resourcePath = resourcePath.replace("{siteName}", APIInvoker.toPathValue(siteName));
 		}
@@ -192,6 +205,7 @@ public class SitesAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * AddSite
@@ -224,6 +238,7 @@ public class SitesAPI extends Object {
 		return responseObject;
 	}
 
+
 	/**
 	 * UpdateSite
 	 *
@@ -244,6 +259,7 @@ public class SitesAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteId != null) {
 			resourcePath = resourcePath.replace("{siteId}", APIInvoker.toPathValue(siteId));
 		}
@@ -259,6 +275,7 @@ public class SitesAPI extends Object {
 		SiteResponse responseObject = (SiteResponse) getApiInvoker().deserialize(response, SiteResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * DeleteSite
@@ -278,6 +295,7 @@ public class SitesAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteId != null) {
 			resourcePath = resourcePath.replace("{siteId}", APIInvoker.toPathValue(siteId));
 		}

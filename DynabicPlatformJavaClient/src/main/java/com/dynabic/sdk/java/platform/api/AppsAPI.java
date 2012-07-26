@@ -26,7 +26,11 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
 import java.lang.Long;
 import java.io.IOException;
 
@@ -40,6 +44,7 @@ import java.io.IOException;
 public class AppsAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
+
 
 	/**
 	 * GetAllApplications
@@ -74,6 +79,7 @@ public class AppsAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
+
 	/**
 	 * GetCompanyApplications
 	 *
@@ -107,6 +113,7 @@ public class AppsAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
+
 	/**
 	 * GetCompanyApplicationById
 	 *
@@ -126,6 +133,7 @@ public class AppsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( applicationId != null) {
 			resourcePath = resourcePath.replace("{applicationId}", APIInvoker.toPathValue(applicationId));
 		}
@@ -141,6 +149,7 @@ public class AppsAPI extends Object {
 		ApplicationInCompanyResponse responseObject = (ApplicationInCompanyResponse) getApiInvoker().deserialize(response, ApplicationInCompanyResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetCompanyApplicationByName
@@ -161,6 +170,7 @@ public class AppsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( appName != null) {
 			resourcePath = resourcePath.replace("{appName}", APIInvoker.toPathValue(appName));
 		}
@@ -176,6 +186,7 @@ public class AppsAPI extends Object {
 		ApplicationInCompanyResponse responseObject = (ApplicationInCompanyResponse) getApiInvoker().deserialize(response, ApplicationInCompanyResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetApplicationCurrentPlan
@@ -196,6 +207,7 @@ public class AppsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( applicationId != null) {
 			resourcePath = resourcePath.replace("{applicationId}", APIInvoker.toPathValue(applicationId));
 		}
@@ -211,6 +223,7 @@ public class AppsAPI extends Object {
 		ApplicationPlan responseObject = (ApplicationPlan) getApiInvoker().deserialize(response, ApplicationPlan.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * SetApplicationStatus
@@ -231,9 +244,11 @@ public class AppsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( applicationId != null) {
 			resourcePath = resourcePath.replace("{applicationId}", APIInvoker.toPathValue(applicationId));
 		}
+
 		if( status != null) {
 			resourcePath = resourcePath.replace("{status}", APIInvoker.toPathValue(status));
 		}

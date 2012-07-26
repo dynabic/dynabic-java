@@ -19,6 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
 
 
@@ -33,25 +34,30 @@ import java.util.Date;
 public class ProductsSignups extends Object {
 
 
+
     /**
      * 
      */
 	 private String product ;
+
 
     /**
      * 
      */
 	 private Double signups ;
 
+
     /**
      * 
      */
 	 private Integer product_id ;
 
+
     /**
      * 
      */
-	 private Date date ;
+	 private java.util.Date date ;
+
 
 
 	/**
@@ -67,6 +73,7 @@ public class ProductsSignups extends Object {
 	 	this.product = product;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -79,6 +86,7 @@ public class ProductsSignups extends Object {
 	 public void setSignups(Double  signups) {
 	 	this.signups = signups;
 	 }
+
 
 	/**
 	 * 
@@ -93,16 +101,17 @@ public class ProductsSignups extends Object {
 	 	this.product_id = product_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getDate() {
+	 public java.util.Date getDate() {
 	 	return date;
 	 }  
 	 
-	 public void setDate(Date  date) {
+	 public void setDate(java.util.Date  date) {
 	 	this.date = date;
 	 }
 

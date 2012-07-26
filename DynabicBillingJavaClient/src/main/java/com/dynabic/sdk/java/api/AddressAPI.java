@@ -26,7 +26,11 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
 import java.lang.Long;
 import java.io.IOException;
 
@@ -40,6 +44,7 @@ import java.io.IOException;
 public class AddressAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
+
 
 	/**
 	 * GetAddressXml
@@ -60,6 +65,7 @@ public class AddressAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( addressId != null) {
 			resourcePath = resourcePath.replace("{addressId}", APIInvoker.toPathValue(addressId));
 		}
@@ -75,6 +81,7 @@ public class AddressAPI extends Object {
 		Address responseObject = (Address) getApiInvoker().deserialize(response, Address.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetAddressJson
@@ -95,6 +102,7 @@ public class AddressAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( addressId != null) {
 			resourcePath = resourcePath.replace("{addressId}", APIInvoker.toPathValue(addressId));
 		}

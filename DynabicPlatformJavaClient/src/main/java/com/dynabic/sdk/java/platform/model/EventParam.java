@@ -31,15 +31,18 @@ import java.util.List;
 public class EventParam extends Object {
 
 
+
     /**
      * 
      */
 	 private String id ;
 
+
     /**
      * 
      */
 	 private String value ;
+
 
 
 	/**
@@ -54,6 +57,7 @@ public class EventParam extends Object {
 	 public void setId(String  id) {
 	 	this.id = id;
 	 }
+
 
 	/**
 	 * 

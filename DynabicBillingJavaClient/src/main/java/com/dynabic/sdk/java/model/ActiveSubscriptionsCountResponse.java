@@ -31,10 +31,12 @@ import java.util.List;
 public class ActiveSubscriptionsCountResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer count ;
+
 
 
 	/**

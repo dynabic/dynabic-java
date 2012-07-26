@@ -119,7 +119,7 @@ public class CustomersAPITest extends AbstractIntegrationTest {
 	@Test
 	public void GetCreditCardsByReferenceId() throws APIException {
 		addCreditCard(customer.getId());
-		List<CreditCardResponse> cards = CustomersAPI.GetCreditCardsByReferenceId(customer.getReference());
+		List<CreditCardResponse> cards = CustomersAPI.GetCreditCardsByReferenceId(testData.subdomain,customer.getReference());
 		Assert.assertNotNull(cards.get(0).getId());
 	}
 
@@ -156,7 +156,7 @@ public class CustomersAPITest extends AbstractIntegrationTest {
 	@Test
 	public void GetFirstCreditCardForCustomerByReferenceId() throws APIException {
 		addCreditCard(customer.getId());
-		CreditCardResponse card = CustomersAPI.GetFirstCreditCardForCustomerByReferenceId(customer.getReference());
+		CreditCardResponse card = CustomersAPI.GetFirstCreditCardForCustomerByReferenceId(testData.subdomain,customer.getReference());
 		Assert.assertNotNull(card);
 		Assert.assertNotNull(card.getId());
 	}

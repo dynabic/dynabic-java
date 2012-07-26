@@ -31,35 +31,42 @@ import java.util.List;
 public class ApplicationPlan extends Object {
 
 
+
     /**
      * 
      */
 	 private Double subscription_period_charge ;
+
 
     /**
      * 
      */
 	 private Integer product_id ;
 
+
     /**
      * 
      */
 	 private String description ;
+
 
     /**
      * 
      */
 	 private String name ;
 
+
     /**
      * 
      */
 	 private Integer application_id ;
 
+
     /**
      * 
      */
 	 private String currency_code ;
+
 
 
 	/**
@@ -75,6 +82,7 @@ public class ApplicationPlan extends Object {
 	 	this.subscription_period_charge = subscription_period_charge;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -87,6 +95,7 @@ public class ApplicationPlan extends Object {
 	 public void setProduct_id(Integer  product_id) {
 	 	this.product_id = product_id;
 	 }
+
 
 	/**
 	 * 
@@ -101,6 +110,7 @@ public class ApplicationPlan extends Object {
 	 	this.description = description;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -114,6 +124,7 @@ public class ApplicationPlan extends Object {
 	 	this.name = name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -126,6 +137,7 @@ public class ApplicationPlan extends Object {
 	 public void setApplication_id(Integer  application_id) {
 	 	this.application_id = application_id;
 	 }
+
 
 	/**
 	 * 

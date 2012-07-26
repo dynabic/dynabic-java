@@ -31,30 +31,36 @@ import java.util.List;
 public class SettingResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private String description ;
 
+
     /**
      * 
      */
 	 private String name ;
+
 
     /**
      * 
      */
 	 private String value ;
 
+
     /**
      * 
      */
 	 private Integer site_id ;
+
 
 
 	/**
@@ -70,6 +76,7 @@ public class SettingResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -82,6 +89,7 @@ public class SettingResponse extends Object {
 	 public void setDescription(String  description) {
 	 	this.description = description;
 	 }
+
 
 	/**
 	 * 
@@ -96,6 +104,7 @@ public class SettingResponse extends Object {
 	 	this.name = name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -108,6 +117,7 @@ public class SettingResponse extends Object {
 	 public void setValue(String  value) {
 	 	this.value = value;
 	 }
+
 
 	/**
 	 * 

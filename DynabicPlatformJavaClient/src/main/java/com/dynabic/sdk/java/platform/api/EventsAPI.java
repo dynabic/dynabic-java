@@ -26,7 +26,11 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
 import java.lang.Long;
 import java.io.IOException;
 
@@ -40,6 +44,7 @@ import java.io.IOException;
 public class EventsAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
+
 
 	/**
 	 * GetEventsForSubscription
@@ -62,12 +67,15 @@ public class EventsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
+
 		if( pageNumber != null) {
 			resourcePath = resourcePath.replace("{pageNumber}", APIInvoker.toPathValue(pageNumber));
 		}
+
 		if( pageSize != null) {
 			resourcePath = resourcePath.replace("{pageSize}", APIInvoker.toPathValue(pageSize));
 		}
@@ -87,6 +95,7 @@ public class EventsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * GetEventsForSubscriptionBetweenDates
@@ -109,12 +118,15 @@ public class EventsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
+
 		if( fromDate != null) {
 			resourcePath = resourcePath.replace("{fromDate}", APIInvoker.toPathValue(fromDate));
 		}
+
 		if( toDate != null) {
 			resourcePath = resourcePath.replace("{toDate}", APIInvoker.toPathValue(toDate));
 		}
@@ -135,6 +147,7 @@ public class EventsAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
+
 	/**
 	 * GetEvent
 	 *
@@ -154,6 +167,7 @@ public class EventsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( eventId != null) {
 			resourcePath = resourcePath.replace("{eventId}", APIInvoker.toPathValue(eventId));
 		}
@@ -169,6 +183,7 @@ public class EventsAPI extends Object {
 		EventResponse responseObject = (EventResponse) getApiInvoker().deserialize(response, EventResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetEventsForSite
@@ -192,15 +207,19 @@ public class EventsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteId != null) {
 			resourcePath = resourcePath.replace("{siteId}", APIInvoker.toPathValue(siteId));
 		}
+
 		if( eventTypeFilter != null) {
 			resourcePath = resourcePath.replace("{eventTypeFilter}", APIInvoker.toPathValue(eventTypeFilter));
 		}
+
 		if( pageNumber != null) {
 			resourcePath = resourcePath.replace("{pageNumber}", APIInvoker.toPathValue(pageNumber));
 		}
+
 		if( pageSize != null) {
 			resourcePath = resourcePath.replace("{pageSize}", APIInvoker.toPathValue(pageSize));
 		}
@@ -220,6 +239,7 @@ public class EventsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * GetEvents
@@ -241,9 +261,11 @@ public class EventsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( eventTypeFilter != null) {
 			resourcePath = resourcePath.replace("{eventTypeFilter}", APIInvoker.toPathValue(eventTypeFilter));
 		}
+
 		if( numberOfReturnedEvents != null) {
 			resourcePath = resourcePath.replace("{numberOfReturnedEvents}", APIInvoker.toPathValue(numberOfReturnedEvents));
 		}

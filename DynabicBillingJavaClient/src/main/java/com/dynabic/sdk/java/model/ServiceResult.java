@@ -31,15 +31,18 @@ import java.util.List;
 public class ServiceResult extends Object {
 
 
+
     /**
      * 
      */
 	 private String result ;
 
+
     /**
      * 
      */
 	 private String description ;
+
 
 
 	/**
@@ -54,6 +57,7 @@ public class ServiceResult extends Object {
 	 public void setResult(String  result) {
 	 	this.result = result;
 	 }
+
 
 	/**
 	 * 

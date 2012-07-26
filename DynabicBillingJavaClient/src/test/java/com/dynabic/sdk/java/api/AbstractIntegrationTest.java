@@ -358,4 +358,3 @@ public abstract class AbstractIntegrationTest {
 	    public String subdomain;
 	}
 }
-

@@ -19,7 +19,9 @@ package com.dynabic.sdk.java.platform.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.List;
+
 import java.util.ArrayList;
 
 
@@ -34,80 +36,96 @@ import java.util.ArrayList;
 public class TestData extends Object {
 
 
+
     /**
      * 
      */
 	 private List<ApplicationResponse> applicationResponseList ;
+
 
     /**
      * 
      */
 	 private List<ApplicationPlan> applicationPlanList ;
 
+
     /**
      * 
      */
 	 private List<ApplicationInCompanyResponse> applicationInCompanyResponseList ;
+
 
     /**
      * 
      */
 	 private List<CompanyInfoRequest> companyInfoRequestList ;
 
+
     /**
      * 
      */
 	 private List<CompanyInfoResponse> companyInfoResponseList ;
+
 
     /**
      * 
      */
 	 private List<SetActiveMarketingPlanResponse> setActiveMarketingPlanResponseList ;
 
+
     /**
      * 
      */
 	 private List<EventResponse> eventResponseList ;
+
 
     /**
      * 
      */
 	 private List<EventParam> eventParamList ;
 
+
     /**
      * 
      */
 	 private List<SettingRequest> settingRequestList ;
+
 
     /**
      * 
      */
 	 private List<SettingResponse> settingResponseList ;
 
+
     /**
      * 
      */
 	 private List<SiteResponse> siteResponseList ;
+
 
     /**
      * 
      */
 	 private List<SiteRequest> siteRequestList ;
 
+
     /**
      * 
      */
 	 private List<UserResponse> userResponseList ;
+
 
     /**
      * 
      */
 	 private List<UserApiKeysResponse> userApiKeysResponseList ;
 
+
     /**
      * 
      */
 	 private List<UserRequest> userRequestList ;
+
 
 
 	/**
@@ -123,6 +141,7 @@ public class TestData extends Object {
 	 	this.applicationResponseList = applicationResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -135,6 +154,7 @@ public class TestData extends Object {
 	 public void setApplicationPlanList(List<ApplicationPlan>  applicationPlanList) {
 	 	this.applicationPlanList = applicationPlanList;
 	 }
+
 
 	/**
 	 * 
@@ -149,6 +169,7 @@ public class TestData extends Object {
 	 	this.applicationInCompanyResponseList = applicationInCompanyResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -161,6 +182,7 @@ public class TestData extends Object {
 	 public void setCompanyInfoRequestList(List<CompanyInfoRequest>  companyInfoRequestList) {
 	 	this.companyInfoRequestList = companyInfoRequestList;
 	 }
+
 
 	/**
 	 * 
@@ -175,6 +197,7 @@ public class TestData extends Object {
 	 	this.companyInfoResponseList = companyInfoResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -187,6 +210,7 @@ public class TestData extends Object {
 	 public void setSetActiveMarketingPlanResponseList(List<SetActiveMarketingPlanResponse>  setActiveMarketingPlanResponseList) {
 	 	this.setActiveMarketingPlanResponseList = setActiveMarketingPlanResponseList;
 	 }
+
 
 	/**
 	 * 
@@ -201,6 +225,7 @@ public class TestData extends Object {
 	 	this.eventResponseList = eventResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -213,6 +238,7 @@ public class TestData extends Object {
 	 public void setEventParamList(List<EventParam>  eventParamList) {
 	 	this.eventParamList = eventParamList;
 	 }
+
 
 	/**
 	 * 
@@ -227,6 +253,7 @@ public class TestData extends Object {
 	 	this.settingRequestList = settingRequestList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -239,6 +266,7 @@ public class TestData extends Object {
 	 public void setSettingResponseList(List<SettingResponse>  settingResponseList) {
 	 	this.settingResponseList = settingResponseList;
 	 }
+
 
 	/**
 	 * 
@@ -253,6 +281,7 @@ public class TestData extends Object {
 	 	this.siteResponseList = siteResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -265,6 +294,7 @@ public class TestData extends Object {
 	 public void setSiteRequestList(List<SiteRequest>  siteRequestList) {
 	 	this.siteRequestList = siteRequestList;
 	 }
+
 
 	/**
 	 * 
@@ -279,6 +309,7 @@ public class TestData extends Object {
 	 	this.userResponseList = userResponseList;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -291,6 +322,7 @@ public class TestData extends Object {
 	 public void setUserApiKeysResponseList(List<UserApiKeysResponse>  userApiKeysResponseList) {
 	 	this.userApiKeysResponseList = userApiKeysResponseList;
 	 }
+
 
 	/**
 	 * 
