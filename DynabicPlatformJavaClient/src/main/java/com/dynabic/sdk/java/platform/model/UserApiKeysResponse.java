@@ -31,18 +31,15 @@ import java.util.List;
 public class UserApiKeysResponse extends Object {
 
 
-
     /**
      * 
      */
 	 private String private_key ;
 
-
     /**
      * 
      */
 	 private String public_key ;
-
 
 
 	/**
@@ -57,7 +54,6 @@ public class UserApiKeysResponse extends Object {
 	 public void setPrivate_key(String  private_key) {
 	 	this.private_key = private_key;
 	 }
-
 
 	/**
 	 * 

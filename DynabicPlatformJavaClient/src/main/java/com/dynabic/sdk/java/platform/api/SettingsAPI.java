@@ -26,11 +26,7 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-
+import java.util.*;
 import java.lang.Long;
 import java.io.IOException;
 
@@ -44,7 +40,6 @@ import java.io.IOException;
 public class SettingsAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
-
 
 	/**
 	 * GetSettings
@@ -65,7 +60,6 @@ public class SettingsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
@@ -85,7 +79,6 @@ public class SettingsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
-
 
 	/**
 	 * GetSettingById
@@ -107,11 +100,9 @@ public class SettingsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( settingId != null) {
 			resourcePath = resourcePath.replace("{settingId}", APIInvoker.toPathValue(settingId));
 		}
@@ -127,7 +118,6 @@ public class SettingsAPI extends Object {
 		SettingResponse responseObject = (SettingResponse) getApiInvoker().deserialize(response, SettingResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetSettingByName
@@ -149,11 +139,9 @@ public class SettingsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( settingName != null) {
 			resourcePath = resourcePath.replace("{settingName}", APIInvoker.toPathValue(settingName));
 		}
@@ -169,7 +157,6 @@ public class SettingsAPI extends Object {
 		SettingResponse responseObject = (SettingResponse) getApiInvoker().deserialize(response, SettingResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * UpdateSetting
@@ -192,11 +179,9 @@ public class SettingsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( settingId != null) {
 			resourcePath = resourcePath.replace("{settingId}", APIInvoker.toPathValue(settingId));
 		}
@@ -212,7 +197,6 @@ public class SettingsAPI extends Object {
 		SettingResponse responseObject = (SettingResponse) getApiInvoker().deserialize(response, SettingResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * UpdateSettingWithExplicitParameters
@@ -233,23 +217,18 @@ public class SettingsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( settingsSettingsInput != null && settingsSettingsInput.getSiteSubdomain() != null) {
 		 	resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(settingsSettingsInput.getSiteSubdomain()));
 		}
-
 		if( settingsSettingsInput != null && settingsSettingsInput.getSettingId() != null) {
 		 	resourcePath = resourcePath.replace("{settingId}", APIInvoker.toPathValue(settingsSettingsInput.getSettingId()));
 		}
-
 		if( settingsSettingsInput != null && settingsSettingsInput.getSettingName() != null) {
 		 	resourcePath = resourcePath.replace("{settingName}", APIInvoker.toPathValue(settingsSettingsInput.getSettingName()));
 		}
-
 		if( settingsSettingsInput != null && settingsSettingsInput.getSettingValue() != null) {
 		 	resourcePath = resourcePath.replace("{settingValue}", APIInvoker.toPathValue(settingsSettingsInput.getSettingValue()));
 		}
-
 		if( settingsSettingsInput != null && settingsSettingsInput.getSettingDescription() != null) {
 		 	resourcePath = resourcePath.replace("{settingDescription}", APIInvoker.toPathValue(settingsSettingsInput.getSettingDescription()));
 		}
@@ -265,7 +244,6 @@ public class SettingsAPI extends Object {
 		SettingResponse responseObject = (SettingResponse) getApiInvoker().deserialize(response, SettingResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * UpdateSettingWithExplicitParameters2
@@ -288,15 +266,12 @@ public class SettingsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( settingId != null) {
 			resourcePath = resourcePath.replace("{settingId}", APIInvoker.toPathValue(settingId));
 		}
-
 		if( settingValue != null) {
 			resourcePath = resourcePath.replace("{settingValue}", APIInvoker.toPathValue(settingValue));
 		}
@@ -312,7 +287,6 @@ public class SettingsAPI extends Object {
 		SettingResponse responseObject = (SettingResponse) getApiInvoker().deserialize(response, SettingResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetDefaultSetting
@@ -333,7 +307,6 @@ public class SettingsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( settingName != null) {
 			resourcePath = resourcePath.replace("{settingName}", APIInvoker.toPathValue(settingName));
 		}

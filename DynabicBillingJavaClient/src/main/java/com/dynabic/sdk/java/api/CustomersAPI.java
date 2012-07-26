@@ -26,11 +26,7 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-
+import java.util.*;
 import java.lang.Long;
 import java.io.IOException;
 
@@ -44,7 +40,6 @@ import java.io.IOException;
 public class CustomersAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
-
 
 	/**
 	 * GetAllCustomers
@@ -67,15 +62,12 @@ public class CustomersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( pageNumber != null) {
 			resourcePath = resourcePath.replace("{pageNumber}", APIInvoker.toPathValue(pageNumber));
 		}
-
 		if( pageSize != null) {
 			resourcePath = resourcePath.replace("{pageSize}", APIInvoker.toPathValue(pageSize));
 		}
@@ -96,7 +88,6 @@ public class CustomersAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
-
 	/**
 	 * GetCustomer
 	 *
@@ -116,7 +107,6 @@ public class CustomersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
@@ -132,7 +122,6 @@ public class CustomersAPI extends Object {
 		CustomerResponse responseObject = (CustomerResponse) getApiInvoker().deserialize(response, CustomerResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetCustomerByReferenceId
@@ -154,11 +143,9 @@ public class CustomersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( referenceId != null) {
 			resourcePath = resourcePath.replace("{referenceId}", APIInvoker.toPathValue(referenceId));
 		}
@@ -174,7 +161,6 @@ public class CustomersAPI extends Object {
 		CustomerResponse responseObject = (CustomerResponse) getApiInvoker().deserialize(response, CustomerResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * AddCustomer
@@ -196,7 +182,6 @@ public class CustomersAPI extends Object {
 		String method = "POST";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
@@ -212,7 +197,6 @@ public class CustomersAPI extends Object {
 		CustomerResponse responseObject = (CustomerResponse) getApiInvoker().deserialize(response, CustomerResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * UpdateCustomer
@@ -234,7 +218,6 @@ public class CustomersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
@@ -250,7 +233,6 @@ public class CustomersAPI extends Object {
 		CustomerResponse responseObject = (CustomerResponse) getApiInvoker().deserialize(response, CustomerResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * DeleteCustomer
@@ -270,7 +252,6 @@ public class CustomersAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
@@ -280,7 +261,6 @@ public class CustomersAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * GetCreditCard
@@ -301,7 +281,6 @@ public class CustomersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( creditCardId != null) {
 			resourcePath = resourcePath.replace("{creditCardId}", APIInvoker.toPathValue(creditCardId));
 		}
@@ -317,7 +296,6 @@ public class CustomersAPI extends Object {
 		CreditCardResponse responseObject = (CreditCardResponse) getApiInvoker().deserialize(response, CreditCardResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetCreditCards
@@ -338,7 +316,6 @@ public class CustomersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
@@ -359,32 +336,25 @@ public class CustomersAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
-
 	/**
 	 * GetCreditCardsByReferenceId
 	 *
 	 * 
 	 * 
-     * @param siteSubdomain  site Subdomain
-     *  @param customerReferenceId  customer Reference Id
+     * @param customerReferenceId  customer Reference Id
      *  
 	 * @return List<CreditCardResponse> {@link CreditCardResponse} 
 	 * @throws APIException 
 	 */
-	 @MethodArgumentNames(value="siteSubdomain, customerReferenceId")
-	 public static List<CreditCardResponse> GetCreditCardsByReferenceId(String siteSubdomain, String customerReferenceId) throws APIException {
+	 @MethodArgumentNames(value="customerReferenceId")
+	 public static List<CreditCardResponse> GetCreditCardsByReferenceId(String customerReferenceId) throws APIException {
 
 		//parse inputs
-		String  resourcePath = "/customers/{siteSubdomain}/reference-id/{customerReferenceId}/credit-cards.{format}";
+		String  resourcePath = "/customers/reference-id/{customerReferenceId}/credit-cards.{format}";
 		resourcePath = resourcePath.replace("{format}","json").replaceAll("\\*", "");
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
-		if( siteSubdomain != null) {
-			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
-		}
-
 		if( customerReferenceId != null) {
 			resourcePath = resourcePath.replace("{customerReferenceId}", APIInvoker.toPathValue(customerReferenceId));
 		}
@@ -404,7 +374,6 @@ public class CustomersAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
-
 
 	/**
 	 * GetCustomersFirstCreditCard
@@ -425,7 +394,6 @@ public class CustomersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
@@ -442,32 +410,25 @@ public class CustomersAPI extends Object {
 		return responseObject;
 	}
 
-
 	/**
 	 * GetFirstCreditCardForCustomerByReferenceId
 	 *
 	 * 
 	 * 
-     * @param siteSubdomain  site Subdomain
-     *  @param customerReferenceId  customer Reference Id
+     * @param customerReferenceId  customer Reference Id
      *  
 	 * @return CreditCardResponse {@link CreditCardResponse} 
 	 * @throws APIException 
 	 */
-	 @MethodArgumentNames(value="siteSubdomain, customerReferenceId")
-	 public static CreditCardResponse GetFirstCreditCardForCustomerByReferenceId(String siteSubdomain, String customerReferenceId) throws APIException {
+	 @MethodArgumentNames(value="customerReferenceId")
+	 public static CreditCardResponse GetFirstCreditCardForCustomerByReferenceId(String customerReferenceId) throws APIException {
 
 		//parse inputs
-		String  resourcePath = "/customers/{siteSubdomain}/reference-id/{customerReferenceId}/credit-card.{format}";
+		String  resourcePath = "/customers/reference-id/{customerReferenceId}/credit-card.{format}";
 		resourcePath = resourcePath.replace("{format}","json").replaceAll("\\*", "");
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
-		if( siteSubdomain != null) {
-			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
-		}
-
 		if( customerReferenceId != null) {
 			resourcePath = resourcePath.replace("{customerReferenceId}", APIInvoker.toPathValue(customerReferenceId));
 		}
@@ -483,7 +444,6 @@ public class CustomersAPI extends Object {
 		CreditCardResponse responseObject = (CreditCardResponse) getApiInvoker().deserialize(response, CreditCardResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * AddCreditCard
@@ -505,7 +465,6 @@ public class CustomersAPI extends Object {
 		String method = "POST";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
@@ -521,7 +480,6 @@ public class CustomersAPI extends Object {
 		CreditCardResponse responseObject = (CreditCardResponse) getApiInvoker().deserialize(response, CreditCardResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * UpdateCreditCard
@@ -544,11 +502,9 @@ public class CustomersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
-
 		if( creditCardId != null) {
 			resourcePath = resourcePath.replace("{creditCardId}", APIInvoker.toPathValue(creditCardId));
 		}
@@ -564,7 +520,6 @@ public class CustomersAPI extends Object {
 		CreditCardResponse responseObject = (CreditCardResponse) getApiInvoker().deserialize(response, CreditCardResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * UpdateCreditCardByCustomerReferenceId
@@ -588,15 +543,12 @@ public class CustomersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomanin != null) {
 			resourcePath = resourcePath.replace("{siteSubdomanin}", APIInvoker.toPathValue(siteSubdomanin));
 		}
-
 		if( customerReferenceId != null) {
 			resourcePath = resourcePath.replace("{customerReferenceId}", APIInvoker.toPathValue(customerReferenceId));
 		}
-
 		if( creditCardId != null) {
 			resourcePath = resourcePath.replace("{creditCardId}", APIInvoker.toPathValue(creditCardId));
 		}
@@ -612,7 +564,6 @@ public class CustomersAPI extends Object {
 		CreditCardResponse responseObject = (CreditCardResponse) getApiInvoker().deserialize(response, CreditCardResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * DeleteCreditCard
@@ -633,11 +584,9 @@ public class CustomersAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
-
 		if( creditCardId != null) {
 			resourcePath = resourcePath.replace("{creditCardId}", APIInvoker.toPathValue(creditCardId));
 		}
@@ -647,7 +596,6 @@ public class CustomersAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * GetBillingAddresses
@@ -668,7 +616,6 @@ public class CustomersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
@@ -689,7 +636,6 @@ public class CustomersAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
-
 	/**
 	 * GetBillingAddresses
 	 *
@@ -709,7 +655,6 @@ public class CustomersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
@@ -725,7 +670,6 @@ public class CustomersAPI extends Object {
 		AddressResponse responseObject = (AddressResponse) getApiInvoker().deserialize(response, AddressResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetFirstBillingAddressForCustomerByReferenceId
@@ -747,11 +691,9 @@ public class CustomersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( customerReferenceId != null) {
 			resourcePath = resourcePath.replace("{customerReferenceId}", APIInvoker.toPathValue(customerReferenceId));
 		}
@@ -767,7 +709,6 @@ public class CustomersAPI extends Object {
 		AddressResponse responseObject = (AddressResponse) getApiInvoker().deserialize(response, AddressResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * AddBillingAddress
@@ -789,7 +730,6 @@ public class CustomersAPI extends Object {
 		String method = "POST";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
@@ -805,7 +745,6 @@ public class CustomersAPI extends Object {
 		AddressResponse responseObject = (AddressResponse) getApiInvoker().deserialize(response, AddressResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * UpdateBillingAddress
@@ -828,11 +767,9 @@ public class CustomersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
-
 		if( billingAddressId != null) {
 			resourcePath = resourcePath.replace("{billingAddressId}", APIInvoker.toPathValue(billingAddressId));
 		}
@@ -848,7 +785,6 @@ public class CustomersAPI extends Object {
 		AddressResponse responseObject = (AddressResponse) getApiInvoker().deserialize(response, AddressResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * UpdateBillingAddressByCustomerReferenceId
@@ -872,15 +808,12 @@ public class CustomersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( customerReferenceId != null) {
 			resourcePath = resourcePath.replace("{customerReferenceId}", APIInvoker.toPathValue(customerReferenceId));
 		}
-
 		if( billingAddressId != null) {
 			resourcePath = resourcePath.replace("{billingAddressId}", APIInvoker.toPathValue(billingAddressId));
 		}
@@ -896,7 +829,6 @@ public class CustomersAPI extends Object {
 		AddressResponse responseObject = (AddressResponse) getApiInvoker().deserialize(response, AddressResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * DeleteBillingAddress
@@ -917,11 +849,9 @@ public class CustomersAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
-
 		if( billingAddressId != null) {
 			resourcePath = resourcePath.replace("{billingAddressId}", APIInvoker.toPathValue(billingAddressId));
 		}

@@ -31,42 +31,35 @@ import java.util.List;
 public class ProductMeteredPriceResponse extends Object {
 
 
-
     /**
      * 
      */
 	 private Integer id ;
-
 
     /**
      * 
      */
 	 private Double end_quantity ;
 
-
     /**
      * 
      */
 	 private Integer product_item_id ;
-
 
     /**
      * 
      */
 	 private Double start_quantity ;
 
-
     /**
      * 
      */
 	 private String description ;
 
-
     /**
      * 
      */
 	 private Double unit_price ;
-
 
 
 	/**
@@ -82,7 +75,6 @@ public class ProductMeteredPriceResponse extends Object {
 	 	this.id = id;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -95,7 +87,6 @@ public class ProductMeteredPriceResponse extends Object {
 	 public void setEnd_quantity(Double  end_quantity) {
 	 	this.end_quantity = end_quantity;
 	 }
-
 
 	/**
 	 * 
@@ -110,7 +101,6 @@ public class ProductMeteredPriceResponse extends Object {
 	 	this.product_item_id = product_item_id;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -124,7 +114,6 @@ public class ProductMeteredPriceResponse extends Object {
 	 	this.start_quantity = start_quantity;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -137,7 +126,6 @@ public class ProductMeteredPriceResponse extends Object {
 	 public void setDescription(String  description) {
 	 	this.description = description;
 	 }
-
 
 	/**
 	 * 

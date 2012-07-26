@@ -31,60 +31,50 @@ import java.util.List;
 public class ProductPricingPlanPaymentScheduleRequest extends Object {
 
 
-
     /**
      * 
      */
 	 private Integer id ;
-
 
     /**
      * 
      */
 	 private Integer frequency_recurrence_factor ;
 
-
     /**
      * 
      */
 	 private Integer frequency_interval ;
-
 
     /**
      * 
      */
 	 private Double subscription_period_change ;
 
-
     /**
      * 
      */
 	 private String name ;
-
 
     /**
      * 
      */
 	 private String frequency_relative_interval ;
 
-
     /**
      * 
      */
 	 private String frequency_type ;
-
 
     /**
      * 
      */
 	 private Integer end_date_offset_days ;
 
-
     /**
      * 
      */
 	 private Integer start_date_offset_days ;
-
 
 
 	/**
@@ -100,7 +90,6 @@ public class ProductPricingPlanPaymentScheduleRequest extends Object {
 	 	this.id = id;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -113,7 +102,6 @@ public class ProductPricingPlanPaymentScheduleRequest extends Object {
 	 public void setFrequency_recurrence_factor(Integer  frequency_recurrence_factor) {
 	 	this.frequency_recurrence_factor = frequency_recurrence_factor;
 	 }
-
 
 	/**
 	 * 
@@ -128,7 +116,6 @@ public class ProductPricingPlanPaymentScheduleRequest extends Object {
 	 	this.frequency_interval = frequency_interval;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -141,7 +128,6 @@ public class ProductPricingPlanPaymentScheduleRequest extends Object {
 	 public void setSubscription_period_change(Double  subscription_period_change) {
 	 	this.subscription_period_change = subscription_period_change;
 	 }
-
 
 	/**
 	 * 
@@ -156,7 +142,6 @@ public class ProductPricingPlanPaymentScheduleRequest extends Object {
 	 	this.name = name;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -169,7 +154,6 @@ public class ProductPricingPlanPaymentScheduleRequest extends Object {
 	 public void setFrequency_relative_interval(String  frequency_relative_interval) {
 	 	this.frequency_relative_interval = frequency_relative_interval;
 	 }
-
 
 	/**
 	 * 
@@ -184,7 +168,6 @@ public class ProductPricingPlanPaymentScheduleRequest extends Object {
 	 	this.frequency_type = frequency_type;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -197,7 +180,6 @@ public class ProductPricingPlanPaymentScheduleRequest extends Object {
 	 public void setEnd_date_offset_days(Integer  end_date_offset_days) {
 	 	this.end_date_offset_days = end_date_offset_days;
 	 }
-
 
 	/**
 	 * 

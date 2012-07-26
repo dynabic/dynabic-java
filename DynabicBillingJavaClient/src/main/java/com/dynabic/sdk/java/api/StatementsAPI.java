@@ -26,11 +26,7 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-
+import java.util.*;
 import java.lang.Long;
 import java.io.IOException;
 
@@ -44,7 +40,6 @@ import java.io.IOException;
 public class StatementsAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
-
 
 	/**
 	 * GetStatementsForSubscription
@@ -67,15 +62,12 @@ public class StatementsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
-
 		if( pageNumber != null) {
 			resourcePath = resourcePath.replace("{pageNumber}", APIInvoker.toPathValue(pageNumber));
 		}
-
 		if( pageSize != null) {
 			resourcePath = resourcePath.replace("{pageSize}", APIInvoker.toPathValue(pageSize));
 		}

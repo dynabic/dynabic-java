@@ -31,18 +31,15 @@ import java.util.List;
 public class RevenueAmount extends Object {
 
 
-
     /**
      * 
      */
 	 private Double amount ;
 
-
     /**
      * 
      */
 	 private String currency_code ;
-
 
 
 	/**
@@ -57,7 +54,6 @@ public class RevenueAmount extends Object {
 	 public void setAmount(Double  amount) {
 	 	this.amount = amount;
 	 }
-
 
 	/**
 	 * 

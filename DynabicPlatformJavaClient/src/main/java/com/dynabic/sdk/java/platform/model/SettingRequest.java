@@ -31,30 +31,25 @@ import java.util.List;
 public class SettingRequest extends Object {
 
 
-
     /**
      * 
      */
 	 private String description ;
-
 
     /**
      * 
      */
 	 private String name ;
 
-
     /**
      * 
      */
 	 private String value ;
 
-
     /**
      * 
      */
 	 private Integer site_id ;
-
 
 
 	/**
@@ -70,7 +65,6 @@ public class SettingRequest extends Object {
 	 	this.description = description;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -84,7 +78,6 @@ public class SettingRequest extends Object {
 	 	this.name = name;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -97,7 +90,6 @@ public class SettingRequest extends Object {
 	 public void setValue(String  value) {
 	 	this.value = value;
 	 }
-
 
 	/**
 	 * 

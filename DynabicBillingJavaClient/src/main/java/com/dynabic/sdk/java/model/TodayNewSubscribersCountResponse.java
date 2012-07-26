@@ -31,12 +31,10 @@ import java.util.List;
 public class TodayNewSubscribersCountResponse extends Object {
 
 
-
     /**
      * 
      */
 	 private Integer count ;
-
 
 
 	/**

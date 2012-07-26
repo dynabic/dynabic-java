@@ -31,18 +31,15 @@ import java.util.List;
 public class ApplicationResponse extends Object {
 
 
-
     /**
      * 
      */
 	 private Integer id ;
 
-
     /**
      * 
      */
 	 private String name ;
-
 
 
 	/**
@@ -57,7 +54,6 @@ public class ApplicationResponse extends Object {
 	 public void setId(Integer  id) {
 	 	this.id = id;
 	 }
-
 
 	/**
 	 * 

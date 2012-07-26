@@ -31,78 +31,65 @@ import java.util.List;
 public class AddressRequest extends Object {
 
 
-
     /**
      * 
      */
 	 private String fax_number ;
-
 
     /**
      * 
      */
 	 private String first_name ;
 
-
     /**
      * 
      */
 	 private String state_province ;
-
 
     /**
      * 
      */
 	 private String phone_number ;
 
-
     /**
      * 
      */
 	 private String email ;
-
 
     /**
      * 
      */
 	 private String company ;
 
-
     /**
      * 
      */
 	 private String last_name ;
-
 
     /**
      * 
      */
 	 private String address1 ;
 
-
     /**
      * 
      */
 	 private String address2 ;
-
 
     /**
      * 
      */
 	 private String zip_postal_code ;
 
-
     /**
      * 
      */
 	 private String country ;
 
-
     /**
      * 
      */
 	 private String city ;
-
 
 
 	/**
@@ -118,7 +105,6 @@ public class AddressRequest extends Object {
 	 	this.fax_number = fax_number;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -131,7 +117,6 @@ public class AddressRequest extends Object {
 	 public void setFirst_name(String  first_name) {
 	 	this.first_name = first_name;
 	 }
-
 
 	/**
 	 * 
@@ -146,7 +131,6 @@ public class AddressRequest extends Object {
 	 	this.state_province = state_province;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -159,7 +143,6 @@ public class AddressRequest extends Object {
 	 public void setPhone_number(String  phone_number) {
 	 	this.phone_number = phone_number;
 	 }
-
 
 	/**
 	 * 
@@ -174,7 +157,6 @@ public class AddressRequest extends Object {
 	 	this.email = email;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -187,7 +169,6 @@ public class AddressRequest extends Object {
 	 public void setCompany(String  company) {
 	 	this.company = company;
 	 }
-
 
 	/**
 	 * 
@@ -202,7 +183,6 @@ public class AddressRequest extends Object {
 	 	this.last_name = last_name;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -215,7 +195,6 @@ public class AddressRequest extends Object {
 	 public void setAddress1(String  address1) {
 	 	this.address1 = address1;
 	 }
-
 
 	/**
 	 * 
@@ -230,7 +209,6 @@ public class AddressRequest extends Object {
 	 	this.address2 = address2;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -244,7 +222,6 @@ public class AddressRequest extends Object {
 	 	this.zip_postal_code = zip_postal_code;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -257,7 +234,6 @@ public class AddressRequest extends Object {
 	 public void setCountry(String  country) {
 	 	this.country = country;
 	 }
-
 
 	/**
 	 * 

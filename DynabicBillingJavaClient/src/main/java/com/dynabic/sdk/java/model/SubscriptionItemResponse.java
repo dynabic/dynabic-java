@@ -19,9 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
-
 import java.util.List;
-
 import java.util.ArrayList;
 
 
@@ -36,30 +34,25 @@ import java.util.ArrayList;
 public class SubscriptionItemResponse extends Object {
 
 
-
     /**
      * 
      */
 	 private Integer subscription_id ;
-
 
     /**
      * 
      */
 	 private Integer product_item_id ;
 
-
     /**
      * 
      */
 	 private Double quantity ;
 
-
     /**
      * 
      */
 	 private List<SubscriptionItemHistoryResponse> update_history  =  new ArrayList<SubscriptionItemHistoryResponse>();
-
 
 
 	/**
@@ -75,7 +68,6 @@ public class SubscriptionItemResponse extends Object {
 	 	this.subscription_id = subscription_id;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -89,7 +81,6 @@ public class SubscriptionItemResponse extends Object {
 	 	this.product_item_id = product_item_id;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -102,7 +93,6 @@ public class SubscriptionItemResponse extends Object {
 	 public void setQuantity(Double  quantity) {
 	 	this.quantity = quantity;
 	 }
-
 
 	/**
 	 * 

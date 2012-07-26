@@ -26,11 +26,7 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-
+import java.util.*;
 import java.lang.Long;
 import java.io.IOException;
 
@@ -44,7 +40,6 @@ import java.io.IOException;
 public class DynabicmarketingplansAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
-
 
 	/**
 	 * SetActiveMarketingPlan
@@ -65,7 +60,6 @@ public class DynabicmarketingplansAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( productId != null) {
 			resourcePath = resourcePath.replace("{productId}", APIInvoker.toPathValue(productId));
 		}

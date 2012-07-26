@@ -26,11 +26,7 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-
+import java.util.*;
 import java.lang.Long;
 import java.io.IOException;
 
@@ -44,7 +40,6 @@ import java.io.IOException;
 public class TestsAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
-
 
 	/**
 	 * Refund
@@ -67,15 +62,12 @@ public class TestsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
-
 		if( transactionId != null) {
 			resourcePath = resourcePath.replace("{transactionId}", APIInvoker.toPathValue(transactionId));
 		}
-
 		if( amount != null) {
 			resourcePath = resourcePath.replace("{amount}", APIInvoker.toPathValue(amount));
 		}
@@ -91,7 +83,6 @@ public class TestsAPI extends Object {
 		Boolean responseObject = (Boolean) getApiInvoker().deserialize(response, Boolean.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * AdjustSubscriptionBalance
@@ -115,19 +106,15 @@ public class TestsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
-
 		if( isAmountAbsolute != null) {
 			resourcePath = resourcePath.replace("{isAmountAbsolute}", APIInvoker.toPathValue(isAmountAbsolute));
 		}
-
 		if( amount != null) {
 			resourcePath = resourcePath.replace("{amount}", APIInvoker.toPathValue(amount));
 		}
-
 		if( chargeDetails != null) {
 			resourcePath = resourcePath.replace("{chargeDetails}", APIInvoker.toPathValue(chargeDetails));
 		}
@@ -143,7 +130,6 @@ public class TestsAPI extends Object {
 		Boolean responseObject = (Boolean) getApiInvoker().deserialize(response, Boolean.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * AssessSubscriptions
@@ -167,7 +153,6 @@ public class TestsAPI extends Object {
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
 
-
 	/**
 	 * AddChargeToSubscription
 	 *
@@ -189,15 +174,12 @@ public class TestsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
-
 		if( amount != null) {
 			resourcePath = resourcePath.replace("{amount}", APIInvoker.toPathValue(amount));
 		}
-
 		if( chargeDetails != null) {
 			resourcePath = resourcePath.replace("{chargeDetails}", APIInvoker.toPathValue(chargeDetails));
 		}
@@ -213,7 +195,6 @@ public class TestsAPI extends Object {
 		Boolean responseObject = (Boolean) getApiInvoker().deserialize(response, Boolean.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * AddSubscription
@@ -236,11 +217,9 @@ public class TestsAPI extends Object {
 		String method = "POST";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( signUpDate != null) {
 			resourcePath = resourcePath.replace("{signUpDate}", APIInvoker.toPathValue(signUpDate));
 		}
@@ -256,7 +235,6 @@ public class TestsAPI extends Object {
 		SubscriptionResponse responseObject = (SubscriptionResponse) getApiInvoker().deserialize(response, SubscriptionResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * AddEventToSubscription
@@ -289,7 +267,6 @@ public class TestsAPI extends Object {
 		return responseObject;
 	}
 
-
 	/**
 	 * SendDailyActivityReport
 	 *
@@ -309,7 +286,6 @@ public class TestsAPI extends Object {
 		String method = "POST";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteId != null) {
 			resourcePath = resourcePath.replace("{siteId}", APIInvoker.toPathValue(siteId));
 		}
@@ -325,7 +301,6 @@ public class TestsAPI extends Object {
 		Boolean responseObject = (Boolean) getApiInvoker().deserialize(response, Boolean.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetProductWithFullData
@@ -347,11 +322,9 @@ public class TestsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( productId != null) {
 			resourcePath = resourcePath.replace("{productId}", APIInvoker.toPathValue(productId));
 		}
-
 		if( siteId != null) {
 			resourcePath = resourcePath.replace("{siteId}", APIInvoker.toPathValue(siteId));
 		}
@@ -367,7 +340,6 @@ public class TestsAPI extends Object {
 		ProductResponse responseObject = (ProductResponse) getApiInvoker().deserialize(response, ProductResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetSubscriptionItemsForAllSubscriptionProductItems
@@ -387,7 +359,6 @@ public class TestsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
@@ -397,7 +368,6 @@ public class TestsAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * GetSubscriptionItemsForPricingPlan
@@ -418,11 +388,9 @@ public class TestsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( productPricingPlanId != null) {
 			resourcePath = resourcePath.replace("{productPricingPlanId}", APIInvoker.toPathValue(productPricingPlanId));
 		}
-
 		if( siteId != null) {
 			resourcePath = resourcePath.replace("{siteId}", APIInvoker.toPathValue(siteId));
 		}

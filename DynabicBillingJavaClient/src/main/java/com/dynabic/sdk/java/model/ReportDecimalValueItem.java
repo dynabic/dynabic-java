@@ -19,7 +19,6 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
-
 import java.util.Date;
 
 
@@ -34,24 +33,20 @@ import java.util.Date;
 public class ReportDecimalValueItem extends Object {
 
 
-
     /**
      * 
      */
 	 private Double value ;
 
-
     /**
      * 
      */
-	 private java.util.Date date ;
-
+	 private Date date ;
 
     /**
      * 
      */
 	 private String currency_code ;
-
 
 
 	/**
@@ -67,20 +62,18 @@ public class ReportDecimalValueItem extends Object {
 	 	this.value = value;
 	 }
 
-
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public java.util.Date getDate() {
+	 public Date getDate() {
 	 	return date;
 	 }  
 	 
-	 public void setDate(java.util.Date  date) {
+	 public void setDate(Date  date) {
 	 	this.date = date;
 	 }
-
 
 	/**
 	 * 

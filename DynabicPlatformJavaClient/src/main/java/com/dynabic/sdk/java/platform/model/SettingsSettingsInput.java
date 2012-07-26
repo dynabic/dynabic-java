@@ -31,36 +31,30 @@ import java.util.List;
 public class SettingsSettingsInput extends Object {
 
 
-
     /**
      * site Subdomain
      */
 	 private String siteSubdomain ;
-
 
     /**
      * setting Id
      */
 	 private String settingId ;
 
-
     /**
      * setting Name
      */
 	 private String settingName ;
-
 
     /**
      * setting Value
      */
 	 private String settingValue ;
 
-
     /**
      * setting Description
      */
 	 private String settingDescription ;
-
 
 
 	/**
@@ -76,7 +70,6 @@ public class SettingsSettingsInput extends Object {
 	 	this.siteSubdomain = siteSubdomain;
 	 }
 
-
 	/**
 	 * setting Id
 	 * 
@@ -89,7 +82,6 @@ public class SettingsSettingsInput extends Object {
 	 public void setSettingId(String  settingId) {
 	 	this.settingId = settingId;
 	 }
-
 
 	/**
 	 * setting Name
@@ -104,7 +96,6 @@ public class SettingsSettingsInput extends Object {
 	 	this.settingName = settingName;
 	 }
 
-
 	/**
 	 * setting Value
 	 * 
@@ -117,7 +108,6 @@ public class SettingsSettingsInput extends Object {
 	 public void setSettingValue(String  settingValue) {
 	 	this.settingValue = settingValue;
 	 }
-
 
 	/**
 	 * setting Description

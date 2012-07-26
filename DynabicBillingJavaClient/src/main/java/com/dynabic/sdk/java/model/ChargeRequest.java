@@ -31,18 +31,15 @@ import java.util.List;
 public class ChargeRequest extends Object {
 
 
-
     /**
      * 
      */
 	 private Double amount ;
 
-
     /**
      * 
      */
 	 private String memo ;
-
 
 
 	/**
@@ -57,7 +54,6 @@ public class ChargeRequest extends Object {
 	 public void setAmount(Double  amount) {
 	 	this.amount = amount;
 	 }
-
 
 	/**
 	 * 

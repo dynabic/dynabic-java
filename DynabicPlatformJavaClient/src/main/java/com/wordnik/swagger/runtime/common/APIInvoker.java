@@ -321,21 +321,6 @@ public class APIInvoker {
         value = (value == null) ? "" : value;
         return encode(value);
     }
-    
-    public static String toPathValue(Integer value) {
-        String out = value.toString();
-        return encode(out);
-    }
-    
-    public static String toPathValue(Boolean value) {
-        String out = value.toString();
-        return encode(out);
-    }
-    
-     public static String toPathValue(java.util.Date value) {
-        String out = value.toString();
-        return encode(out);
-    }
 
     /**
      * Overloaded method for returning a path value

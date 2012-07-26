@@ -26,11 +26,7 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-
+import java.util.*;
 import java.lang.Long;
 import java.io.IOException;
 
@@ -44,7 +40,6 @@ import java.io.IOException;
 public class UsersAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
-
 
 	/**
 	 * GetAllUsers
@@ -66,11 +61,9 @@ public class UsersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( pageNumber != null) {
 			resourcePath = resourcePath.replace("{pageNumber}", APIInvoker.toPathValue(pageNumber));
 		}
-
 		if( pageSize != null) {
 			resourcePath = resourcePath.replace("{pageSize}", APIInvoker.toPathValue(pageSize));
 		}
@@ -91,7 +84,6 @@ public class UsersAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
-
 	/**
 	 * GetUserById
 	 *
@@ -111,7 +103,6 @@ public class UsersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}
@@ -127,7 +118,6 @@ public class UsersAPI extends Object {
 		UserResponse responseObject = (UserResponse) getApiInvoker().deserialize(response, UserResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetUserByUserName
@@ -148,7 +138,6 @@ public class UsersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userName != null) {
 			resourcePath = resourcePath.replace("{userName}", APIInvoker.toPathValue(userName));
 		}
@@ -164,7 +153,6 @@ public class UsersAPI extends Object {
 		UserResponse responseObject = (UserResponse) getApiInvoker().deserialize(response, UserResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetUserApiKeys
@@ -185,7 +173,6 @@ public class UsersAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}
@@ -201,7 +188,6 @@ public class UsersAPI extends Object {
 		UserApiKeysResponse responseObject = (UserApiKeysResponse) getApiInvoker().deserialize(response, UserApiKeysResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * AddUser
@@ -234,7 +220,6 @@ public class UsersAPI extends Object {
 		return responseObject;
 	}
 
-
 	/**
 	 * UpdateUser
 	 *
@@ -255,7 +240,6 @@ public class UsersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}
@@ -271,7 +255,6 @@ public class UsersAPI extends Object {
 		UserResponse responseObject = (UserResponse) getApiInvoker().deserialize(response, UserResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * DeleteUser
@@ -291,7 +274,6 @@ public class UsersAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}
@@ -301,7 +283,6 @@ public class UsersAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * SetDeletedStatus
@@ -322,11 +303,9 @@ public class UsersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}
-
 		if( status != null) {
 			resourcePath = resourcePath.replace("{status}", APIInvoker.toPathValue(status));
 		}
@@ -336,7 +315,6 @@ public class UsersAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * SetActiveStatus
@@ -357,11 +335,9 @@ public class UsersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}
-
 		if( status != null) {
 			resourcePath = resourcePath.replace("{status}", APIInvoker.toPathValue(status));
 		}
@@ -371,7 +347,6 @@ public class UsersAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * ResetPassword
@@ -391,7 +366,6 @@ public class UsersAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}
@@ -401,7 +375,6 @@ public class UsersAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * ModifyPassword
@@ -423,15 +396,12 @@ public class UsersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}
-
 		if( oldPassword != null) {
 			resourcePath = resourcePath.replace("{oldPassword}", APIInvoker.toPathValue(oldPassword));
 		}
-
 		if( newPassword != null) {
 			resourcePath = resourcePath.replace("{newPassword}", APIInvoker.toPathValue(newPassword));
 		}
@@ -441,7 +411,6 @@ public class UsersAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * SetRoles
@@ -462,11 +431,9 @@ public class UsersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}
-
 		if( roles != null) {
 			resourcePath = resourcePath.replace("{roles}", APIInvoker.toPathValue(roles));
 		}
@@ -476,7 +443,6 @@ public class UsersAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * DeleteApiKeys
@@ -496,7 +462,6 @@ public class UsersAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}
@@ -506,7 +471,6 @@ public class UsersAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * GenerateNewApiKeys
@@ -527,7 +491,6 @@ public class UsersAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( userId != null) {
 			resourcePath = resourcePath.replace("{userId}", APIInvoker.toPathValue(userId));
 		}

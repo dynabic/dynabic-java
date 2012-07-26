@@ -31,48 +31,40 @@ import java.util.List;
 public class CompanyInfoRequest extends Object {
 
 
-
     /**
      * 
      */
 	 private String timezone ;
-
 
     /**
      * 
      */
 	 private String phone ;
 
-
     /**
      * 
      */
 	 private String email ;
-
 
     /**
      * 
      */
 	 private String name ;
 
-
     /**
      * 
      */
 	 private String culture ;
-
 
     /**
      * 
      */
 	 private String currency ;
 
-
     /**
      * 
      */
 	 private String country ;
-
 
 
 	/**
@@ -88,7 +80,6 @@ public class CompanyInfoRequest extends Object {
 	 	this.timezone = timezone;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -101,7 +92,6 @@ public class CompanyInfoRequest extends Object {
 	 public void setPhone(String  phone) {
 	 	this.phone = phone;
 	 }
-
 
 	/**
 	 * 
@@ -116,7 +106,6 @@ public class CompanyInfoRequest extends Object {
 	 	this.email = email;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -129,7 +118,6 @@ public class CompanyInfoRequest extends Object {
 	 public void setName(String  name) {
 	 	this.name = name;
 	 }
-
 
 	/**
 	 * 
@@ -144,7 +132,6 @@ public class CompanyInfoRequest extends Object {
 	 	this.culture = culture;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -157,7 +144,6 @@ public class CompanyInfoRequest extends Object {
 	 public void setCurrency(String  currency) {
 	 	this.currency = currency;
 	 }
-
 
 	/**
 	 * 

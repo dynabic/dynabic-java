@@ -26,11 +26,7 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-
+import java.util.*;
 import java.lang.Long;
 import java.io.IOException;
 
@@ -44,7 +40,6 @@ import java.io.IOException;
 public class ProductsAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
-
 
 	/**
 	 * GetProductsBySite
@@ -68,19 +63,15 @@ public class ProductsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( isArchived != null) {
 			resourcePath = resourcePath.replace("{isArchived}", APIInvoker.toPathValue(isArchived));
 		}
-
 		if( pageNumber != null) {
 			resourcePath = resourcePath.replace("{pageNumber}", APIInvoker.toPathValue(pageNumber));
 		}
-
 		if( pageSize != null) {
 			resourcePath = resourcePath.replace("{pageSize}", APIInvoker.toPathValue(pageSize));
 		}
@@ -100,7 +91,6 @@ public class ProductsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
-
 
 	/**
 	 * GetProductsBySiteAndFamily
@@ -123,15 +113,12 @@ public class ProductsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( productFamilyName != null) {
 			resourcePath = resourcePath.replace("{productFamilyName}", APIInvoker.toPathValue(productFamilyName));
 		}
-
 		if( isArchived != null) {
 			resourcePath = resourcePath.replace("{isArchived}", APIInvoker.toPathValue(isArchived));
 		}
@@ -151,7 +138,6 @@ public class ProductsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
-
 
 	/**
 	 * GetProductsBySiteAndProductName
@@ -173,11 +159,9 @@ public class ProductsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
-
 		if( productName != null) {
 			resourcePath = resourcePath.replace("{productName}", APIInvoker.toPathValue(productName));
 		}
@@ -197,7 +181,6 @@ public class ProductsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
-
 
 	/**
 	 * GetProductByApiRef
@@ -219,11 +202,9 @@ public class ProductsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( siteId != null) {
 			resourcePath = resourcePath.replace("{siteId}", APIInvoker.toPathValue(siteId));
 		}
-
 		if( apiRef != null) {
 			resourcePath = resourcePath.replace("{apiRef}", APIInvoker.toPathValue(apiRef));
 		}
@@ -239,7 +220,6 @@ public class ProductsAPI extends Object {
 		ProductResponse responseObject = (ProductResponse) getApiInvoker().deserialize(response, ProductResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetProductsByFamilyId
@@ -261,11 +241,9 @@ public class ProductsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( productFamilyId != null) {
 			resourcePath = resourcePath.replace("{productFamilyId}", APIInvoker.toPathValue(productFamilyId));
 		}
-
 		if( isArchived != null) {
 			resourcePath = resourcePath.replace("{isArchived}", APIInvoker.toPathValue(isArchived));
 		}
@@ -285,7 +263,6 @@ public class ProductsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
-
 
 	/**
 	 * GetProductByFamilyIdAndProductName
@@ -307,11 +284,9 @@ public class ProductsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( productFamilyId != null) {
 			resourcePath = resourcePath.replace("{productFamilyId}", APIInvoker.toPathValue(productFamilyId));
 		}
-
 		if( productName != null) {
 			resourcePath = resourcePath.replace("{productName}", APIInvoker.toPathValue(productName));
 		}
@@ -327,7 +302,6 @@ public class ProductsAPI extends Object {
 		ProductResponse responseObject = (ProductResponse) getApiInvoker().deserialize(response, ProductResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * GetProductById
@@ -348,7 +322,6 @@ public class ProductsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( productId != null) {
 			resourcePath = resourcePath.replace("{productId}", APIInvoker.toPathValue(productId));
 		}
@@ -364,7 +337,6 @@ public class ProductsAPI extends Object {
 		ProductResponse responseObject = (ProductResponse) getApiInvoker().deserialize(response, ProductResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * AddProduct
@@ -397,7 +369,6 @@ public class ProductsAPI extends Object {
 		return responseObject;
 	}
 
-
 	/**
 	 * UpdateProduct
 	 *
@@ -418,7 +389,6 @@ public class ProductsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( productId != null) {
 			resourcePath = resourcePath.replace("{productId}", APIInvoker.toPathValue(productId));
 		}
@@ -434,7 +404,6 @@ public class ProductsAPI extends Object {
 		ProductResponse responseObject = (ProductResponse) getApiInvoker().deserialize(response, ProductResponse.class);
 		return responseObject;
 	}
-
 
 	/**
 	 * DeleteProduct
@@ -454,7 +423,6 @@ public class ProductsAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( productId != null) {
 			resourcePath = resourcePath.replace("{productId}", APIInvoker.toPathValue(productId));
 		}
@@ -464,7 +432,6 @@ public class ProductsAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * ArchiveProduct
@@ -484,7 +451,6 @@ public class ProductsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( productId != null) {
 			resourcePath = resourcePath.replace("{productId}", APIInvoker.toPathValue(productId));
 		}
@@ -494,7 +460,6 @@ public class ProductsAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
-
 
 	/**
 	 * ActivateProduct
@@ -514,7 +479,6 @@ public class ProductsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
-
 		if( productId != null) {
 			resourcePath = resourcePath.replace("{productId}", APIInvoker.toPathValue(productId));
 		}

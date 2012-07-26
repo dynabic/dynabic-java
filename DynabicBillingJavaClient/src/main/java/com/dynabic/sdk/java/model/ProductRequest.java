@@ -19,9 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
-
 import java.util.List;
-
 import java.util.ArrayList;
 
 
@@ -36,60 +34,50 @@ import java.util.ArrayList;
 public class ProductRequest extends Object {
 
 
-
     /**
      * 
      */
 	 private Integer id ;
-
 
     /**
      * 
      */
 	 private String is_billing_address_at_signup_required ;
 
-
     /**
      * 
      */
 	 private String is_credit_card_at_signup_required ;
-
 
     /**
      * 
      */
 	 private List<PricingPlanRequest> pricing_plans  =  new ArrayList<PricingPlanRequest>();
 
-
     /**
      * 
      */
 	 private String description ;
-
 
     /**
      * 
      */
 	 private String accounting_code ;
 
-
     /**
      * 
      */
 	 private String api_reference1 ;
-
 
     /**
      * 
      */
 	 private String name ;
 
-
     /**
      * 
      */
 	 private Integer product_family_id ;
-
 
 
 	/**
@@ -105,7 +93,6 @@ public class ProductRequest extends Object {
 	 	this.id = id;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -118,7 +105,6 @@ public class ProductRequest extends Object {
 	 public void setIs_billing_address_at_signup_required(String  is_billing_address_at_signup_required) {
 	 	this.is_billing_address_at_signup_required = is_billing_address_at_signup_required;
 	 }
-
 
 	/**
 	 * 
@@ -133,7 +119,6 @@ public class ProductRequest extends Object {
 	 	this.is_credit_card_at_signup_required = is_credit_card_at_signup_required;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -146,7 +131,6 @@ public class ProductRequest extends Object {
 	 public void setPricing_plans(List<PricingPlanRequest>  pricing_plans) {
 	 	this.pricing_plans = pricing_plans;
 	 }
-
 
 	/**
 	 * 
@@ -161,7 +145,6 @@ public class ProductRequest extends Object {
 	 	this.description = description;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -174,7 +157,6 @@ public class ProductRequest extends Object {
 	 public void setAccounting_code(String  accounting_code) {
 	 	this.accounting_code = accounting_code;
 	 }
-
 
 	/**
 	 * 
@@ -189,7 +171,6 @@ public class ProductRequest extends Object {
 	 	this.api_reference1 = api_reference1;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -202,7 +183,6 @@ public class ProductRequest extends Object {
 	 public void setName(String  name) {
 	 	this.name = name;
 	 }
-
 
 	/**
 	 * 

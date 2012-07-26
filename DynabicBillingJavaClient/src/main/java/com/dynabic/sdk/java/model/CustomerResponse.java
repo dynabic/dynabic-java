@@ -19,7 +19,6 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
-
 import java.util.Date;
 
 
@@ -34,78 +33,65 @@ import java.util.Date;
 public class CustomerResponse extends Object {
 
 
-
     /**
      * 
      */
 	 private AddressResponse shipping_address ;
-
 
     /**
      * 
      */
 	 private Integer id ;
 
-
     /**
      * 
      */
 	 private String first_name ;
-
 
     /**
      * 
      */
 	 private String phone ;
 
-
     /**
      * 
      */
 	 private String email ;
-
 
     /**
      * 
      */
 	 private String company ;
 
-
     /**
      * 
      */
 	 private Integer shipping_address_id ;
-
 
     /**
      * 
      */
 	 private Boolean is_shipping_address_same_to_billing ;
 
-
     /**
      * 
      */
 	 private String last_name ;
 
-
     /**
      * 
      */
-	 private java.util.Date registration_date ;
-
+	 private Date registration_date ;
 
     /**
      * 
      */
 	 private Integer site_id ;
 
-
     /**
      * 
      */
 	 private String reference ;
-
 
 
 	/**
@@ -121,7 +107,6 @@ public class CustomerResponse extends Object {
 	 	this.shipping_address = shipping_address;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -134,7 +119,6 @@ public class CustomerResponse extends Object {
 	 public void setId(Integer  id) {
 	 	this.id = id;
 	 }
-
 
 	/**
 	 * 
@@ -149,7 +133,6 @@ public class CustomerResponse extends Object {
 	 	this.first_name = first_name;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -162,7 +145,6 @@ public class CustomerResponse extends Object {
 	 public void setPhone(String  phone) {
 	 	this.phone = phone;
 	 }
-
 
 	/**
 	 * 
@@ -177,7 +159,6 @@ public class CustomerResponse extends Object {
 	 	this.email = email;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -190,7 +171,6 @@ public class CustomerResponse extends Object {
 	 public void setCompany(String  company) {
 	 	this.company = company;
 	 }
-
 
 	/**
 	 * 
@@ -205,7 +185,6 @@ public class CustomerResponse extends Object {
 	 	this.shipping_address_id = shipping_address_id;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -218,7 +197,6 @@ public class CustomerResponse extends Object {
 	 public void setIs_shipping_address_same_to_billing(Boolean  is_shipping_address_same_to_billing) {
 	 	this.is_shipping_address_same_to_billing = is_shipping_address_same_to_billing;
 	 }
-
 
 	/**
 	 * 
@@ -233,20 +211,18 @@ public class CustomerResponse extends Object {
 	 	this.last_name = last_name;
 	 }
 
-
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public java.util.Date getRegistration_date() {
+	 public Date getRegistration_date() {
 	 	return registration_date;
 	 }  
 	 
-	 public void setRegistration_date(java.util.Date  registration_date) {
+	 public void setRegistration_date(Date  registration_date) {
 	 	this.registration_date = registration_date;
 	 }
-
 
 	/**
 	 * 
@@ -260,7 +236,6 @@ public class CustomerResponse extends Object {
 	 public void setSite_id(Integer  site_id) {
 	 	this.site_id = site_id;
 	 }
-
 
 	/**
 	 * 

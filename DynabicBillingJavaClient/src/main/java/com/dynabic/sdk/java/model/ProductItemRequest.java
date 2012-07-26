@@ -19,9 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
-
 import java.util.List;
-
 import java.util.ArrayList;
 
 
@@ -36,66 +34,55 @@ import java.util.ArrayList;
 public class ProductItemRequest extends Object {
 
 
-
     /**
      * 
      */
 	 private Integer id ;
-
 
     /**
      * 
      */
 	 private Integer product_item_id ;
 
-
     /**
      * 
      */
 	 private Boolean is_visible_on_hosted_page ;
-
 
     /**
      * 
      */
 	 private String description ;
 
-
     /**
      * 
      */
 	 private String charge_model ;
-
 
     /**
      * 
      */
 	 private String name ;
 
-
     /**
      * 
      */
 	 private List<ProductItemRequest> product_item_children  =  new ArrayList<ProductItemRequest>();
-
 
     /**
      * 
      */
 	 private String unit_name ;
 
-
     /**
      * 
      */
 	 private List<ProductMeteredPriceRequest> metered_prices  =  new ArrayList<ProductMeteredPriceRequest>();
 
-
     /**
      * 
      */
 	 private String item_type ;
-
 
 
 	/**
@@ -111,7 +98,6 @@ public class ProductItemRequest extends Object {
 	 	this.id = id;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -124,7 +110,6 @@ public class ProductItemRequest extends Object {
 	 public void setProduct_item_id(Integer  product_item_id) {
 	 	this.product_item_id = product_item_id;
 	 }
-
 
 	/**
 	 * 
@@ -139,7 +124,6 @@ public class ProductItemRequest extends Object {
 	 	this.is_visible_on_hosted_page = is_visible_on_hosted_page;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -152,7 +136,6 @@ public class ProductItemRequest extends Object {
 	 public void setDescription(String  description) {
 	 	this.description = description;
 	 }
-
 
 	/**
 	 * 
@@ -167,7 +150,6 @@ public class ProductItemRequest extends Object {
 	 	this.charge_model = charge_model;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -180,7 +162,6 @@ public class ProductItemRequest extends Object {
 	 public void setName(String  name) {
 	 	this.name = name;
 	 }
-
 
 	/**
 	 * 
@@ -195,7 +176,6 @@ public class ProductItemRequest extends Object {
 	 	this.product_item_children = product_item_children;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -209,7 +189,6 @@ public class ProductItemRequest extends Object {
 	 	this.unit_name = unit_name;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -222,7 +201,6 @@ public class ProductItemRequest extends Object {
 	 public void setMetered_prices(List<ProductMeteredPriceRequest>  metered_prices) {
 	 	this.metered_prices = metered_prices;
 	 }
-
 
 	/**
 	 * 

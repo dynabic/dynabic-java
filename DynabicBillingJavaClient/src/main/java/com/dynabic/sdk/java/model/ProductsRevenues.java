@@ -19,7 +19,6 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
-
 import java.util.Date;
 
 
@@ -34,36 +33,30 @@ import java.util.Date;
 public class ProductsRevenues extends Object {
 
 
-
     /**
      * 
      */
 	 private String product ;
-
 
     /**
      * 
      */
 	 private Integer product_id ;
 
-
     /**
      * 
      */
 	 private Double revenues ;
 
-
     /**
      * 
      */
-	 private java.util.Date date ;
-
+	 private Date date ;
 
     /**
      * 
      */
 	 private String currency_code ;
-
 
 
 	/**
@@ -79,7 +72,6 @@ public class ProductsRevenues extends Object {
 	 	this.product = product;
 	 }
 
-
 	/**
 	 * 
 	 * 
@@ -92,7 +84,6 @@ public class ProductsRevenues extends Object {
 	 public void setProduct_id(Integer  product_id) {
 	 	this.product_id = product_id;
 	 }
-
 
 	/**
 	 * 
@@ -107,20 +98,18 @@ public class ProductsRevenues extends Object {
 	 	this.revenues = revenues;
 	 }
 
-
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public java.util.Date getDate() {
+	 public Date getDate() {
 	 	return date;
 	 }  
 	 
-	 public void setDate(java.util.Date  date) {
+	 public void setDate(Date  date) {
 	 	this.date = date;
 	 }
-
 
 	/**
 	 * 
