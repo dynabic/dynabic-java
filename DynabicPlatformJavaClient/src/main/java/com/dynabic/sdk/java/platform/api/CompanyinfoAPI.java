@@ -26,7 +26,11 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
 import java.lang.Long;
 import java.io.IOException;
 
@@ -40,6 +44,7 @@ import java.io.IOException;
 public class CompanyinfoAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
+
 
 	/**
 	 * GetCompanyInfo
@@ -69,6 +74,7 @@ public class CompanyinfoAPI extends Object {
 		CompanyInfoResponse responseObject = (CompanyInfoResponse) getApiInvoker().deserialize(response, CompanyInfoResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * UpdateCompanyInfo

@@ -31,105 +31,126 @@ import java.util.List;
 public class Country extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer NumericIsoCode ;
+
 
     /**
      * 
      */
 	 private String Fips ;
 
+
     /**
      * 
      */
 	 private Integer DisplayOrder ;
+
 
     /**
      * 
      */
 	 private String Tld ;
 
+
     /**
      * 
      */
 	 private Integer Area ;
+
 
     /**
      * 
      */
 	 private String Capital ;
 
+
     /**
      * 
      */
 	 private Integer Geonameid ;
+
 
     /**
      * 
      */
 	 private String PostalCodeRegex ;
 
+
     /**
      * 
      */
 	 private String EquivalentFipsCode ;
+
 
     /**
      * 
      */
 	 private String CurrencyCode ;
 
+
     /**
      * 
      */
 	 private String Languages ;
+
 
     /**
      * 
      */
 	 private String Name ;
 
+
     /**
      * 
      */
 	 private String ThreeLetterIsoCode ;
+
 
     /**
      * 
      */
 	 private String CurrencyName ;
 
+
     /**
      * 
      */
 	 private String PostalCodeFormat ;
+
 
     /**
      * 
      */
 	 private String Neighbours ;
 
+
     /**
      * 
      */
 	 private Integer Population ;
+
 
     /**
      * 
      */
 	 private Integer Id ;
 
+
     /**
      * 
      */
 	 private String Continent ;
 
+
     /**
      * 
      */
 	 private String TwoLetterIsoCode ;
+
 
 
 	/**
@@ -145,6 +166,7 @@ public class Country extends Object {
 	 	this.NumericIsoCode = NumericIsoCode;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -157,6 +179,7 @@ public class Country extends Object {
 	 public void setFips(String  Fips) {
 	 	this.Fips = Fips;
 	 }
+
 
 	/**
 	 * 
@@ -171,6 +194,7 @@ public class Country extends Object {
 	 	this.DisplayOrder = DisplayOrder;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -183,6 +207,7 @@ public class Country extends Object {
 	 public void setTld(String  Tld) {
 	 	this.Tld = Tld;
 	 }
+
 
 	/**
 	 * 
@@ -197,6 +222,7 @@ public class Country extends Object {
 	 	this.Area = Area;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -209,6 +235,7 @@ public class Country extends Object {
 	 public void setCapital(String  Capital) {
 	 	this.Capital = Capital;
 	 }
+
 
 	/**
 	 * 
@@ -223,6 +250,7 @@ public class Country extends Object {
 	 	this.Geonameid = Geonameid;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -235,6 +263,7 @@ public class Country extends Object {
 	 public void setPostalCodeRegex(String  PostalCodeRegex) {
 	 	this.PostalCodeRegex = PostalCodeRegex;
 	 }
+
 
 	/**
 	 * 
@@ -249,6 +278,7 @@ public class Country extends Object {
 	 	this.EquivalentFipsCode = EquivalentFipsCode;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -261,6 +291,7 @@ public class Country extends Object {
 	 public void setCurrencyCode(String  CurrencyCode) {
 	 	this.CurrencyCode = CurrencyCode;
 	 }
+
 
 	/**
 	 * 
@@ -275,6 +306,7 @@ public class Country extends Object {
 	 	this.Languages = Languages;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -287,6 +319,7 @@ public class Country extends Object {
 	 public void setName(String  Name) {
 	 	this.Name = Name;
 	 }
+
 
 	/**
 	 * 
@@ -301,6 +334,7 @@ public class Country extends Object {
 	 	this.ThreeLetterIsoCode = ThreeLetterIsoCode;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -313,6 +347,7 @@ public class Country extends Object {
 	 public void setCurrencyName(String  CurrencyName) {
 	 	this.CurrencyName = CurrencyName;
 	 }
+
 
 	/**
 	 * 
@@ -327,6 +362,7 @@ public class Country extends Object {
 	 	this.PostalCodeFormat = PostalCodeFormat;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -339,6 +375,7 @@ public class Country extends Object {
 	 public void setNeighbours(String  Neighbours) {
 	 	this.Neighbours = Neighbours;
 	 }
+
 
 	/**
 	 * 
@@ -353,6 +390,7 @@ public class Country extends Object {
 	 	this.Population = Population;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -366,6 +404,7 @@ public class Country extends Object {
 	 	this.Id = Id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -378,6 +417,7 @@ public class Country extends Object {
 	 public void setContinent(String  Continent) {
 	 	this.Continent = Continent;
 	 }
+
 
 	/**
 	 * 

@@ -19,6 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
 
 
@@ -33,40 +34,48 @@ import java.util.Date;
 public class StatementDetail extends Object {
 
 
+
     /**
      * 
      */
 	 private Double amount ;
+
 
     /**
      * 
      */
 	 private Integer id ;
 
+
     /**
      * 
      */
 	 private Integer currency_id ;
+
 
     /**
      * 
      */
 	 private String details ;
 
+
     /**
      * 
      */
 	 private String type ;
 
+
     /**
      * 
      */
-	 private Date date ;
+	 private java.util.Date date ;
+
 
     /**
      * 
      */
 	 private Integer statement_id ;
+
 
 
 	/**
@@ -82,6 +91,7 @@ public class StatementDetail extends Object {
 	 	this.amount = amount;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -94,6 +104,7 @@ public class StatementDetail extends Object {
 	 public void setId(Integer  id) {
 	 	this.id = id;
 	 }
+
 
 	/**
 	 * 
@@ -108,6 +119,7 @@ public class StatementDetail extends Object {
 	 	this.currency_id = currency_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -120,6 +132,7 @@ public class StatementDetail extends Object {
 	 public void setDetails(String  details) {
 	 	this.details = details;
 	 }
+
 
 	/**
 	 * 
@@ -134,18 +147,20 @@ public class StatementDetail extends Object {
 	 	this.type = type;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getDate() {
+	 public java.util.Date getDate() {
 	 	return date;
 	 }  
 	 
-	 public void setDate(Date  date) {
+	 public void setDate(java.util.Date  date) {
 	 	this.date = date;
 	 }
+
 
 	/**
 	 * 

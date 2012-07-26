@@ -19,6 +19,7 @@ package com.dynabic.sdk.java.platform.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
 
 
@@ -33,95 +34,114 @@ import java.util.Date;
 public class UserResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private String user_roles ;
+
 
     /**
      * 
      */
 	 private String private_key ;
 
+
     /**
      * 
      */
 	 private Boolean deleted ;
+
 
     /**
      * 
      */
 	 private Boolean is_subscribed_to_newsletter ;
 
+
     /**
      * 
      */
 	 private String currency ;
+
 
     /**
      * 
      */
 	 private String country ;
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private String first_name ;
 
+
     /**
      * 
      */
 	 private String timezone ;
+
 
     /**
      * 
      */
 	 private String googleapps_user_name ;
 
+
     /**
      * 
      */
 	 private String email ;
 
+
     /**
      * 
      */
-	 private Date registration_date ;
+	 private java.util.Date registration_date ;
+
 
     /**
      * 
      */
 	 private String last_name ;
 
+
     /**
      * 
      */
 	 private Boolean active ;
+
 
     /**
      * 
      */
 	 private String yahoo_user_name ;
 
+
     /**
      * 
      */
 	 private String facebook_id ;
+
 
     /**
      * 
      */
 	 private String public_key ;
 
+
     /**
      * 
      */
 	 private String culture ;
+
 
 
 	/**
@@ -137,6 +157,7 @@ public class UserResponse extends Object {
 	 	this.user_roles = user_roles;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -149,6 +170,7 @@ public class UserResponse extends Object {
 	 public void setPrivate_key(String  private_key) {
 	 	this.private_key = private_key;
 	 }
+
 
 	/**
 	 * 
@@ -163,6 +185,7 @@ public class UserResponse extends Object {
 	 	this.deleted = deleted;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -175,6 +198,7 @@ public class UserResponse extends Object {
 	 public void setIs_subscribed_to_newsletter(Boolean  is_subscribed_to_newsletter) {
 	 	this.is_subscribed_to_newsletter = is_subscribed_to_newsletter;
 	 }
+
 
 	/**
 	 * 
@@ -189,6 +213,7 @@ public class UserResponse extends Object {
 	 	this.currency = currency;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -201,6 +226,7 @@ public class UserResponse extends Object {
 	 public void setCountry(String  country) {
 	 	this.country = country;
 	 }
+
 
 	/**
 	 * 
@@ -215,6 +241,7 @@ public class UserResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -227,6 +254,7 @@ public class UserResponse extends Object {
 	 public void setFirst_name(String  first_name) {
 	 	this.first_name = first_name;
 	 }
+
 
 	/**
 	 * 
@@ -241,6 +269,7 @@ public class UserResponse extends Object {
 	 	this.timezone = timezone;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -253,6 +282,7 @@ public class UserResponse extends Object {
 	 public void setGoogleapps_user_name(String  googleapps_user_name) {
 	 	this.googleapps_user_name = googleapps_user_name;
 	 }
+
 
 	/**
 	 * 
@@ -267,18 +297,20 @@ public class UserResponse extends Object {
 	 	this.email = email;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getRegistration_date() {
+	 public java.util.Date getRegistration_date() {
 	 	return registration_date;
 	 }  
 	 
-	 public void setRegistration_date(Date  registration_date) {
+	 public void setRegistration_date(java.util.Date  registration_date) {
 	 	this.registration_date = registration_date;
 	 }
+
 
 	/**
 	 * 
@@ -293,6 +325,7 @@ public class UserResponse extends Object {
 	 	this.last_name = last_name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -305,6 +338,7 @@ public class UserResponse extends Object {
 	 public void setActive(Boolean  active) {
 	 	this.active = active;
 	 }
+
 
 	/**
 	 * 
@@ -319,6 +353,7 @@ public class UserResponse extends Object {
 	 	this.yahoo_user_name = yahoo_user_name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -332,6 +367,7 @@ public class UserResponse extends Object {
 	 	this.facebook_id = facebook_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -344,6 +380,7 @@ public class UserResponse extends Object {
 	 public void setPublic_key(String  public_key) {
 	 	this.public_key = public_key;
 	 }
+
 
 	/**
 	 * 

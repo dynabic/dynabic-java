@@ -19,7 +19,9 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.List;
+
 import java.util.ArrayList;
 
 
@@ -34,55 +36,66 @@ import java.util.ArrayList;
 public class ProductResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private String is_billing_address_at_signup_required ;
 
+
     /**
      * 
      */
 	 private String is_credit_card_at_signup_required ;
+
 
     /**
      * 
      */
 	 private List<PricingPlanResponse> pricing_plans  =  new ArrayList<PricingPlanResponse>();
 
+
     /**
      * 
      */
 	 private String description ;
+
 
     /**
      * 
      */
 	 private String accounting_code ;
 
+
     /**
      * 
      */
 	 private String api_reference1 ;
+
 
     /**
      * 
      */
 	 private String name ;
 
+
     /**
      * 
      */
 	 private Integer product_family_id ;
 
+
     /**
      * 
      */
 	 private Boolean is_archived ;
+
 
 
 	/**
@@ -98,6 +111,7 @@ public class ProductResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -110,6 +124,7 @@ public class ProductResponse extends Object {
 	 public void setIs_billing_address_at_signup_required(String  is_billing_address_at_signup_required) {
 	 	this.is_billing_address_at_signup_required = is_billing_address_at_signup_required;
 	 }
+
 
 	/**
 	 * 
@@ -124,6 +139,7 @@ public class ProductResponse extends Object {
 	 	this.is_credit_card_at_signup_required = is_credit_card_at_signup_required;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -136,6 +152,7 @@ public class ProductResponse extends Object {
 	 public void setPricing_plans(List<PricingPlanResponse>  pricing_plans) {
 	 	this.pricing_plans = pricing_plans;
 	 }
+
 
 	/**
 	 * 
@@ -150,6 +167,7 @@ public class ProductResponse extends Object {
 	 	this.description = description;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -162,6 +180,7 @@ public class ProductResponse extends Object {
 	 public void setAccounting_code(String  accounting_code) {
 	 	this.accounting_code = accounting_code;
 	 }
+
 
 	/**
 	 * 
@@ -176,6 +195,7 @@ public class ProductResponse extends Object {
 	 	this.api_reference1 = api_reference1;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -189,6 +209,7 @@ public class ProductResponse extends Object {
 	 	this.name = name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -201,6 +222,7 @@ public class ProductResponse extends Object {
 	 public void setProduct_family_id(Integer  product_family_id) {
 	 	this.product_family_id = product_family_id;
 	 }
+
 
 	/**
 	 * 

@@ -19,8 +19,11 @@ package com.dynabic.sdk.java.platform.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.List;
+
 import java.util.ArrayList;
+
 import java.util.Date;
 
 
@@ -35,35 +38,42 @@ import java.util.Date;
 public class EventResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private String event_type ;
 
+
     /**
      * 
      */
 	 private Integer site_id ;
+
 
     /**
      * 
      */
 	 private List<EventParam> parameters  =  new ArrayList<EventParam>();
 
+
     /**
      * 
      */
 	 private String event_result ;
 
+
     /**
      * 
      */
-	 private Date date ;
+	 private java.util.Date date ;
+
 
 
 	/**
@@ -79,6 +89,7 @@ public class EventResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -91,6 +102,7 @@ public class EventResponse extends Object {
 	 public void setEvent_type(String  event_type) {
 	 	this.event_type = event_type;
 	 }
+
 
 	/**
 	 * 
@@ -105,6 +117,7 @@ public class EventResponse extends Object {
 	 	this.site_id = site_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -117,6 +130,7 @@ public class EventResponse extends Object {
 	 public void setParameters(List<EventParam>  parameters) {
 	 	this.parameters = parameters;
 	 }
+
 
 	/**
 	 * 
@@ -131,16 +145,17 @@ public class EventResponse extends Object {
 	 	this.event_result = event_result;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getDate() {
+	 public java.util.Date getDate() {
 	 	return date;
 	 }  
 	 
-	 public void setDate(Date  date) {
+	 public void setDate(java.util.Date  date) {
 	 	this.date = date;
 	 }
 

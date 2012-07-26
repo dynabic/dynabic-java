@@ -31,50 +31,60 @@ import java.util.List;
 public class CustomerRequest extends Object {
 
 
+
     /**
      * 
      */
 	 private AddressRequest shipping_address ;
+
 
     /**
      * 
      */
 	 private String first_name ;
 
+
     /**
      * 
      */
 	 private String phone ;
+
 
     /**
      * 
      */
 	 private String email ;
 
+
     /**
      * 
      */
 	 private String company ;
+
 
     /**
      * 
      */
 	 private Integer shipping_address_id ;
 
+
     /**
      * 
      */
 	 private Boolean is_shipping_address_same_to_billing ;
+
 
     /**
      * 
      */
 	 private String last_name ;
 
+
     /**
      * 
      */
 	 private String reference ;
+
 
 
 	/**
@@ -90,6 +100,7 @@ public class CustomerRequest extends Object {
 	 	this.shipping_address = shipping_address;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -102,6 +113,7 @@ public class CustomerRequest extends Object {
 	 public void setFirst_name(String  first_name) {
 	 	this.first_name = first_name;
 	 }
+
 
 	/**
 	 * 
@@ -116,6 +128,7 @@ public class CustomerRequest extends Object {
 	 	this.phone = phone;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -128,6 +141,7 @@ public class CustomerRequest extends Object {
 	 public void setEmail(String  email) {
 	 	this.email = email;
 	 }
+
 
 	/**
 	 * 
@@ -142,6 +156,7 @@ public class CustomerRequest extends Object {
 	 	this.company = company;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -154,6 +169,7 @@ public class CustomerRequest extends Object {
 	 public void setShipping_address_id(Integer  shipping_address_id) {
 	 	this.shipping_address_id = shipping_address_id;
 	 }
+
 
 	/**
 	 * 
@@ -168,6 +184,7 @@ public class CustomerRequest extends Object {
 	 	this.is_shipping_address_same_to_billing = is_shipping_address_same_to_billing;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -180,6 +197,7 @@ public class CustomerRequest extends Object {
 	 public void setLast_name(String  last_name) {
 	 	this.last_name = last_name;
 	 }
+
 
 	/**
 	 * 

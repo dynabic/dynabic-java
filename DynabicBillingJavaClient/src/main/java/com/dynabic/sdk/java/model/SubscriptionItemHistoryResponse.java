@@ -19,6 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
 
 
@@ -33,20 +34,24 @@ import java.util.Date;
 public class SubscriptionItemHistoryResponse extends Object {
 
 
+
     /**
      * 
      */
-	 private Date update_on ;
+	 private java.util.Date update_on ;
+
 
     /**
      * 
      */
 	 private Double new_value ;
 
+
     /**
      * 
      */
 	 private String description ;
+
 
     /**
      * 
@@ -54,18 +59,20 @@ public class SubscriptionItemHistoryResponse extends Object {
 	 private Double old_value ;
 
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getUpdate_on() {
+	 public java.util.Date getUpdate_on() {
 	 	return update_on;
 	 }  
 	 
-	 public void setUpdate_on(Date  update_on) {
+	 public void setUpdate_on(java.util.Date  update_on) {
 	 	this.update_on = update_on;
 	 }
+
 
 	/**
 	 * 
@@ -80,6 +87,7 @@ public class SubscriptionItemHistoryResponse extends Object {
 	 	this.new_value = new_value;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -92,6 +100,7 @@ public class SubscriptionItemHistoryResponse extends Object {
 	 public void setDescription(String  description) {
 	 	this.description = description;
 	 }
+
 
 	/**
 	 * 

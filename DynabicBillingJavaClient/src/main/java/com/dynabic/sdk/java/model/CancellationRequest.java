@@ -31,15 +31,18 @@ import java.util.List;
 public class CancellationRequest extends Object {
 
 
+
     /**
      * 
      */
 	 private String cancelationDetails ;
 
+
     /**
      * 
      */
 	 private Boolean isCancelledAtEndOfPeriod ;
+
 
 
 	/**
@@ -54,6 +57,7 @@ public class CancellationRequest extends Object {
 	 public void setCancelationDetails(String  cancelationDetails) {
 	 	this.cancelationDetails = cancelationDetails;
 	 }
+
 
 	/**
 	 * 

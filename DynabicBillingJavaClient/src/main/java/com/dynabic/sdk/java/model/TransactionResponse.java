@@ -19,6 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
 
 
@@ -33,115 +34,144 @@ import java.util.Date;
 public class TransactionResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private String gateway_response_message ;
+
 
     /**
      * 
      */
 	 private Integer subscription_id ;
 
+
     /**
      * 
      */
 	 private String transaction_type ;
+
+
+    /**
+     * 
+     */
+	 private ServiceResult service_result ;
+
 
     /**
      * 
      */
 	 private String gateway_raw_response ;
 
+
     /**
      * 
      */
-	 private Date transaction_date ;
+	 private java.util.Date transaction_date ;
+
 
     /**
      * 
      */
 	 private Integer settlement_attempts_count ;
 
+
     /**
      * 
      */
 	 private String currency ;
+
 
     /**
      * 
      */
 	 private String purchase_order_reference ;
 
+
     /**
      * 
      */
 	 private Double amount ;
+
 
     /**
      * 
      */
 	 private Integer id ;
 
+
     /**
      * 
      */
-	 private Date last_settlement_attempt_date ;
+	 private java.util.Date last_settlement_attempt_date ;
+
 
     /**
      * 
      */
 	 private String transaction_status ;
 
+
     /**
      * 
      */
 	 private Double refunded ;
+
 
     /**
      * 
      */
 	 private String details ;
 
-    /**
-     * 
-     */
-	 private String gateway_raw_request ;
-
-    /**
-     * 
-     */
-	 private String gateway_transaction_id ;
 
     /**
      * 
      */
 	 private Double subscription_balance ;
 
+
+    /**
+     * 
+     */
+	 private String gateway_raw_request ;
+
+
+    /**
+     * 
+     */
+	 private String gateway_transaction_id ;
+
+
     /**
      * 
      */
 	 private String gateway_response_code ;
+
 
     /**
      * 
      */
 	 private String gateway_response_description ;
 
+
     /**
      * 
      */
 	 private String gateway_status ;
+
 
     /**
      * 
      */
 	 private String gateway_ref_transaction_id ;
 
+
     /**
      * 
      */
-	 private Date gateway_settle_date ;
+	 private java.util.Date gateway_settle_date ;
+
 
 
 	/**
@@ -157,6 +187,7 @@ public class TransactionResponse extends Object {
 	 	this.gateway_response_message = gateway_response_message;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -169,6 +200,7 @@ public class TransactionResponse extends Object {
 	 public void setSubscription_id(Integer  subscription_id) {
 	 	this.subscription_id = subscription_id;
 	 }
+
 
 	/**
 	 * 
@@ -183,6 +215,21 @@ public class TransactionResponse extends Object {
 	 	this.transaction_type = transaction_type;
 	 }
 
+
+	/**
+	 * 
+	 * 
+	 * 
+	 */
+	 public ServiceResult getService_result() {
+	 	return service_result;
+	 }  
+	 
+	 public void setService_result(ServiceResult  service_result) {
+	 	this.service_result = service_result;
+	 }
+
+
 	/**
 	 * 
 	 * 
@@ -196,18 +243,20 @@ public class TransactionResponse extends Object {
 	 	this.gateway_raw_response = gateway_raw_response;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getTransaction_date() {
+	 public java.util.Date getTransaction_date() {
 	 	return transaction_date;
 	 }  
 	 
-	 public void setTransaction_date(Date  transaction_date) {
+	 public void setTransaction_date(java.util.Date  transaction_date) {
 	 	this.transaction_date = transaction_date;
 	 }
+
 
 	/**
 	 * 
@@ -222,6 +271,7 @@ public class TransactionResponse extends Object {
 	 	this.settlement_attempts_count = settlement_attempts_count;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -234,6 +284,7 @@ public class TransactionResponse extends Object {
 	 public void setCurrency(String  currency) {
 	 	this.currency = currency;
 	 }
+
 
 	/**
 	 * 
@@ -248,6 +299,7 @@ public class TransactionResponse extends Object {
 	 	this.purchase_order_reference = purchase_order_reference;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -260,6 +312,7 @@ public class TransactionResponse extends Object {
 	 public void setAmount(Double  amount) {
 	 	this.amount = amount;
 	 }
+
 
 	/**
 	 * 
@@ -274,18 +327,20 @@ public class TransactionResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getLast_settlement_attempt_date() {
+	 public java.util.Date getLast_settlement_attempt_date() {
 	 	return last_settlement_attempt_date;
 	 }  
 	 
-	 public void setLast_settlement_attempt_date(Date  last_settlement_attempt_date) {
+	 public void setLast_settlement_attempt_date(java.util.Date  last_settlement_attempt_date) {
 	 	this.last_settlement_attempt_date = last_settlement_attempt_date;
 	 }
+
 
 	/**
 	 * 
@@ -300,6 +355,7 @@ public class TransactionResponse extends Object {
 	 	this.transaction_status = transaction_status;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -312,6 +368,7 @@ public class TransactionResponse extends Object {
 	 public void setRefunded(Double  refunded) {
 	 	this.refunded = refunded;
 	 }
+
 
 	/**
 	 * 
@@ -326,31 +383,6 @@ public class TransactionResponse extends Object {
 	 	this.details = details;
 	 }
 
-	/**
-	 * 
-	 * 
-	 * 
-	 */
-	 public String getGateway_raw_request() {
-	 	return gateway_raw_request;
-	 }  
-	 
-	 public void setGateway_raw_request(String  gateway_raw_request) {
-	 	this.gateway_raw_request = gateway_raw_request;
-	 }
-
-	/**
-	 * 
-	 * 
-	 * 
-	 */
-	 public String getGateway_transaction_id() {
-	 	return gateway_transaction_id;
-	 }  
-	 
-	 public void setGateway_transaction_id(String  gateway_transaction_id) {
-	 	this.gateway_transaction_id = gateway_transaction_id;
-	 }
 
 	/**
 	 * 
@@ -365,6 +397,35 @@ public class TransactionResponse extends Object {
 	 	this.subscription_balance = subscription_balance;
 	 }
 
+
+	/**
+	 * 
+	 * 
+	 * 
+	 */
+	 public String getGateway_raw_request() {
+	 	return gateway_raw_request;
+	 }  
+	 
+	 public void setGateway_raw_request(String  gateway_raw_request) {
+	 	this.gateway_raw_request = gateway_raw_request;
+	 }
+
+
+	/**
+	 * 
+	 * 
+	 * 
+	 */
+	 public String getGateway_transaction_id() {
+	 	return gateway_transaction_id;
+	 }  
+	 
+	 public void setGateway_transaction_id(String  gateway_transaction_id) {
+	 	this.gateway_transaction_id = gateway_transaction_id;
+	 }
+
+
 	/**
 	 * 
 	 * 
@@ -377,6 +438,7 @@ public class TransactionResponse extends Object {
 	 public void setGateway_response_code(String  gateway_response_code) {
 	 	this.gateway_response_code = gateway_response_code;
 	 }
+
 
 	/**
 	 * 
@@ -391,6 +453,7 @@ public class TransactionResponse extends Object {
 	 	this.gateway_response_description = gateway_response_description;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -403,6 +466,7 @@ public class TransactionResponse extends Object {
 	 public void setGateway_status(String  gateway_status) {
 	 	this.gateway_status = gateway_status;
 	 }
+
 
 	/**
 	 * 
@@ -417,16 +481,17 @@ public class TransactionResponse extends Object {
 	 	this.gateway_ref_transaction_id = gateway_ref_transaction_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getGateway_settle_date() {
+	 public java.util.Date getGateway_settle_date() {
 	 	return gateway_settle_date;
 	 }  
 	 
-	 public void setGateway_settle_date(Date  gateway_settle_date) {
+	 public void setGateway_settle_date(java.util.Date  gateway_settle_date) {
 	 	this.gateway_settle_date = gateway_settle_date;
 	 }
 

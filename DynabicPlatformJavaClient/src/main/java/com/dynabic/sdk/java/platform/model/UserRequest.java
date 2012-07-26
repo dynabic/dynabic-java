@@ -31,80 +31,96 @@ import java.util.List;
 public class UserRequest extends Object {
 
 
+
     /**
      * 
      */
 	 private String user_roles ;
+
 
     /**
      * 
      */
 	 private String password ;
 
+
     /**
      * 
      */
 	 private Boolean deleted ;
+
 
     /**
      * 
      */
 	 private Boolean is_subscribed_to_newsletter ;
 
+
     /**
      * 
      */
 	 private String country ;
+
 
     /**
      * 
      */
 	 private String currency ;
 
+
     /**
      * 
      */
 	 private String first_name ;
+
 
     /**
      * 
      */
 	 private String timezone ;
 
+
     /**
      * 
      */
 	 private String googleapps_user_name ;
+
 
     /**
      * 
      */
 	 private String email ;
 
+
     /**
      * 
      */
 	 private String last_name ;
+
 
     /**
      * 
      */
 	 private Boolean active ;
 
+
     /**
      * 
      */
 	 private String yahoo_user_name ;
+
 
     /**
      * 
      */
 	 private String facebook_id ;
 
+
     /**
      * 
      */
 	 private String culture ;
+
 
 
 	/**
@@ -120,6 +136,7 @@ public class UserRequest extends Object {
 	 	this.user_roles = user_roles;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -132,6 +149,7 @@ public class UserRequest extends Object {
 	 public void setPassword(String  password) {
 	 	this.password = password;
 	 }
+
 
 	/**
 	 * 
@@ -146,6 +164,7 @@ public class UserRequest extends Object {
 	 	this.deleted = deleted;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -158,6 +177,7 @@ public class UserRequest extends Object {
 	 public void setIs_subscribed_to_newsletter(Boolean  is_subscribed_to_newsletter) {
 	 	this.is_subscribed_to_newsletter = is_subscribed_to_newsletter;
 	 }
+
 
 	/**
 	 * 
@@ -172,6 +192,7 @@ public class UserRequest extends Object {
 	 	this.country = country;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -184,6 +205,7 @@ public class UserRequest extends Object {
 	 public void setCurrency(String  currency) {
 	 	this.currency = currency;
 	 }
+
 
 	/**
 	 * 
@@ -198,6 +220,7 @@ public class UserRequest extends Object {
 	 	this.first_name = first_name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -210,6 +233,7 @@ public class UserRequest extends Object {
 	 public void setTimezone(String  timezone) {
 	 	this.timezone = timezone;
 	 }
+
 
 	/**
 	 * 
@@ -224,6 +248,7 @@ public class UserRequest extends Object {
 	 	this.googleapps_user_name = googleapps_user_name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -236,6 +261,7 @@ public class UserRequest extends Object {
 	 public void setEmail(String  email) {
 	 	this.email = email;
 	 }
+
 
 	/**
 	 * 
@@ -250,6 +276,7 @@ public class UserRequest extends Object {
 	 	this.last_name = last_name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -262,6 +289,7 @@ public class UserRequest extends Object {
 	 public void setActive(Boolean  active) {
 	 	this.active = active;
 	 }
+
 
 	/**
 	 * 
@@ -276,6 +304,7 @@ public class UserRequest extends Object {
 	 	this.yahoo_user_name = yahoo_user_name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -288,6 +317,7 @@ public class UserRequest extends Object {
 	 public void setFacebook_id(String  facebook_id) {
 	 	this.facebook_id = facebook_id;
 	 }
+
 
 	/**
 	 * 

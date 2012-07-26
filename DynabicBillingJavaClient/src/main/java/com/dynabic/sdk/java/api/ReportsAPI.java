@@ -26,7 +26,11 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
 import java.lang.Long;
 import java.io.IOException;
 
@@ -40,6 +44,7 @@ import java.io.IOException;
 public class ReportsAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
+
 
 	/**
 	 * GetProductsSignupsEvolution
@@ -62,12 +67,15 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( startDate != null) {
 			resourcePath = resourcePath.replace("{startDate}", APIInvoker.toPathValue(startDate));
 		}
+
 		if( endDate != null) {
 			resourcePath = resourcePath.replace("{endDate}", APIInvoker.toPathValue(endDate));
 		}
@@ -87,6 +95,7 @@ public class ReportsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * GetProductsRevenuesEvolution
@@ -109,12 +118,15 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( startDate != null) {
 			resourcePath = resourcePath.replace("{startDate}", APIInvoker.toPathValue(startDate));
 		}
+
 		if( endDate != null) {
 			resourcePath = resourcePath.replace("{endDate}", APIInvoker.toPathValue(endDate));
 		}
@@ -135,6 +147,7 @@ public class ReportsAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
+
 	/**
 	 * GetTotalRevenueAmount
 	 *
@@ -154,6 +167,7 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
@@ -173,6 +187,7 @@ public class ReportsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * GetActiveSubscriptionsCount
@@ -193,6 +208,7 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
@@ -208,6 +224,7 @@ public class ReportsAPI extends Object {
 		ActiveSubscriptionsCountResponse responseObject = (ActiveSubscriptionsCountResponse) getApiInvoker().deserialize(response, ActiveSubscriptionsCountResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetTotalSubscribersCount
@@ -228,6 +245,7 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
@@ -243,6 +261,7 @@ public class ReportsAPI extends Object {
 		TotalSubscribersCountResponse responseObject = (TotalSubscribersCountResponse) getApiInvoker().deserialize(response, TotalSubscribersCountResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetTodayRevenueAmount
@@ -263,6 +282,7 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
@@ -283,6 +303,7 @@ public class ReportsAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
+
 	/**
 	 * GetTodayNewSubscribersCount
 	 *
@@ -302,6 +323,7 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
@@ -317,6 +339,7 @@ public class ReportsAPI extends Object {
 		TodayNewSubscribersCountResponse responseObject = (TodayNewSubscribersCountResponse) getApiInvoker().deserialize(response, TodayNewSubscribersCountResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetSignupsEvolution
@@ -339,12 +362,15 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( startDate != null) {
 			resourcePath = resourcePath.replace("{startDate}", APIInvoker.toPathValue(startDate));
 		}
+
 		if( endDate != null) {
 			resourcePath = resourcePath.replace("{endDate}", APIInvoker.toPathValue(endDate));
 		}
@@ -364,6 +390,7 @@ public class ReportsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * GetRevenuesEvolution
@@ -386,12 +413,15 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( startDate != null) {
 			resourcePath = resourcePath.replace("{startDate}", APIInvoker.toPathValue(startDate));
 		}
+
 		if( endDate != null) {
 			resourcePath = resourcePath.replace("{endDate}", APIInvoker.toPathValue(endDate));
 		}
@@ -411,6 +441,7 @@ public class ReportsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * GetCustomersEvolution
@@ -433,12 +464,15 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( startDate != null) {
 			resourcePath = resourcePath.replace("{startDate}", APIInvoker.toPathValue(startDate));
 		}
+
 		if( endDate != null) {
 			resourcePath = resourcePath.replace("{endDate}", APIInvoker.toPathValue(endDate));
 		}
@@ -458,6 +492,7 @@ public class ReportsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * GetSubscriptionsEvolution
@@ -480,12 +515,15 @@ public class ReportsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( startDate != null) {
 			resourcePath = resourcePath.replace("{startDate}", APIInvoker.toPathValue(startDate));
 		}
+
 		if( endDate != null) {
 			resourcePath = resourcePath.replace("{endDate}", APIInvoker.toPathValue(endDate));
 		}
@@ -505,6 +543,7 @@ public class ReportsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * GetSitesSummary

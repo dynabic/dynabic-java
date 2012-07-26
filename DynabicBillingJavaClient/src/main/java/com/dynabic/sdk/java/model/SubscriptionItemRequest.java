@@ -31,25 +31,30 @@ import java.util.List;
 public class SubscriptionItemRequest extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer subscription_id ;
+
 
     /**
      * 
      */
 	 private Integer product_item_id ;
 
+
     /**
      * 
      */
 	 private String description ;
 
+
     /**
      * 
      */
 	 private Double quantity ;
+
 
 
 	/**
@@ -65,6 +70,7 @@ public class SubscriptionItemRequest extends Object {
 	 	this.subscription_id = subscription_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -78,6 +84,7 @@ public class SubscriptionItemRequest extends Object {
 	 	this.product_item_id = product_item_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -90,6 +97,7 @@ public class SubscriptionItemRequest extends Object {
 	 public void setDescription(String  description) {
 	 	this.description = description;
 	 }
+
 
 	/**
 	 * 

@@ -31,35 +31,42 @@ import java.util.List;
 public class SiteResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private Integer company_id ;
 
+
     /**
      * 
      */
 	 private String name ;
+
 
     /**
      * 
      */
 	 private String subdomain ;
 
+
     /**
      * 
      */
 	 private Boolean is_test_mode ;
 
+
     /**
      * 
      */
 	 private Double revenue ;
+
 
 
 	/**
@@ -75,6 +82,7 @@ public class SiteResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -87,6 +95,7 @@ public class SiteResponse extends Object {
 	 public void setCompany_id(Integer  company_id) {
 	 	this.company_id = company_id;
 	 }
+
 
 	/**
 	 * 
@@ -101,6 +110,7 @@ public class SiteResponse extends Object {
 	 	this.name = name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -114,6 +124,7 @@ public class SiteResponse extends Object {
 	 	this.subdomain = subdomain;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -126,6 +137,7 @@ public class SiteResponse extends Object {
 	 public void setIs_test_mode(Boolean  is_test_mode) {
 	 	this.is_test_mode = is_test_mode;
 	 }
+
 
 	/**
 	 * 

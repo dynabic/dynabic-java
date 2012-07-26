@@ -19,6 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
 
 
@@ -33,85 +34,102 @@ import java.util.Date;
 public class AddressResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private String fax_number ;
+
 
     /**
      * 
      */
 	 private String state_province ;
 
+
     /**
      * 
      */
 	 private String phone_number ;
 
+
     /**
      * 
      */
-	 private Date created_on ;
+	 private java.util.Date created_on ;
+
 
     /**
      * 
      */
 	 private String address1 ;
 
+
     /**
      * 
      */
 	 private String address2 ;
+
 
     /**
      * 
      */
 	 private String country ;
 
+
     /**
      * 
      */
 	 private String city ;
+
 
     /**
      * 
      */
 	 private Integer id ;
 
+
     /**
      * 
      */
 	 private String first_name ;
+
 
     /**
      * 
      */
 	 private String email ;
 
+
     /**
      * 
      */
 	 private String company ;
+
 
     /**
      * 
      */
 	 private String last_name ;
 
+
     /**
      * 
      */
-	 private Date updated_on ;
+	 private java.util.Date updated_on ;
+
 
     /**
      * 
      */
 	 private String zip_postal_code ;
 
+
     /**
      * 
      */
 	 private Integer customer_id ;
+
 
 
 	/**
@@ -127,6 +145,7 @@ public class AddressResponse extends Object {
 	 	this.fax_number = fax_number;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -139,6 +158,7 @@ public class AddressResponse extends Object {
 	 public void setState_province(String  state_province) {
 	 	this.state_province = state_province;
 	 }
+
 
 	/**
 	 * 
@@ -153,18 +173,20 @@ public class AddressResponse extends Object {
 	 	this.phone_number = phone_number;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getCreated_on() {
+	 public java.util.Date getCreated_on() {
 	 	return created_on;
 	 }  
 	 
-	 public void setCreated_on(Date  created_on) {
+	 public void setCreated_on(java.util.Date  created_on) {
 	 	this.created_on = created_on;
 	 }
+
 
 	/**
 	 * 
@@ -179,6 +201,7 @@ public class AddressResponse extends Object {
 	 	this.address1 = address1;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -191,6 +214,7 @@ public class AddressResponse extends Object {
 	 public void setAddress2(String  address2) {
 	 	this.address2 = address2;
 	 }
+
 
 	/**
 	 * 
@@ -205,6 +229,7 @@ public class AddressResponse extends Object {
 	 	this.country = country;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -217,6 +242,7 @@ public class AddressResponse extends Object {
 	 public void setCity(String  city) {
 	 	this.city = city;
 	 }
+
 
 	/**
 	 * 
@@ -231,6 +257,7 @@ public class AddressResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -243,6 +270,7 @@ public class AddressResponse extends Object {
 	 public void setFirst_name(String  first_name) {
 	 	this.first_name = first_name;
 	 }
+
 
 	/**
 	 * 
@@ -257,6 +285,7 @@ public class AddressResponse extends Object {
 	 	this.email = email;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -269,6 +298,7 @@ public class AddressResponse extends Object {
 	 public void setCompany(String  company) {
 	 	this.company = company;
 	 }
+
 
 	/**
 	 * 
@@ -283,18 +313,20 @@ public class AddressResponse extends Object {
 	 	this.last_name = last_name;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getUpdated_on() {
+	 public java.util.Date getUpdated_on() {
 	 	return updated_on;
 	 }  
 	 
-	 public void setUpdated_on(Date  updated_on) {
+	 public void setUpdated_on(java.util.Date  updated_on) {
 	 	this.updated_on = updated_on;
 	 }
+
 
 	/**
 	 * 
@@ -308,6 +340,7 @@ public class AddressResponse extends Object {
 	 public void setZip_postal_code(String  zip_postal_code) {
 	 	this.zip_postal_code = zip_postal_code;
 	 }
+
 
 	/**
 	 * 

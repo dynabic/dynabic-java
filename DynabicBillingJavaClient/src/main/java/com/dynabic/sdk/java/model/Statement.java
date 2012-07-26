@@ -19,8 +19,11 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
+
 import java.util.List;
+
 import java.util.ArrayList;
 
 
@@ -35,75 +38,90 @@ import java.util.ArrayList;
 public class Statement extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer subscription_id ;
+
 
     /**
      * 
      */
 	 private String status ;
 
+
     /**
      * 
      */
-	 private Date statement_date ;
+	 private java.util.Date statement_date ;
+
 
     /**
      * 
      */
 	 private Double current_charges ;
 
+
     /**
      * 
      */
 	 private String customer_first_name ;
+
 
     /**
      * 
      */
 	 private Integer billing_address_id ;
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private List<StatementDetail> statement_details  =  new ArrayList<StatementDetail>();
 
+
     /**
      * 
      */
 	 private String customer_last_name ;
+
 
     /**
      * 
      */
 	 private Double starting_balance ;
 
+
     /**
      * 
      */
 	 private Double payments_and_credits ;
+
 
     /**
      * 
      */
 	 private String email ;
 
-    /**
-     * 
-     */
-	 private Date billing_start_date ;
 
     /**
      * 
      */
-	 private Date billing_end_date ;
+	 private java.util.Date billing_start_date ;
+
+
+    /**
+     * 
+     */
+	 private java.util.Date billing_end_date ;
+
 
 
 	/**
@@ -119,6 +137,7 @@ public class Statement extends Object {
 	 	this.subscription_id = subscription_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -132,18 +151,20 @@ public class Statement extends Object {
 	 	this.status = status;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getStatement_date() {
+	 public java.util.Date getStatement_date() {
 	 	return statement_date;
 	 }  
 	 
-	 public void setStatement_date(Date  statement_date) {
+	 public void setStatement_date(java.util.Date  statement_date) {
 	 	this.statement_date = statement_date;
 	 }
+
 
 	/**
 	 * 
@@ -158,6 +179,7 @@ public class Statement extends Object {
 	 	this.current_charges = current_charges;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -170,6 +192,7 @@ public class Statement extends Object {
 	 public void setCustomer_first_name(String  customer_first_name) {
 	 	this.customer_first_name = customer_first_name;
 	 }
+
 
 	/**
 	 * 
@@ -184,6 +207,7 @@ public class Statement extends Object {
 	 	this.billing_address_id = billing_address_id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -196,6 +220,7 @@ public class Statement extends Object {
 	 public void setId(Integer  id) {
 	 	this.id = id;
 	 }
+
 
 	/**
 	 * 
@@ -210,6 +235,7 @@ public class Statement extends Object {
 	 	this.statement_details = statement_details;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -222,6 +248,7 @@ public class Statement extends Object {
 	 public void setCustomer_last_name(String  customer_last_name) {
 	 	this.customer_last_name = customer_last_name;
 	 }
+
 
 	/**
 	 * 
@@ -236,6 +263,7 @@ public class Statement extends Object {
 	 	this.starting_balance = starting_balance;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -248,6 +276,7 @@ public class Statement extends Object {
 	 public void setPayments_and_credits(Double  payments_and_credits) {
 	 	this.payments_and_credits = payments_and_credits;
 	 }
+
 
 	/**
 	 * 
@@ -262,29 +291,31 @@ public class Statement extends Object {
 	 	this.email = email;
 	 }
 
-	/**
-	 * 
-	 * 
-	 * 
-	 */
-	 public Date getBilling_start_date() {
-	 	return billing_start_date;
-	 }  
-	 
-	 public void setBilling_start_date(Date  billing_start_date) {
-	 	this.billing_start_date = billing_start_date;
-	 }
 
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getBilling_end_date() {
+	 public java.util.Date getBilling_start_date() {
+	 	return billing_start_date;
+	 }  
+	 
+	 public void setBilling_start_date(java.util.Date  billing_start_date) {
+	 	this.billing_start_date = billing_start_date;
+	 }
+
+
+	/**
+	 * 
+	 * 
+	 * 
+	 */
+	 public java.util.Date getBilling_end_date() {
 	 	return billing_end_date;
 	 }  
 	 
-	 public void setBilling_end_date(Date  billing_end_date) {
+	 public void setBilling_end_date(java.util.Date  billing_end_date) {
 	 	this.billing_end_date = billing_end_date;
 	 }
 

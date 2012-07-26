@@ -26,7 +26,11 @@ import com.wordnik.swagger.runtime.annotations.*;
 import com.wordnik.swagger.runtime.common.*;
 import com.wordnik.swagger.runtime.exception.*;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
 import java.lang.Long;
 import java.io.IOException;
 
@@ -40,6 +44,7 @@ import java.io.IOException;
 public class SubscriptionsAPI extends Object {
 
     private static APIInvoker apiInvoker = null;
+
 
 	/**
 	 * GetSubscriptions
@@ -62,12 +67,15 @@ public class SubscriptionsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( pageNumber != null) {
 			resourcePath = resourcePath.replace("{pageNumber}", APIInvoker.toPathValue(pageNumber));
 		}
+
 		if( pageSize != null) {
 			resourcePath = resourcePath.replace("{pageSize}", APIInvoker.toPathValue(pageSize));
 		}
@@ -87,6 +95,7 @@ public class SubscriptionsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * GetSubscriptionsForStatus
@@ -110,15 +119,19 @@ public class SubscriptionsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( status != null) {
 			resourcePath = resourcePath.replace("{status}", APIInvoker.toPathValue(status));
 		}
+
 		if( pageNumber != null) {
 			resourcePath = resourcePath.replace("{pageNumber}", APIInvoker.toPathValue(pageNumber));
 		}
+
 		if( pageSize != null) {
 			resourcePath = resourcePath.replace("{pageSize}", APIInvoker.toPathValue(pageSize));
 		}
@@ -139,6 +152,7 @@ public class SubscriptionsAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
+
 	/**
 	 * GetSubscription
 	 *
@@ -158,6 +172,7 @@ public class SubscriptionsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
@@ -173,6 +188,7 @@ public class SubscriptionsAPI extends Object {
 		SubscriptionResponse responseObject = (SubscriptionResponse) getApiInvoker().deserialize(response, SubscriptionResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetSubscriptionsOfCustomer
@@ -193,6 +209,7 @@ public class SubscriptionsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( customerId != null) {
 			resourcePath = resourcePath.replace("{customerId}", APIInvoker.toPathValue(customerId));
 		}
@@ -212,6 +229,7 @@ public class SubscriptionsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * GetSubscriptionsOfCustomerByReferenceId
@@ -233,9 +251,11 @@ public class SubscriptionsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( customerReferenceId != null) {
 			resourcePath = resourcePath.replace("{customerReferenceId}", APIInvoker.toPathValue(customerReferenceId));
 		}
@@ -255,6 +275,7 @@ public class SubscriptionsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * AddSubscription
@@ -276,6 +297,7 @@ public class SubscriptionsAPI extends Object {
 		String method = "POST";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
@@ -291,6 +313,7 @@ public class SubscriptionsAPI extends Object {
 		SubscriptionResponse responseObject = (SubscriptionResponse) getApiInvoker().deserialize(response, SubscriptionResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * UpdateSubscription
@@ -313,9 +336,11 @@ public class SubscriptionsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( siteSubdomain != null) {
 			resourcePath = resourcePath.replace("{siteSubdomain}", APIInvoker.toPathValue(siteSubdomain));
 		}
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
@@ -331,6 +356,7 @@ public class SubscriptionsAPI extends Object {
 		SubscriptionResponse responseObject = (SubscriptionResponse) getApiInvoker().deserialize(response, SubscriptionResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * DeleteSubscription
@@ -350,6 +376,7 @@ public class SubscriptionsAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
@@ -359,6 +386,7 @@ public class SubscriptionsAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
+
 
 	/**
 	 * GetAddress
@@ -379,6 +407,7 @@ public class SubscriptionsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
@@ -394,6 +423,7 @@ public class SubscriptionsAPI extends Object {
 		AddressResponse responseObject = (AddressResponse) getApiInvoker().deserialize(response, AddressResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * GetCustomersForProduct
@@ -414,6 +444,7 @@ public class SubscriptionsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
@@ -433,6 +464,7 @@ public class SubscriptionsAPI extends Object {
         	String[] args = new String[]{response, typeRef.toString()};
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
+
 
 	/**
 	 * AddChargeToSubscription
@@ -454,6 +486,7 @@ public class SubscriptionsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
@@ -469,6 +502,7 @@ public class SubscriptionsAPI extends Object {
 		TransactionResponse responseObject = (TransactionResponse) getApiInvoker().deserialize(response, TransactionResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * Refund
@@ -491,9 +525,11 @@ public class SubscriptionsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
+
 		if( transactionId != null) {
 			resourcePath = resourcePath.replace("{transactionId}", APIInvoker.toPathValue(transactionId));
 		}
@@ -509,6 +545,7 @@ public class SubscriptionsAPI extends Object {
 		TransactionResponse responseObject = (TransactionResponse) getApiInvoker().deserialize(response, TransactionResponse.class);
 		return responseObject;
 	}
+
 
 	/**
 	 * AdjustSubscriptionBalance
@@ -530,9 +567,11 @@ public class SubscriptionsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
+
 		if( isAmountAbsolute != null) {
 			resourcePath = resourcePath.replace("{isAmountAbsolute}", APIInvoker.toPathValue(isAmountAbsolute));
 		}
@@ -542,6 +581,7 @@ public class SubscriptionsAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, postData, headerParams);
 	}
+
 
 	/**
 	 * ChangeSubscriptionProduct
@@ -557,14 +597,16 @@ public class SubscriptionsAPI extends Object {
 	 public static void ChangeSubscriptionProduct(String subscriptionId, String newProductPricingPlanId) throws APIException {
 
 		//parse inputs
-		String  resourcePath = "/subscriptions/changeproduct/{subscriptionId}/{newProductPricingPlanId}";
+		String  resourcePath = "/subscriptions/changeproduct/{subscriptionId}/{newProductPricingPlanId}.{format}";
 		resourcePath = resourcePath.replace("{format}","json").replaceAll("\\*", "");
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
+
 		if( newProductPricingPlanId != null) {
 			resourcePath = resourcePath.replace("{newProductPricingPlanId}", APIInvoker.toPathValue(newProductPricingPlanId));
 		}
@@ -574,6 +616,7 @@ public class SubscriptionsAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
+
 
 	/**
 	 * UpgradeDowngradeSubscriptionProduct
@@ -591,20 +634,24 @@ public class SubscriptionsAPI extends Object {
 	 public static void UpgradeDowngradeSubscriptionProduct(String subscriptionId, String newProductPricingPlanId, String includeTrial, String includeUpfrontCharge) throws APIException {
 
 		//parse inputs
-		String  resourcePath = "/subscriptions/upgradedowngrade/{subscriptionId}/{newProductPricingPlanId}/{includeTrial}/{includeUpfrontCharge}";
+		String  resourcePath = "/subscriptions/upgradedowngrade/{subscriptionId}/{newProductPricingPlanId}/{includeTrial}/{includeUpfrontCharge}.{format}";
 		resourcePath = resourcePath.replace("{format}","json").replaceAll("\\*", "");
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
+
 		if( newProductPricingPlanId != null) {
 			resourcePath = resourcePath.replace("{newProductPricingPlanId}", APIInvoker.toPathValue(newProductPricingPlanId));
 		}
+
 		if( includeTrial != null) {
 			resourcePath = resourcePath.replace("{includeTrial}", APIInvoker.toPathValue(includeTrial));
 		}
+
 		if( includeUpfrontCharge != null) {
 			resourcePath = resourcePath.replace("{includeUpfrontCharge}", APIInvoker.toPathValue(includeUpfrontCharge));
 		}
@@ -614,6 +661,7 @@ public class SubscriptionsAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
+
 
 	/**
 	 * CancelSubscription
@@ -629,11 +677,12 @@ public class SubscriptionsAPI extends Object {
 	 public static void CancelSubscription(String subscriptionId, CancellationRequest postData) throws APIException {
 
 		//parse inputs
-		String  resourcePath = "/subscriptions/cancel/{subscriptionId}";
+		String  resourcePath = "/subscriptions/cancel/{subscriptionId}.{format}";
 		resourcePath = resourcePath.replace("{format}","json").replaceAll("\\*", "");
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
@@ -643,6 +692,7 @@ public class SubscriptionsAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, postData, headerParams);
 	}
+
 
 	/**
 	 * ReactivateSubscription
@@ -662,6 +712,7 @@ public class SubscriptionsAPI extends Object {
 		String method = "PUT";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
@@ -671,6 +722,7 @@ public class SubscriptionsAPI extends Object {
 		//make the API Call
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, null, headerParams);
 	}
+
 
 	/**
 	 * AddSubscriptionItems
@@ -696,6 +748,7 @@ public class SubscriptionsAPI extends Object {
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, postData, headerParams);
 	}
 
+
 	/**
 	 * UpdateSubscriptionItems
 	 *
@@ -720,6 +773,7 @@ public class SubscriptionsAPI extends Object {
 		String response = getApiInvoker().invokeAPI(resourcePath, method, queryParams, postData, headerParams);
 	}
 
+
 	/**
 	 * GetSubscriptionItems
 	 *
@@ -739,6 +793,7 @@ public class SubscriptionsAPI extends Object {
 		String method = "GET";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}
@@ -759,6 +814,7 @@ public class SubscriptionsAPI extends Object {
             throw new APIException(APIExceptionCodes.ERROR_CONVERTING_JSON_TO_JAVA, args, "Error in converting response json value to java object : " + ioe.getMessage(), ioe);
         }	}
 
+
 	/**
 	 * ResetSubscriptionMeteredItems
 	 *
@@ -777,6 +833,7 @@ public class SubscriptionsAPI extends Object {
 		String method = "DELETE";
 		Map<String, String> queryParams = new HashMap<String, String>();
 		Map<String, String> headerParams = new HashMap<String, String>();
+
 		if( subscriptionId != null) {
 			resourcePath = resourcePath.replace("{subscriptionId}", APIInvoker.toPathValue(subscriptionId));
 		}

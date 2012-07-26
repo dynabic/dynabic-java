@@ -31,20 +31,24 @@ import java.util.List;
 public class SiteRequest extends Object {
 
 
+
     /**
      * 
      */
 	 private String name ;
+
 
     /**
      * 
      */
 	 private String subdomain ;
 
+
     /**
      * 
      */
 	 private Boolean is_test_mode ;
+
 
 
 	/**
@@ -60,6 +64,7 @@ public class SiteRequest extends Object {
 	 	this.name = name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -72,6 +77,7 @@ public class SiteRequest extends Object {
 	 public void setSubdomain(String  subdomain) {
 	 	this.subdomain = subdomain;
 	 }
+
 
 	/**
 	 * 

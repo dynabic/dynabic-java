@@ -19,6 +19,7 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.Date;
 
 
@@ -33,45 +34,54 @@ import java.util.Date;
 public class CreditCardResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private String card_number ;
 
+
     /**
      * 
      */
 	 private String status ;
 
+
     /**
      * 
      */
-	 private Date expiration_date ;
+	 private java.util.Date expiration_date ;
+
 
     /**
      * 
      */
 	 private String cvv ;
 
+
     /**
      * 
      */
 	 private String last_name_on_card ;
+
 
     /**
      * 
      */
 	 private String first_name_on_card ;
 
+
     /**
      * 
      */
 	 private Integer customer_id ;
+
 
 
 	/**
@@ -87,6 +97,7 @@ public class CreditCardResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -99,6 +110,7 @@ public class CreditCardResponse extends Object {
 	 public void setCard_number(String  card_number) {
 	 	this.card_number = card_number;
 	 }
+
 
 	/**
 	 * 
@@ -113,18 +125,20 @@ public class CreditCardResponse extends Object {
 	 	this.status = status;
 	 }
 
+
 	/**
 	 * 
 	 * 
 	 * 
 	 */
-	 public Date getExpiration_date() {
+	 public java.util.Date getExpiration_date() {
 	 	return expiration_date;
 	 }  
 	 
-	 public void setExpiration_date(Date  expiration_date) {
+	 public void setExpiration_date(java.util.Date  expiration_date) {
 	 	this.expiration_date = expiration_date;
 	 }
+
 
 	/**
 	 * 
@@ -139,6 +153,7 @@ public class CreditCardResponse extends Object {
 	 	this.cvv = cvv;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -152,6 +167,7 @@ public class CreditCardResponse extends Object {
 	 	this.last_name_on_card = last_name_on_card;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -164,6 +180,7 @@ public class CreditCardResponse extends Object {
 	 public void setFirst_name_on_card(String  first_name_on_card) {
 	 	this.first_name_on_card = first_name_on_card;
 	 }
+
 
 	/**
 	 * 

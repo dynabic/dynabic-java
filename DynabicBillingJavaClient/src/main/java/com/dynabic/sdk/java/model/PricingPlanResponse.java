@@ -19,7 +19,9 @@ package com.dynabic.sdk.java.model;
 import com.wordnik.swagger.runtime.annotations.*;
 import java.util.List;
 
+
 import java.util.List;
+
 import java.util.ArrayList;
 
 
@@ -34,50 +36,60 @@ import java.util.ArrayList;
 public class PricingPlanResponse extends Object {
 
 
+
     /**
      * 
      */
 	 private Integer id ;
+
 
     /**
      * 
      */
 	 private Integer product_id ;
 
+
     /**
      * 
      */
 	 private Integer trial_period_duration_days ;
+
 
     /**
      * 
      */
 	 private Double trial_period_charge ;
 
+
     /**
      * 
      */
 	 private String name ;
+
 
     /**
      * 
      */
 	 private Double upfront_charge ;
 
+
     /**
      * 
      */
 	 private List<ProductItemResponse> product_items  =  new ArrayList<ProductItemResponse>();
+
 
     /**
      * 
      */
 	 private List<ProductPricingPlanPaymentScheduleResponse> pricing_plan_payment_schedules  =  new ArrayList<ProductPricingPlanPaymentScheduleResponse>();
 
+
     /**
      * 
      */
 	 private String currency_code ;
+
 
 
 	/**
@@ -93,6 +105,7 @@ public class PricingPlanResponse extends Object {
 	 	this.id = id;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -105,6 +118,7 @@ public class PricingPlanResponse extends Object {
 	 public void setProduct_id(Integer  product_id) {
 	 	this.product_id = product_id;
 	 }
+
 
 	/**
 	 * 
@@ -119,6 +133,7 @@ public class PricingPlanResponse extends Object {
 	 	this.trial_period_duration_days = trial_period_duration_days;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -131,6 +146,7 @@ public class PricingPlanResponse extends Object {
 	 public void setTrial_period_charge(Double  trial_period_charge) {
 	 	this.trial_period_charge = trial_period_charge;
 	 }
+
 
 	/**
 	 * 
@@ -145,6 +161,7 @@ public class PricingPlanResponse extends Object {
 	 	this.name = name;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -157,6 +174,7 @@ public class PricingPlanResponse extends Object {
 	 public void setUpfront_charge(Double  upfront_charge) {
 	 	this.upfront_charge = upfront_charge;
 	 }
+
 
 	/**
 	 * 
@@ -171,6 +189,7 @@ public class PricingPlanResponse extends Object {
 	 	this.product_items = product_items;
 	 }
 
+
 	/**
 	 * 
 	 * 
@@ -183,6 +202,7 @@ public class PricingPlanResponse extends Object {
 	 public void setPricing_plan_payment_schedules(List<ProductPricingPlanPaymentScheduleResponse>  pricing_plan_payment_schedules) {
 	 	this.pricing_plan_payment_schedules = pricing_plan_payment_schedules;
 	 }
+
 
 	/**
 	 * 
